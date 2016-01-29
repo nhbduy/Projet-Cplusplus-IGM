@@ -8,7 +8,7 @@ class Constante : public Expression
         Constante();
         Constante(double);
         virtual ~Constante();
-        double getVal() const;
+        double eval() const;
         Expression* clone() const;
         friend ostream& operator<<(ostream&, const Constante &);
 

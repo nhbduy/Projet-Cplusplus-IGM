@@ -17,12 +17,13 @@
 1454091951 source:e:\study\c++\projet\src\expression.cpp
 	"expression.h"
 
-1454100726 source:e:\study\c++\projet\projet_cpp\src\constante.cpp
+1454105559 source:e:\study\c++\projet\projet_cpp\src\constante.cpp
 	"expression.h"
 	"constante.h"
+	<fonction.h>
 	<math.h>
 
-1454101335 e:\study\c++\projet\projet_cpp\include\expression.h
+1454105470 e:\study\c++\projet\projet_cpp\include\expression.h
 	<iostream>
 	<sstream>
 	<string>
@@ -30,9 +31,9 @@
 	<map>
 	<set>
 
-1454099958 e:\study\c++\projet\projet_cpp\include\constante.h
+1454105548 e:\study\c++\projet\projet_cpp\include\constante.h
 
-1454100837 source:e:\study\c++\projet\projet_cpp\src\expression.cpp
+1454105463 source:e:\study\c++\projet\projet_cpp\src\expression.cpp
 	"expression.h"
 
 1454100348 source:e:\study\c++\projet\projet_cpp\main.cpp
@@ -42,9 +43,9 @@
 	"constante.h"
 	"cos.h"
 
-1454100562 e:\study\c++\projet\projet_cpp\include\cos.h
+1454105849 e:\study\c++\projet\projet_cpp\include\cos.h
 
-1454100575 source:e:\study\c++\projet\projet_cpp\src\cos.cpp
+1454105604 source:e:\study\c++\projet\projet_cpp\src\cos.cpp
 	"cos.h"
 
 1454101312 e:\study\c++\projet\projet_cpp\include\fonction.h

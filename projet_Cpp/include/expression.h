@@ -15,7 +15,7 @@ class Expression
         Expression();
         Expression(const string&);
         virtual ~Expression();
-        string getNom() const;
+        string getString() const;
         virtual Expression* clone() const = 0;
         friend ostream& operator<<(ostream&, const Expression &);
 

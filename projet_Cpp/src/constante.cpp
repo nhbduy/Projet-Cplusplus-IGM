@@ -19,7 +19,7 @@ Constante::~Constante()
     //dtor
 }
 
-double Constante::getVal() const
+double Constante::eval() const
 {
     return _value;
 }
@@ -31,7 +31,7 @@ Expression* Constante::clone() const
 
 ostream& operator<<(ostream& os, const Constante & a)
 {
-    os << "cde";
+//    os << "cde";
     return os;
 }
 

@@ -14,7 +14,7 @@ Expression::~Expression()
     //dtor
 }
 
-string Expression::getNom() const
+string Expression::getString() const
 {
     return _nom;
 }
@@ -28,7 +28,7 @@ Expression* Expression::clone() const
 
 ostream& operator<<(ostream& os, const Expression & a)
 {
-    os << a.getNom();
+    os << a.getString();
     return os;
 }
 
