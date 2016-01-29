@@ -5,12 +5,12 @@
 class Cos
 {
     public:
-        Cos();
-        Cos(double);
-        Cos(Constante);
-        virtual ~Cos();
-        double eval();
-        friend ostream& operator<<(ostream&, const Cos &);
+//        Cos();
+//        Cos(double);
+//        Cos(Constante);
+//        virtual ~Cos();
+//        double eval();
+//        friend ostream& operator<<(ostream&, const Cos &);
 
     protected:
         double val;

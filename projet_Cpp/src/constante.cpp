@@ -1,14 +1,17 @@
 #include "expression.h"
 #include "constante.h"
 
+#include <fonction.h>
+#include <math.h>
+
 Constante::Constante()
 {
     //ctor
 }
 
-Constante::Constante(double n) : Expression()
+Constante::Constante(double val) : Expression(string_from_double(val)), _value(val)
 {
-    val = n;
+
 }
 
 Constante::~Constante()
@@ -18,7 +21,7 @@ Constante::~Constante()
 
 double Constante::getVal() const
 {
-    return val;
+    return _value;
 }
 
 Expression* Constante::clone() const

@@ -17,21 +17,41 @@
 1454091951 source:e:\study\c++\projet\src\expression.cpp
 	"expression.h"
 
-1454094269 source:e:\study\c++\projet\projet_cpp\src\constante.cpp
+1454100726 source:e:\study\c++\projet\projet_cpp\src\constante.cpp
 	"expression.h"
 	"constante.h"
+	<math.h>
 
-1454094215 e:\study\c++\projet\projet_cpp\include\expression.h
+1454101335 e:\study\c++\projet\projet_cpp\include\expression.h
 	<iostream>
+	<sstream>
+	<string>
+	<math.h>
+	<map>
+	<set>
 
-1454096953 e:\study\c++\projet\projet_cpp\include\constante.h
+1454099958 e:\study\c++\projet\projet_cpp\include\constante.h
 
-1454094332 source:e:\study\c++\projet\projet_cpp\src\expression.cpp
+1454100837 source:e:\study\c++\projet\projet_cpp\src\expression.cpp
 	"expression.h"
 
-1454093540 source:e:\study\c++\projet\projet_cpp\main.cpp
+1454100348 source:e:\study\c++\projet\projet_cpp\main.cpp
 	<iostream>
 	<fstream>
 	"include\expression.h"
 	"constante.h"
+	"cos.h"
+
+1454100562 e:\study\c++\projet\projet_cpp\include\cos.h
+
+1454100575 source:e:\study\c++\projet\projet_cpp\src\cos.cpp
+	"cos.h"
+
+1454101312 e:\study\c++\projet\projet_cpp\include\fonction.h
+	<iostream>
+	<sstream>
+	<string>
+	<math.h>
+	<map>
+	<set>
 

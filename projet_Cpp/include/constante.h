@@ -14,7 +14,7 @@ class Constante : public Expression
 
     protected:
     private:
-//        double val = 0;
+        double _value = 0;
 };
 
 #endif // CONSTANTE_H
