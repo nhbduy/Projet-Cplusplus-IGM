@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1454090069 source:e:\study\c++\projet\main.cpp
+	<iostream>
+	<fstream>
+	"include\expression.h"
+	"constante.h"
+
+1454091732 e:\study\c++\projet\include\constante.h
+
+1454091880 e:\study\c++\projet\include\expression.h
+	<iostream>
+
+1454091823 source:e:\study\c++\projet\src\constante.cpp
+	"expression.h"
+	"constante.h"
+
+1454091951 source:e:\study\c++\projet\src\expression.cpp
+	"expression.h"
+
+1454094269 source:e:\study\c++\projet\projet_cpp\src\constante.cpp
+	"expression.h"
+	"constante.h"
+
+1454094215 e:\study\c++\projet\projet_cpp\include\expression.h
+	<iostream>
+
+1454096953 e:\study\c++\projet\projet_cpp\include\constante.h
+
+1454094332 source:e:\study\c++\projet\projet_cpp\src\expression.cpp
+	"expression.h"
+
+1454093540 source:e:\study\c++\projet\projet_cpp\main.cpp
+	<iostream>
+	<fstream>
+	"include\expression.h"
+	"constante.h"
+
