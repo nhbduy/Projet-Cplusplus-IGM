@@ -9,7 +9,7 @@ Constante::Constante()
     //ctor
 }
 
-Constante::Constante(double val) : Expression(string_from_double(val)), _value(val)
+Constante::Constante(const double val) : Expression(string_from_double(val)), _value(val)
 {
 
 }

@@ -5,7 +5,7 @@ Unaire::Unaire()
     //ctor
 }
 
-Unaire::Unaire(const string& name, Expression *op):Expression(name),_op(op)
+Unaire::Unaire( Expression *op, const string& name):Expression(name),_op(op)
 {
 }
 

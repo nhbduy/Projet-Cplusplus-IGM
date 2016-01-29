@@ -24,7 +24,10 @@ Expression* Expression::clone() const
 
 }
 
+double Expression::eval() const
+{
 
+}
 
 ostream& operator<<(ostream& os, const Expression & a)
 {

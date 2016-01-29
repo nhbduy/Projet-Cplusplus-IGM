@@ -6,7 +6,7 @@ class Unaire : public Expression
 {
     public:
         Unaire();
-        Unaire(const string& name, Expression *);
+        Unaire(Expression *, const string& name);
         virtual ~Unaire();
         virtual string getString();
     protected:
