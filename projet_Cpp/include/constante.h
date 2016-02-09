@@ -1,6 +1,9 @@
 #ifndef CONSTANTE_H
 #define CONSTANTE_H
 
+#include <iostream>
+
+using namespace std;
 
 class Constante : public Expression
 {

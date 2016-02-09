@@ -1,6 +1,9 @@
 #ifndef COS_H
 #define COS_H
 
+#include <iostream>
+
+using namespace std;
 
 class Cos
 {

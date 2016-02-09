@@ -1,5 +1,8 @@
+#include <iostream>
 #include "expression.h"
 #include "constante.h"
+
+using namespace std;
 
 Constante::Constante()
 {
@@ -31,4 +34,3 @@ ostream& operator<<(ostream& os, const Constante & a)
     os << "cde";
     return os;
 }
-

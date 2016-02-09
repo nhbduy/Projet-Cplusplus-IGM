@@ -1,5 +1,7 @@
+#include <iostream>
 #include "cos.h"
 
+using namespace std;
 
 Cos::Cos()
 {
