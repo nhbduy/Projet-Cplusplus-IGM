@@ -2,6 +2,7 @@
 #define CONSTANTE_H
 
 #include <iostream>
+#include "expression.h"
 
 using namespace std;
 
