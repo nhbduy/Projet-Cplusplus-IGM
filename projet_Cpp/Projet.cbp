@@ -35,9 +35,12 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/constante.h" />
+		<Unit filename="include/cos.h" />
 		<Unit filename="include/expression.h" />
+		<Unit filename="include/fonction.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/constante.cpp" />
+		<Unit filename="src/cos.cpp" />
 		<Unit filename="src/expression.cpp" />
 		<Extensions>
 			<code_completion />

@@ -8,14 +8,18 @@ Expression::Expression()
     //ctor
 }
 
+Expression::Expression(const string& nom) : _nom(nom) {
+
+}
+
 Expression::~Expression()
 {
     //dtor
 }
 
-double Expression::getVal() const
+string Expression::getString() const
 {
-    return val;
+    return _nom;
 }
 
 Expression* Expression::clone() const
@@ -23,9 +27,14 @@ Expression* Expression::clone() const
 
 }
 
+double Expression::eval() const
+{
+
+}
+
 ostream& operator<<(ostream& os, const Expression & a)
 {
-    os << a.getVal();
+    os << a.getString();
     return os;
 }
 

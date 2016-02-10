@@ -8,14 +8,9 @@ Cos::Cos()
     //ctor
 }
 
-Cos::Cos(double x)
+Cos::Cos(Expression *exp, const string&name):Unaire(exp,name)
 {
-    val = x;
-}
 
-Cos::Cos(Constante c)
-{
-    val = c.getVal();
 }
 
 Cos::~Cos()
@@ -23,13 +18,7 @@ Cos::~Cos()
     //dtor
 }
 
-double Cos::eval()
+double Cos::eval() const
 {
-    return cos(val);
-}
-
-ostream& operator<<(ostream& os, const Cos & a)
-{
-    os << "abc";
-    return os;
+ return cos(_op->eval());
 }

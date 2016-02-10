@@ -1,16 +1,21 @@
 #include <iostream>
 #include "constante.h"
 
+<<<<<<< HEAD
 using namespace std;
+=======
+#include <fonction.h>
+#include <math.h>
+>>>>>>> refs/remotes/origin/testConstante()
 
 Constante::Constante()
 {
     //ctor
 }
 
-Constante::Constante(double n) : Expression()
+Constante::Constante(const double val) : Expression(string_from_double(val)), _value(val)
 {
-    val = n;
+
 }
 
 Constante::~Constante()
@@ -18,9 +23,9 @@ Constante::~Constante()
     //dtor
 }
 
-double Constante::getVal() const
+double Constante::eval() const
 {
-    return val;
+    return _value;
 }
 
 Expression* Constante::clone() const
@@ -30,6 +35,6 @@ Expression* Constante::clone() const
 
 ostream& operator<<(ostream& os, const Constante & a)
 {
-    os << "cde";
+//    os << "cde";
     return os;
 }

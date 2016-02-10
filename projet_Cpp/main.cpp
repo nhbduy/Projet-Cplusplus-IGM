@@ -42,6 +42,7 @@ void testCosinus()
 int main()
 {
     testConstante();
+    testCosinus();
     return 0;
 }
 

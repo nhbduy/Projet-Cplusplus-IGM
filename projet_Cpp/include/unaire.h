@@ -1,5 +1,6 @@
 #ifndef UNAIRE_H
 #define UNAIRE_H
+<<<<<<< HEAD
 
 #include <iostream>
 
@@ -32,4 +33,20 @@ public:
 
 
 
+=======
+#include "expression.h"
+
+class Unaire : public Expression
+{
+    public:
+        Unaire();
+        Unaire(Expression *, const string& name);
+        virtual ~Unaire();
+        virtual string getString();
+    protected:
+        Expression *_op;
+    private:
+};
+
+>>>>>>> refs/remotes/origin/testConstante()
 #endif // UNAIRE_H
