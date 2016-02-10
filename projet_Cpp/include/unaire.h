@@ -5,9 +5,29 @@
 
 using namespace std;
 
-class Unaire
+class Unaire : public Expression
 {
+protected:
+    Expression *exp;
+public:
+    Unaire();
+    virtual ~Unaire();
 
+    virtual double getVal();
+
+};
+
+class Cos : public Unaire
+{
+protected:
+     double val;
+public:
+     Cos();
+     Cos(double);
+     Cos(Constante);
+     virtual ~Cos();
+     double eval();
+     friend ostream& operator<<(ostream&, const Cos &);
 };
 
 

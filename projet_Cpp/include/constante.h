@@ -8,16 +8,16 @@ using namespace std;
 
 class Constante : public Expression
 {
-    public:
-        Constante();
-        Constante(double);
-        virtual ~Constante();
-        double getVal() const;
-        Expression* clone() const;
-        friend ostream& operator<<(ostream&, const Constante &);
+public:
+    Constante();
+    Constante(double);
+    virtual ~Constante();
+    double getVal() const;
+    Expression* clone() const;
+    friend ostream& operator<<(ostream&, const Constante &);
 
-    protected:
-    private:
+protected:
+private:
 //        double val = 0;
 };
 
