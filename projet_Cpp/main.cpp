@@ -3,7 +3,6 @@
 #include <fstream>
 #include "expression.h"
 #include "constante.h"
-//#include "cos.h"
 //#include "binaire.h"    // contient les sous-classes de Binaire : Somme, Produit, Superieur ....
 #include "unaire.h"     // contient les sous-classes de Unaire : Cos, Sin ....
 //#include "variable.h"

@@ -8,31 +8,15 @@ using namespace std;
 
 class Constante : public Expression
 {
-<<<<<<< HEAD
+private:
+    double _value = 0;
 public:
     Constante();
-    Constante(double);
-    virtual ~Constante();
-    double getVal() const;
+    Constante(const double=0.0);
+    ~Constante();
+    double eval() const;
     Expression* clone() const;
     friend ostream& operator<<(ostream&, const Constante &);
-
-protected:
-private:
-//        double val = 0;
-=======
-    public:
-        Constante();
-        Constante(const double=0.0);
-        ~Constante();
-        double eval() const;
-        Expression* clone() const;
-        friend ostream& operator<<(ostream&, const Constante &);
-
-    protected:
-    private:
-        double _value = 0;
->>>>>>> refs/remotes/origin/testConstante()
 };
 
 #endif // CONSTANTE_H

@@ -1,12 +1,10 @@
 #include <iostream>
 #include "constante.h"
 
-<<<<<<< HEAD
 using namespace std;
-=======
+
 #include <fonction.h>
 #include <math.h>
->>>>>>> refs/remotes/origin/testConstante()
 
 Constante::Constante()
 {
