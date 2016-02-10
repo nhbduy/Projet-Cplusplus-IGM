@@ -34,14 +34,29 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/affectation.h" />
+		<Unit filename="include/binaire.h" />
+		<Unit filename="include/bloc.h" />
+		<Unit filename="include/boucle.h" />
+		<Unit filename="include/conditionnel.h" />
 		<Unit filename="include/constante.h" />
-		<Unit filename="include/cos.h" />
+		<Unit filename="include/exponentielle.h" />
 		<Unit filename="include/expression.h" />
-		<Unit filename="include/fonction.h" />
+		<Unit filename="include/ifThenElse.h" />
+		<Unit filename="include/unaire.h" />
+		<Unit filename="include/variable.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/affectation.cpp" />
+		<Unit filename="src/binaire.cpp" />
+		<Unit filename="src/bloc.cpp" />
+		<Unit filename="src/boucle.cpp" />
+		<Unit filename="src/conditionnel.cpp" />
 		<Unit filename="src/constante.cpp" />
-		<Unit filename="src/cos.cpp" />
+		<Unit filename="src/exponentielle.cpp" />
 		<Unit filename="src/expression.cpp" />
+		<Unit filename="src/ifThenElse.cpp" />
+		<Unit filename="src/unaire.cpp" />
+		<Unit filename="src/variable.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
