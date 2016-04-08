@@ -1,12 +1,24 @@
 #ifndef UNAIRE_H
 #define UNAIRE_H
-<<<<<<< HEAD
 
 #include <iostream>
+#include "expression.h"
 
 using namespace std;
 
 class Unaire : public Expression
+{
+    public:
+        Unaire();
+        Unaire(Expression *, const string& name);
+        virtual ~Unaire();
+        virtual string getString();
+    protected:
+        Expression *_op;
+    private:
+};
+
+/*class Unaire : public Expression
 {
 protected:
     Expression *exp;
@@ -16,7 +28,7 @@ public:
 
     virtual double getVal();
 
-};
+};*/
 
 class Cos : public Unaire
 {
@@ -33,20 +45,4 @@ public:
 
 
 
-=======
-#include "expression.h"
-
-class Unaire : public Expression
-{
-    public:
-        Unaire();
-        Unaire(Expression *, const string& name);
-        virtual ~Unaire();
-        virtual string getString();
-    protected:
-        Expression *_op;
-    private:
-};
-
->>>>>>> refs/remotes/origin/testConstante()
 #endif // UNAIRE_H
