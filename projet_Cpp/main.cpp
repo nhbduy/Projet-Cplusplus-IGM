@@ -1,17 +1,15 @@
-
 #include <iostream>
 #include <fstream>
-#include "expression.h"
+//#include "expression.h"
 #include "constante.h"
 //#include "binaire.h"    // contient les sous-classes de Binaire : Somme, Produit, Superieur ....
-#include "unaire.h"     // contient les sous-classes de Unaire : Cos, Sin ....
+//#include "unaire.h"     // contient les sous-classes de Unaire : COs, Sin ....
 //#include "variable.h"
 //#include "affectation.h"
 //#include "conditionnel.h"
 //#include "ifThenElse.h"
 //#include "boucle.h"
-//#include "bloc.h"
-
+//#INCLUDE "BLOC.H"
 
 using namespace std;
 
@@ -27,26 +25,17 @@ void testConstante()
     delete cbis;
 }
 
-
 void testCosinus()
 {
 //    // c = cos(PI/3)
-    Cos * c = new Cos(new Constante(M_PI/3.0));
-    cout << *c << " = " << c->eval() << endl;
+//    Cos * c = new Cos(new Constante(M_PI/3.0));
+//    cout << *c << " = " << c->eval() << endl;
 //    delete c;
 //    cout << "destruction automatique des variables locales allouees sur la PILE: ICI AUCUNE " << endl;
 }
 
-
-int main()
+void testBinaire()
 {
-    testConstante();
-    testCosinus();
-    return 0;
-}
-
-//void testBinaire()
-//{
 //    // s = 1 + 2 * sin(PI/6)
 //    Somme * s = new Somme(new Constante(1.0), new Produit(new Constante(2.0), new Sin(new Constante(M_PI/6.0))));
 //    cout << "s : " << *s << " = " << s->eval() << endl;
@@ -61,10 +50,10 @@ int main()
 //    delete s;
 //    delete sbis;
 //    cout << "destruction automatique des variables locales allouees sur la PILE: ICI COMP" << endl;
-//}
-//
-//void testVariable1()
-//{
+}
+
+void testVariable1()
+{
 //    // x = 3
 //    Variable x("x", 3.0);
 //    // y = 0
@@ -83,10 +72,10 @@ int main()
 //    delete exp; // OK car il existe un clone
 //    delete a;
 //    cout << "destruction automatique des variables locales allouees sur la PILE: ICI X et Y" << endl;
-//}
-//
-//void testVariable2()
-//{
+}
+
+void testVariable2()
+{
 //    // x = PI/3
 //    Variable * x = new Variable("x", M_PI/3.0);
 //    cout << *x << " = " << x->eval() << endl;
@@ -95,10 +84,10 @@ int main()
 //    cout << *x << " = " << x->eval() << endl;
 //
 //    Variable::effacerMemoire();
-//}
-//
-//void testConditionnel ()
-//{
+}
+
+void testConditionnel ()
+{
 //    // x = 0
 //    Variable * x = new Variable("x", 8);
 //
@@ -117,10 +106,10 @@ int main()
 //    cout << *expr <<  "\n EVAL ternaire : " << expr->eval() << endl;
 //    cout << *x << " = " << x->eval() << endl;
 //    Variable::effacerMemoire();
-//}
-//
-//void testIfThenElse()
-//{
+}
+
+void testIfThenElse()
+{
 //    // x = 0
 //    Variable  * x = new Variable("x", 8);
 //
@@ -134,10 +123,10 @@ int main()
 //    cout << *x << " = " << x->eval() << endl;
 //
 //    Variable::effacerMemoire();
-//}
-//
-//void testBloc()
-//{
+}
+
+void testBloc()
+{
 //    // x = 5
 //    Variable * x = new Variable("x", 5);
 //    // bloc = { x = x + 9 }
@@ -166,11 +155,11 @@ int main()
 //    cout << *y << " = " << y->eval() << endl;
 //
 //    Variable::effacerMemoire();
-//}
-//
-//// Calcul d'une factorielle
-//void testPour1()
-//{
+}
+
+// Calcul d'une factorielle
+void testPour1()
+{
 //    // x = 3
 //    Variable * x = new Variable("x", 3.0);
 //    cout << *x << " = " << x->eval() << endl;
@@ -206,11 +195,11 @@ int main()
 //    cout << x->eval() <<"!" << " = " << res->eval() << endl;
 //
 //    Variable::effacerMemoire();
-//}
-//
-//// boucle avec plusieurs instructions (un bloc)
-//void testPour2()
-//{
+}
+
+// boucle avec plusieurs instructions (un bloc)
+void testPour2()
+{
 //    // x = 3
 //    Variable * x = new Variable("x", 3.0);
 //    cout << *x << " = " << x->eval() << endl;
@@ -267,11 +256,11 @@ int main()
 //    cout << *pour << "\n EVAL pour : " << pour->eval() << endl;
 //    cout << *x << " = " << x->eval() << endl;
 //    cout << *y << " = " << y->eval() << endl;
-//}
-//
-//
-//void testPour3()
-//{
+}
+
+
+void testPour3()
+{
 //    // x = 3
 //    Variable * x = new Variable("x", 3.0);
 //    cout << *x << " = " << x->eval() << endl;
@@ -339,10 +328,10 @@ int main()
 //    cout << *pour1 << "\n EVAL pour1 : " << pour1->eval() << endl;
 //    cout << *x << " = " << x->eval() << endl;
 //    cout << *y << " = " << y->eval() << endl;
-//}
-//
-//void verifBoucle2()
-//{
+}
+
+void verifBoucle2()
+{
 //    double x = 3;
 //    double y = 5;
 //    int i = 0;
@@ -359,10 +348,10 @@ int main()
 //
 //    cout << " x = " << x << endl;
 //    cout << " y = " << y << endl;
-//}
-//
-//void verifBoucle3()
-//{
+}
+
+void verifBoucle3()
+{
 //    double x = 3;
 //    double y = 5;
 //    int i = 0;
@@ -383,96 +372,95 @@ int main()
 //
 //    cout << " x = " << x << endl;
 //    cout << " y = " << y << endl;
-//}
-//
-//int main()
-//{
-//    int choix = -1;
-//
-//
-//
-//    do
-//    {
-//        cout << " 0 : constante" << endl;
-//        cout << " 1 : cosinus" << endl;
-//        cout << " 2 : binaire" << endl;
-//        cout << " 3 : variable1" << endl;
-//        cout << " 4 : variable2" << endl;
-//        cout << " 5 : conditionnel" << endl;
-//        cout << " 6 : if then else" << endl;
-//        cout << " 7 : bloc" << endl;
-//        cout << " 8 : boucle avec une seule expression" << endl;
-//        cout << " 9 : boucle avec bloc d'expressions" << endl;
-//        cout << " 10 : boucles imbriqu�es" << endl;
-//        cout << " 11 : tous les tests" << endl;
-//        cout << " 666 : quitter" << endl;
-//        cout << "choix : ";
-//        cin >> choix;
-//        switch(choix)
-//        {
-//        case 0 :
-//            testConstante();
-//            break;
-//        case 1 :
-//            testCosinus();
-//            break;
-//        case 2 :
-//            testBinaire();
-//            break;
-//        case 3 :
-//            testVariable1();
-//            break;
-//        case 4 :
-//            testVariable2();
-//            break;
-//        case 5 :
-//            testConditionnel();
-//            break;
-//        case 6 :
-//            testIfThenElse();
-//            break;
-//        case 7 :
-//            testBloc();
-//            break;
-//        case 8 :
-//            testPour1();
-//            break;
-//        case 9 :
-//            testPour2();
-//            cout << "VERIFICATION" << endl;
-//            verifBoucle2();
-//            break;
-//        case 10 :
-//            testPour3();
-//            cout << "VERIFICATION" << endl;
-//            verifBoucle3();
-//            break;
-//        case 11 :
-//            testConstante();
-//            testCosinus();
-//            testBinaire();
-//            testVariable1();
-//            testVariable2();
-//            testConditionnel();
-//            testIfThenElse();
-//            testBloc();
-//            testPour1();
-//            testPour2();
-//            cout << "VERIFICATION" << endl;
-//            verifBoucle2();
-//            testPour3();
-//            cout << "VERIFICATION" << endl;
-//            verifBoucle3();
-//            break;
-//        default :
-//            cout << "cas inconnu!" << endl;
-//            break;
-//        }
-//    }
-//    while (choix != 666);
-//
-//    Expression::toutLiberer();
-//
-//    return 0;
-//}
-//
+}
+
+int main()
+{
+    int choix = -1;
+
+
+
+    do
+    {
+        cout << " 0 : constante" << endl;
+        cout << " 1 : cosinus" << endl;
+        cout << " 2 : binaire" << endl;
+        cout << " 3 : variable1" << endl;
+        cout << " 4 : variable2" << endl;
+        cout << " 5 : conditionnel" << endl;
+        cout << " 6 : if then else" << endl;
+        cout << " 7 : bloc" << endl;
+        cout << " 8 : boucle avec une seule expression" << endl;
+        cout << " 9 : boucle avec bloc d'expressions" << endl;
+        cout << " 10 : boucles imbriquées" << endl;
+        cout << " 11 : tous les tests" << endl;
+        cout << " 666 : quitter" << endl;
+        cout << "choix : ";
+        cin >> choix;
+        switch(choix)
+        {
+        case 0 :
+            testConstante();
+            break;
+        case 1 :
+            testCosinus();
+            break;
+        case 2 :
+            testBinaire();
+            break;
+        case 3 :
+            testVariable1();
+            break;
+        case 4 :
+            testVariable2();
+            break;
+        case 5 :
+            testConditionnel();
+            break;
+        case 6 :
+            testIfThenElse();
+            break;
+        case 7 :
+            testBloc();
+            break;
+        case 8 :
+            testPour1();
+            break;
+        case 9 :
+            testPour2();
+            cout << "VERIFICATION" << endl;
+            verifBoucle2();
+            break;
+        case 10 :
+            testPour3();
+            cout << "VERIFICATION" << endl;
+            verifBoucle3();
+            break;
+        case 11 :
+            testConstante();
+            testCosinus();
+            testBinaire();
+            testVariable1();
+            testVariable2();
+            testConditionnel();
+            testIfThenElse();
+            testBloc();
+            testPour1();
+            testPour2();
+            cout << "VERIFICATION" << endl;
+            verifBoucle2();
+            testPour3();
+            cout << "VERIFICATION" << endl;
+            verifBoucle3();
+            break;
+        default :
+            cout << "cas inconnu!" << endl;
+            break;
+        }
+    }
+    while (choix != 666);
+
+    Expression::toutLiberer();
+
+    return 0;
+}
