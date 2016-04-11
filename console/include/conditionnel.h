@@ -1,5 +1,6 @@
 #ifndef CONDITIONNEL_H
 #define CONDITIONNEL_H
+
 #include "expression.h"
 #include "binaire.h"
 

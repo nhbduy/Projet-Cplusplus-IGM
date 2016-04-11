@@ -1,7 +1,6 @@
 #include "expression.h"
 #include "constante.h"
-
-#include <fonction.h>
+//#include <fonction.h>
 #include <math.h>
 
 Constante::Constante()
@@ -26,7 +25,7 @@ double Constante::eval() const
 
 Expression* Constante::deriver(const string &var)
 {
-
+	return 0;
 }
 
 Expression *Constante::simplifier()

@@ -193,3 +193,112 @@
 1460323157 source:e:\github\tutoralgebra\src\boucle.cpp
 	"boucle.h"
 
+1460405186 source:f:\github\projet-cplusplus-igm\console\src\affectation.cpp
+	"affectation.h"
+
+1460406713 f:\github\projet-cplusplus-igm\console\include\affectation.h
+	"binaire.h"
+	"variable.h"
+
+1460406716 f:\github\projet-cplusplus-igm\console\include\binaire.h
+	"expression.h"
+
+1460406720 f:\github\projet-cplusplus-igm\console\include\expression.h
+	<iostream>
+	<sstream>
+	<string>
+	<math.h>
+	<map>
+	<set>
+
+1460406723 f:\github\projet-cplusplus-igm\console\include\variable.h
+	<iostream>
+	<map>
+	"expression.h"
+	"constante.h"
+
+1460408712 f:\github\projet-cplusplus-igm\console\include\constante.h
+	"expression.h"
+
+1460406614 source:f:\github\projet-cplusplus-igm\console\src\binaire.cpp
+	"binaire.h"
+
+1460406493 source:f:\github\projet-cplusplus-igm\console\src\conditionnel.cpp
+	"conditionnel.h"
+
+1460406705 f:\github\projet-cplusplus-igm\console\include\conditionnel.h
+	"expression.h"
+	"binaire.h"
+
+1460398901 source:f:\github\projet-cplusplus-igm\console\src\constante.cpp
+	"expression.h"
+	"constante.h"
+	<math.h>
+
+1460246188 f:\github\projet-cplusplus-igm\console\include\fonction.h
+	<iostream>
+	<sstream>
+	<string>
+	<math.h>
+	<map>
+	<set>
+
+1460392266 source:f:\github\projet-cplusplus-igm\console\src\cos.cpp
+
+1460396565 source:f:\github\projet-cplusplus-igm\console\src\expression.cpp
+	"expression.h"
+
+1460392266 source:f:\github\projet-cplusplus-igm\console\src\produit.cpp
+
+1460392266 source:f:\github\projet-cplusplus-igm\console\src\sin.cpp
+
+1460392266 source:f:\github\projet-cplusplus-igm\console\src\somme.cpp
+
+1460392266 source:f:\github\projet-cplusplus-igm\console\src\superieur.cpp
+
+1460400542 source:f:\github\projet-cplusplus-igm\console\src\unaire.cpp
+	"unaire.h"
+
+1460406710 f:\github\projet-cplusplus-igm\console\include\unaire.h
+	"expression.h"
+	"binaire.h"
+
+1460405201 source:f:\github\projet-cplusplus-igm\console\src\variable.cpp
+	"variable.h"
+
+1460409086 source:f:\github\projet-cplusplus-igm\console\main.cpp
+	<iostream>
+	<fstream>
+	"math.h"
+	"expression.h"
+	"constante.h"
+	"binaire.h"
+	"unaire.h"
+	"variable.h"
+	"affectation.h"
+	"conditionnel.h"
+	"ifThenElse.h"
+	"boucle.h"
+	"bloc.h"
+
+1460406742 f:\github\projet-cplusplus-igm\console\include\ifthenelse.h
+	"expression.h"
+	"binaire.h"
+
+1460407753 f:\github\projet-cplusplus-igm\console\include\boucle.h
+	"expression.h"
+
+1460406873 f:\github\projet-cplusplus-igm\console\include\bloc.h
+	<list>
+	"expression.h"
+	"binaire.h"
+
+1460407251 source:f:\github\projet-cplusplus-igm\console\src\bloc.cpp
+	"bloc.h"
+
+1460407504 source:f:\github\projet-cplusplus-igm\console\src\boucle.cpp
+	"boucle.h"
+
+1460407174 source:f:\github\projet-cplusplus-igm\console\src\ifthenelse.cpp
+	"ifThenElse.h"
+

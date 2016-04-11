@@ -2,12 +2,12 @@
 
 IfThenElse::IfThenElse()
 {
-    //ctor
+	//ctor
 }
 
 IfThenElse::~IfThenElse()
 {
-    //dtor
+	//dtor
 }
 
 IfThenElse::IfThenElse(Binaire* cond, Expression* exp1, Expression* exp2) : Expression("if"), _cond(cond), _exp1(exp1), _exp2(exp2)
@@ -18,9 +18,9 @@ IfThenElse::IfThenElse(Binaire* cond, Expression* exp1, Expression* exp2) : Expr
 
 string IfThenElse::afficher() const
 {
-   // ostringstream os;
+	// ostringstream os;
 
-	return "if (" + _cond->afficher() + ") { \n  " + _exp1->afficher() + "\n }else{\n" + _exp2->afficher() + "\n}";
+	return "if (" + _cond->afficher() + ") {\n\t" + _exp1->afficher() + "\n} else {\n\t" + _exp2->afficher() + "\n}";
 	//return os.str();
 
 
@@ -33,12 +33,12 @@ Expression* IfThenElse::clone() const
 
 Expression* IfThenElse::deriver(const string &var)
 {
-
+	return 0;
 }
 
 Expression * IfThenElse::simplifier()
 {
-
+	return 0;
 }
 
 ostream & operator << (ostream & os, const IfThenElse & conditionnel)
@@ -49,10 +49,10 @@ ostream & operator << (ostream & os, const IfThenElse & conditionnel)
 
 double IfThenElse::eval() const
 {
-    if (_cond->eval())
+	if (_cond->eval())
 
-        return _exp1->eval();
-    else
-        return _exp2->eval();
-   // return (((bool)_cond->eval()) ? _exp1->eval() : _exp2->eval());
+		return _exp1->eval();
+	else
+		return _exp2->eval();
+	// return (((bool)_cond->eval()) ? _exp1->eval() : _exp2->eval());
 }

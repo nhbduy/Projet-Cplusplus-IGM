@@ -2,36 +2,36 @@
 
 Unaire::Unaire()
 {
-    //ctor
+	//ctor
 }
 
-Unaire::Unaire( Expression *op, const string& name):Expression(name),_op(op)
+Unaire::Unaire(Expression *op, const string& name) :Expression(name), _op(op)
 {
 }
 
 Unaire::~Unaire()
 {
-    //dtor
+	//dtor
 }
 
 string Unaire::afficher()
 {
-return Expression::_nom+"("+ _op->afficher() +")";
+	return Expression::_nom + "(" + _op->afficher() + ")";
 }
 
 Sin::Sin()
 {
-    //ctor
+	//ctor
 }
 
-Sin::Sin(Expression *exp, const string&name):Unaire(exp,"sin("+exp->afficher()+")")
+Sin::Sin(Expression *exp, const string&name) :Unaire(exp, "sin(" + exp->afficher() + ")")
 {
 
 }
 
 Sin::~Sin()
 {
-    //dtor
+	//dtor
 }
 
 Expression* Sin::clone() const
@@ -41,33 +41,34 @@ Expression* Sin::clone() const
 
 double Sin::eval() const
 {
-    return sin(_op->eval());
+	return sin(_op->eval());
 }
 
 Expression* Sin::deriver(const string& var)
 {
-    return new Produit(_op->deriver(var),new Cos(_op));
+	//return new Produit(_op->deriver(var), new Cos(_op));
+	return 0;
 }
 
 Expression *Sin::simplifier()
 {
-    return new Sin(_op->simplifier());
+	return new Sin(_op->simplifier());
 }
 
 
 Cos::Cos()
 {
-    //ctor
+	//ctor
 }
 
-Cos::Cos(Expression *exp, const string&name):Unaire(exp,"cos("+exp->afficher()+")")
+Cos::Cos(Expression *exp, const string&name) :Unaire(exp, "cos(" + exp->afficher() + ")")
 {
 
 }
 
 Cos::~Cos()
 {
-    //dtor
+	//dtor
 }
 
 Expression* Cos::clone() const
@@ -78,32 +79,33 @@ Expression* Cos::clone() const
 
 double Cos::eval() const
 {
-    return cos(_op->eval());
+	return cos(_op->eval());
 }
 
 Expression *Cos::deriver(const string& var)
 {
-    return new Produit(_op->deriver(var),new Sin(_op));
+	//return new Produit(_op->deriver(var), new Sin(_op));
+	return 0;
 }
 
 Expression *Cos::simplifier()
 {
-    return new Cos(_op->simplifier());
+	return new Cos(_op->simplifier());
 }
 
 Exponentielle::Exponentielle()
 {
-    //ctor
+	//ctor
 }
 
-Exponentielle::Exponentielle(Expression *exp, Expression *pow, const string&name):Unaire(exp,"("+exp->afficher()+")^("+pow->afficher()+")"),_exp(exp),_pow(pow)
+Exponentielle::Exponentielle(Expression *exp, Expression *pow, const string&name) :Unaire(exp, "(" + exp->afficher() + ")^(" + pow->afficher() + ")"), _exp(exp), _pow(pow)
 {
 
 }
 
 Exponentielle::~Exponentielle()
 {
-    //dtor
+	//dtor
 }
 
 Expression* Exponentielle::clone() const
@@ -114,27 +116,28 @@ Expression* Exponentielle::clone() const
 
 double Exponentielle::eval() const
 {
-    return pow(_exp->eval(),_pow->eval());
+	return pow(_exp->eval(), _pow->eval());
 }
 
 Expression* Exponentielle::deriver(const string &var)
 {
-
+	//return new Produit(_pow->deriver(var), new Exponentielle(_exp(exp), _pow(pow-1));
+	return 0;
 }
 
 Expression *Exponentielle::simplifier()
 {
-    return new Exponentielle(_op->simplifier(),_op->simplifier());
+	return new Exponentielle(_op->simplifier(), _op->simplifier());
 }
 
 
 string Exponentielle::afficher() const
 {
-    return ( "("+_exp->afficher()+")^("+_pow->afficher()+")");
+	return ("(" + _exp->afficher() + ")^(" + _pow->afficher() + ")");
 }
 
 ostream& operator<<(ostream& os, const Exponentielle & a)
 {
-    os << a.afficher();
-    return os;
+	os << a.afficher();
+	return os;
 }

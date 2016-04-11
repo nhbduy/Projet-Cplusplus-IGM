@@ -2,22 +2,22 @@
 map<string, double> Variable::_variables;
 Variable::Variable()
 {
-    //ctor
+	//ctor
 }
 
-Variable::Variable(const string& id, double valeur) : Expression(id),_id(id)
+Variable::Variable(const string& id, double valeur) : Expression(id), _id(id)
 {
-    _variables[_id] = valeur;
+	_variables[_id] = valeur;
 }
 
-Variable::Variable(const string& id):Expression(id), _id(id)
+Variable::Variable(const string& id) : Expression(id), _id(id)
 {
-    _variables[_id] = 0;
+	_variables[_id] = 0;
 }
 
 Variable::~Variable()
 {
-    //dtor
+	//dtor
 }
 
 Expression* Variable::clone() const
@@ -27,22 +27,22 @@ Expression* Variable::clone() const
 
 double Variable::eval() const
 {
-    return _variables[_id];
+	return _variables[_id];
 }
 
 Expression *Variable::simplifier()
 {
-
+	return 0;
 }
 
 Expression* Variable::deriver(const string &var)
 {
-    double value=0.0;
-    if (var==this->afficher())
-        {
-            value = 1.0;
-        }
-    return new Constante(value);
+	double value = 0.0;
+	if (var == this->afficher())
+	{
+		value = 1.0;
+	}
+	return new Constante(value);
 
 }
 
@@ -53,8 +53,8 @@ string Variable::afficher() const
 
 double Variable::set(double valeur)
 {
-    _variables[_id] = valeur;
-    return valeur;
+	_variables[_id] = valeur;
+	return valeur;
 }
 
 ostream & operator << (ostream & os, const Variable & variable)

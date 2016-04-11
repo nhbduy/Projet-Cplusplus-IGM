@@ -2,16 +2,17 @@
 
 Binaire::Binaire()
 {
-    //ctor
+	//ctor
 }
 
 Binaire::~Binaire()
-{
-    delete _gauche;
-    delete _droite;
+{	
+	//dtor
+	//delete _gauche;
+	//delete _droite;
 }
 
-Binaire::Binaire(Expression *op1, Expression *op2, const string& name):Expression(name),_gauche(op1), _droite(op2)
+Binaire::Binaire(Expression *op1, Expression *op2, const string& name) :Expression(name), _gauche(op1), _droite(op2)
 {
 
 }
@@ -19,44 +20,44 @@ Binaire::Binaire(Expression *op1, Expression *op2, const string& name):Expressio
 
 string Binaire::afficher()
 {
-    return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
+	return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
 }
 
 Somme::Somme()
 {
-    //ctor
+	//ctor
 }
 
 Somme::~Somme()
 {
-    //dtor
+	//dtor
 }
 
-Somme::Somme(Expression *exp1, Expression *exp2, const string& name):Binaire(exp1,exp2,"+")
+Somme::Somme(Expression *exp1, Expression *exp2, const string& name) :Binaire(exp1, exp2, " + ")
 {
 
 }
 
 double Somme::eval() const
 {
-    //cout << _gauche->afficher()+"\n";
-    //cout << _droite->afficher();
-    return (_gauche->eval()+_droite->eval());
+	//cout << _gauche->afficher()+"\n";
+	//cout << _droite->afficher();
+	return (_gauche->eval() + _droite->eval());
 }
 
 Expression *Somme::deriver(const string &var)
 {
-    return new Somme( _gauche->deriver(var), _droite->deriver(var));
+	return new Somme(_gauche->deriver(var), _droite->deriver(var));
 }
 
 Expression * Somme::simplifier()
 {
-
+	return 0;
 }
 
 string Somme::afficher() const
 {
-     return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
+	return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
 }
 
 
@@ -67,45 +68,45 @@ Expression *Somme::clone() const
 
 ostream& operator<<(ostream& os, const Somme & a)
 {
-    os << a.afficher();
-    return os;
+	os << a.afficher();
+	return os;
 }
 
 Difference::Difference()
 {
-    //ctor
+	//ctor
 }
 
 Difference::~Difference()
 {
-    //dtor
+	//dtor
 }
 
-Difference::Difference(Expression *exp1, Expression *exp2, const string& name):Binaire(exp1,exp2,"-")
+Difference::Difference(Expression *exp1, Expression *exp2, const string& name) :Binaire(exp1, exp2, " - ")
 {
 
 }
 
 double Difference::eval() const
 {
-    //cout << _gauche->afficher()+"\n";
-    //cout << _droite->afficher();
-    return (_gauche->eval() - _droite->eval());
+	//cout << _gauche->afficher()+"\n";
+	//cout << _droite->afficher();
+	return (_gauche->eval() - _droite->eval());
 }
 
 Expression *Difference::deriver(const string &var)
 {
-    return new Difference( _gauche->deriver(var),_droite->deriver(var));
+	return new Difference(_gauche->deriver(var), _droite->deriver(var));
 }
 
 Expression * Difference::simplifier()
 {
-
+	return 0;
 }
 
 string Difference::afficher() const
 {
-     return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
+	return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
 }
 
 
@@ -116,40 +117,40 @@ Expression *Difference::clone() const
 
 ostream& operator<<(ostream& os, const Difference & a)
 {
-    os << a.afficher();
-    return os;
+	os << a.afficher();
+	return os;
 }
 
 Produit::Produit()
 {
-    //ctor
+	//ctor
 }
 
 Produit::~Produit()
 {
-    //dtor
+	//dtor
 }
 
-Produit::Produit(Expression *exp1, Expression *exp2, const string& name):Binaire(exp1,exp2,"*")
+Produit::Produit(Expression *exp1, Expression *exp2, const string& name) :Binaire(exp1, exp2, " * ")
 {
 
 }
 
 double Produit::eval() const
 {
-    //cout << _gauche->afficher()+"\n";
-    //cout << _droite->afficher();
-    return (_gauche->eval()*_droite->eval());
+	//cout << _gauche->afficher()+"\n";
+	//cout << _droite->afficher();
+	return (_gauche->eval()*_droite->eval());
 }
 
 Expression* Produit::deriver(const string &var)
 {
-    return new Somme( new Produit(_gauche->deriver(var),_droite ), new Produit(_gauche, _droite->deriver(var)));
+	return new Somme(new Produit(_gauche->deriver(var), _droite), new Produit(_gauche, _droite->deriver(var)));
 }
 
 Expression * Produit::simplifier()
 {
-
+	return 0;
 }
 
 Expression* Produit::clone() const
@@ -159,44 +160,44 @@ Expression* Produit::clone() const
 
 string Produit::afficher() const
 {
-     return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
+	return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
 }
 
 ostream& operator<<(ostream& os, const Produit & a)
 {
-    os << a.afficher();
-    return os;
+	os << a.afficher();
+	return os;
 }
 
 
 Division::Division()
 {
-    //ctor
+	//ctor
 }
 
 Division::~Division()
 {
-    //dtor
+	//dtor
 }
 
-Division::Division(Expression *exp1, Expression *exp2, const string& name):Binaire(exp1,exp2,"/")
+Division::Division(Expression *exp1, Expression *exp2, const string& name) :Binaire(exp1, exp2, " / ")
 {
 
 }
 
 double Division::eval() const
 {
-    return (_gauche->eval() / _droite->eval());
+	return (_gauche->eval() / _droite->eval());
 }
 
 Expression* Division::deriver(const string &var)
 {
-    return new Division( new Difference( new Produit(_gauche->deriver(var),_droite ), new Produit(_gauche, _droite->deriver(var))) , new Produit(_droite, _droite));
+	return new Division(new Difference(new Produit(_gauche->deriver(var), _droite), new Produit(_gauche, _droite->deriver(var))), new Produit(_droite, _droite));
 }
 
 Expression * Division::simplifier()
 {
-
+	return 0;
 }
 
 Expression* Division::clone() const
@@ -206,50 +207,50 @@ Expression* Division::clone() const
 
 string Division::afficher() const
 {
-     return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
+	return "(" + _gauche->afficher() + Expression::_nom + _droite->afficher() + ")";
 }
 
 ostream& operator<<(ostream& os, const Division & a)
 {
-    os << a.afficher();
-    return os;
+	os << a.afficher();
+	return os;
 }
 
 Superieur::Superieur()
 {
-    //ctor
+	//ctor
 }
 
 Superieur::~Superieur()
 {
-    //dtor
+	//dtor
 }
 
-Superieur::Superieur(Expression *exp1, Expression *exp2):Binaire(exp1,exp2,">")
+Superieur::Superieur(Expression *exp1, Expression *exp2) :Binaire(exp1, exp2, " > ")
 {
 
 }
 
 double Superieur::eval() const
 {
-    if(_gauche->eval() > _droite->eval())
-        return 1;
-    return 0;
+	if (_gauche->eval() > _droite->eval())
+		return 1;
+	return 0;
 }
 
 Expression* Superieur::deriver(const string &var)
 {
-
+	return 0;
 }
 
 Expression * Superieur::simplifier()
 {
-
+	return 0;
 }
 
 string Superieur::afficher() const
 {
-    return ( "(" + _gauche->afficher()+ " > " + _droite->afficher() + ")");
+	return ("(" + _gauche->afficher() + " > " + _droite->afficher() + ")");
 }
 
 Expression* Superieur::clone() const
@@ -259,45 +260,45 @@ Expression* Superieur::clone() const
 
 ostream& operator<<(ostream& os, const Superieur & a)
 {
-    os << a.afficher();
-    return os;
+	os << a.afficher();
+	return os;
 }
 
 Inferieur::Inferieur()
 {
-    //ctor
+	//ctor
 }
 
 Inferieur::~Inferieur()
 {
-    //dtor
+	//dtor
 }
 
-Inferieur::Inferieur(Expression *exp1, Expression *exp2):Binaire(exp1,exp2,"<")
+Inferieur::Inferieur(Expression *exp1, Expression *exp2) :Binaire(exp1, exp2, " < ")
 {
 
 }
 
 double Inferieur::eval() const
 {
-    if(_gauche->eval() < _droite->eval())
-        return 1;
-    return 0;
+	if (_gauche->eval() < _droite->eval())
+		return 1;
+	return 0;
 }
 
 Expression* Inferieur::deriver(const string &var)
 {
-
+	return 0;
 }
 
 Expression * Inferieur::simplifier()
 {
-
+	return 0;
 }
 
 string Inferieur::afficher() const
 {
-    return ( "(" + _gauche->afficher()+ " <" + _droite->afficher() + ")");
+	return ("(" + _gauche->afficher() + " <" + _droite->afficher() + ")");
 }
 
 Expression* Inferieur::clone() const
@@ -307,45 +308,45 @@ Expression* Inferieur::clone() const
 
 ostream& operator<<(ostream& os, const Inferieur & a)
 {
-    os << a.afficher();
-    return os;
+	os << a.afficher();
+	return os;
 }
 
 SuperieurEgal::SuperieurEgal()
 {
-    //ctor
+	//ctor
 }
 
 SuperieurEgal::~SuperieurEgal()
 {
-    //dtor
+	//dtor
 }
 
-SuperieurEgal::SuperieurEgal(Expression *exp1, Expression *exp2):Binaire(exp1,exp2,">=")
+SuperieurEgal::SuperieurEgal(Expression *exp1, Expression *exp2) :Binaire(exp1, exp2, " >= ")
 {
 
 }
 
 double SuperieurEgal::eval() const
 {
-    if(_gauche->eval() >= _droite->eval())
-        return 1;
-    return 0;
+	if (_gauche->eval() >= _droite->eval())
+		return 1;
+	return 0;
 }
 
 Expression* SuperieurEgal::deriver(const string &var)
 {
-
+	return 0;
 }
 
 Expression * SuperieurEgal::simplifier()
 {
-
+	return 0;
 }
 
 string SuperieurEgal::afficher() const
 {
-    return ( "(" + _gauche->afficher()+ " >= " + _droite->afficher() + ")");
+	return ("(" + _gauche->afficher() + " >= " + _droite->afficher() + ")");
 }
 
 Expression* SuperieurEgal::clone() const
@@ -355,45 +356,45 @@ Expression* SuperieurEgal::clone() const
 
 ostream& operator<<(ostream& os, const SuperieurEgal & a)
 {
-    os << a.afficher();
-    return os;
+	os << a.afficher();
+	return os;
 }
 
 InferieurEgal::InferieurEgal()
 {
-    //ctor
+	//ctor
 }
 
 InferieurEgal::~InferieurEgal()
 {
-    //dtor
+	//dtor
 }
 
-InferieurEgal::InferieurEgal(Expression *exp1, Expression *exp2):Binaire(exp1,exp2,"<=")
+InferieurEgal::InferieurEgal(Expression *exp1, Expression *exp2) :Binaire(exp1, exp2, " <= ")
 {
 
 }
 
 double InferieurEgal::eval() const
 {
-    if(_gauche->eval() <= _droite->eval())
-        return 1;
-    return 0;
+	if (_gauche->eval() <= _droite->eval())
+		return 1;
+	return 0;
 }
 
 Expression* InferieurEgal::deriver(const string &var)
 {
-
+	return 0;
 }
 
 Expression *InferieurEgal::simplifier()
 {
-
+	return 0;
 }
 
 string InferieurEgal::afficher() const
 {
-    return ( "(" + _gauche->afficher()+ " <= " + _droite->afficher() + ")");
+	return ("(" + _gauche->afficher() + " <= " + _droite->afficher() + ")");
 }
 
 Expression* InferieurEgal::clone() const
@@ -403,6 +404,6 @@ Expression* InferieurEgal::clone() const
 
 ostream& operator<<(ostream& os, const InferieurEgal & a)
 {
-    os << a.afficher();
-    return os;
+	os << a.afficher();
+	return os;
 }
