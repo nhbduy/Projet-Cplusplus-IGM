@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-//#include "expression.h"
+#include "expression.h"
 #include "constante.h"
 //#include "binaire.h"    // contient les sous-classes de Binaire : Somme, Produit, Superieur ....
 //#include "unaire.h"     // contient les sous-classes de Unaire : COs, Sin ....
