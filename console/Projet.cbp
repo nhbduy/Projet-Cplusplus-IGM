@@ -36,28 +36,23 @@
 		</Compiler>
 		<Unit filename="include/affectation.h" />
 		<Unit filename="include/binaire.h" />
+		<Unit filename="include/bloc.h" />
+		<Unit filename="include/boucle.h" />
 		<Unit filename="include/conditionnel.h" />
 		<Unit filename="include/constante.h" />
-		<Unit filename="include/cos.h" />
 		<Unit filename="include/expression.h" />
-		<Unit filename="include/fonction.h" />
-		<Unit filename="include/produit.h" />
-		<Unit filename="include/sin.h" />
-		<Unit filename="include/somme.h" />
-		<Unit filename="include/superieur.h" />
+		<Unit filename="include/ifThenElse.h" />
 		<Unit filename="include/unaire.h" />
 		<Unit filename="include/variable.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/affectation.cpp" />
 		<Unit filename="src/binaire.cpp" />
+		<Unit filename="src/bloc.cpp" />
+		<Unit filename="src/boucle.cpp" />
 		<Unit filename="src/conditionnel.cpp" />
 		<Unit filename="src/constante.cpp" />
-		<Unit filename="src/cos.cpp" />
 		<Unit filename="src/expression.cpp" />
-		<Unit filename="src/produit.cpp" />
-		<Unit filename="src/sin.cpp" />
-		<Unit filename="src/somme.cpp" />
-		<Unit filename="src/superieur.cpp" />
+		<Unit filename="src/ifThenElse.cpp" />
 		<Unit filename="src/unaire.cpp" />
 		<Unit filename="src/variable.cpp" />
 		<Extensions>
