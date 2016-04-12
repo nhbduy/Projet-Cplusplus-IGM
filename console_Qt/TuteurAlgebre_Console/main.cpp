@@ -507,6 +507,6 @@ int main(int argc, char** argv)
 {
     QApplication application(argc, argv);
     TEST_CPP w;
-    w.show();
+
     return application.exec();
 }
