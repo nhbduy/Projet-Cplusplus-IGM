@@ -29,7 +29,8 @@ SOURCES += main.cpp \
     expression.cpp \
     ifthenelse.cpp \
     unaire.cpp \
-    variable.cpp
+    variable.cpp \
+    test.cpp
 
 HEADERS += \
     expression.h \
