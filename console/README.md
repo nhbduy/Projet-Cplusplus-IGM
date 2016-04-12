@@ -1,2 +1,0 @@
-# TutorAlgebra
-Program in C++
