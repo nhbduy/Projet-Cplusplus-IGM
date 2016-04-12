@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1460456745 source:f:\github\projet-cplusplus-igm\client-serveur\main.cpp
+
+1460457818 source:f:\github\projet-cplusplus-igm\client-serveur\resource\chat.rc
+	<windows.h>
+	"..\include\chat.h"
+
+1460457259 f:\github\projet-cplusplus-igm\client-serveur\include\chat.h
+
+1460457813 source:f:\github\projet-cplusplus-igm\client-serveur\src\chat.cpp
+	<windows.h>
+	<windowsx.h>
+	<commctrl.h>
+	<winsock.h>
+	"..\include\chat.h"
+
