@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="TuteurAlgebre_Socket" />
+		<Option title="TuteurAlgebre_Client" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/TuteurAlgebre_Socket" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/TuteurAlgebre_Client" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -15,12 +15,12 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="C:/Program Files (x86)/CodeBlocks/MinGW/lib/libws2_32.a" />
-					<Add library="C:/Program Files (x86)/CodeBlocks/MinGW/lib/libwsock32.a" />
+					<Add library="lib/libws2_32.a" />
+					<Add library="lib/libwsock32.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/TuteurAlgebre_Socket" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/TuteurAlgebre_Client" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -29,8 +29,8 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="C:/Program Files (x86)/CodeBlocks/MinGW/lib/libws2_32.a" />
-					<Add library="C:/Program Files (x86)/CodeBlocks/MinGW/lib/libwsock32.a" />
+					<Add library="lib/libws2_32.a" />
+					<Add library="lib/libwsock32.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -38,16 +38,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/client.h" />
-		<Unit filename="include/serveur.h" />
-		<Unit filename="resources/client.rc">
-			<Option compilerVar="WINDRES" />
-		</Unit>
-		<Unit filename="resources/serveur.rc">
-			<Option compilerVar="WINDRES" />
-		</Unit>
+		<Linker>
+			<Add library="lib/libws2_32.a" />
+			<Add library="lib/libwsock32.a" />
+		</Linker>
 		<Unit filename="src/client.cpp" />
-		<Unit filename="src/serveur.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
