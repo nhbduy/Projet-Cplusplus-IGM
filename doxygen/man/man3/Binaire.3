@@ -1,0 +1,97 @@
+.TH "Binaire" 3 "Tue Apr 12 2016" "Projet-Cplusplus-IGM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Binaire \- La classe \fBBinaire\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <binaire\&.h>\fP
+.PP
+Inherits \fBExpression\fP\&.
+.PP
+Inherited by \fBAffectation\fP, \fBDifference\fP, \fBDivision\fP, \fBInferieur\fP, \fBInferieurEgal\fP, \fBProduit\fP, \fBSomme\fP, \fBSuperieur\fP, and \fBSuperieurEgal\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBinaire\fP ()"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "virtual \fB~Binaire\fP ()"
+.br
+.RI "\fIDestructeur Destructeur de la classe \fBBinaire\fP\&. \fP"
+.ti -1c
+.RI "\fBBinaire\fP (\fBExpression\fP *, \fBExpression\fP *, const string &name='binaire')"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "virtual string \fBafficher\fP ()"
+.br
+.RI "\fIAffiche l'expression Methode qui permet d'afficher l'expression\&. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBExpression\fP * \fB_gauche\fP"
+.br
+.ti -1c
+.RI "\fBExpression\fP * \fB_droite\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+La classe \fBBinaire\fP\&. 
+
+Cette classe représente les opérateurs binaires 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Binaire::Binaire ()"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBBinaire\fP 
+.SS "Binaire::~Binaire ()\fC [virtual]\fP"
+
+.PP
+Destructeur Destructeur de la classe \fBBinaire\fP\&. 
+.SS "Binaire::Binaire (\fBExpression\fP * op1, \fBExpression\fP * op2, const string & name = \fC'binaire'\fP)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBBinaire\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexp1\fP : opérande gauche 
+.br
+\fIexp2\fP : opérande droite 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "string Binaire::afficher ()\fC [virtual]\fP"
+
+.PP
+Affiche l'expression Methode qui permet d'afficher l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le string d'expression 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBExpression\fP * Binaire::_droite\fC [protected]\fP"
+
+.SS "\fBExpression\fP* Binaire::_gauche\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Projet-Cplusplus-IGM from the source code\&.

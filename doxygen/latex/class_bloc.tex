@@ -1,0 +1,216 @@
+\hypertarget{class_bloc}{}\section{Bloc Class Reference}
+\label{class_bloc}\index{Bloc@{Bloc}}
+
+
+La classe \hyperlink{class_bloc}{Bloc}.  
+
+
+
+
+{\ttfamily \#include $<$bloc.\+h$>$}
+
+Inheritance diagram for Bloc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bloc}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bloc_ae3ac5cbad6363c4ab56262a94d0b982e}{Bloc} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_bloc_a1f40a68b1acb741fc91e07bbaa61dc22}{$\sim$\+Bloc} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. \end{DoxyCompactList}\item 
+\hyperlink{class_bloc_aabf8e5cb40aa177dfb12ebc79e9a2550}{Bloc} (const string \&, \hyperlink{class_expression}{Expression} $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_bloc_a15c01c71bdad5b42c2d79102a19ca5aa}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression \end{DoxyCompactList}\item 
+string \hyperlink{class_bloc_acfe2075a0f69de800f447c1bc0aee63f}{afficher} () const 
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+double \hyperlink{class_bloc_a8847a4df7adf319e48ed7a277347ac80}{eval} () const 
+\begin{DoxyCompactList}\small\item\em Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_bloc_ad8547a697be0d0829fbf13d4f6623376}{deriver} (const string \&)
+\begin{DoxyCompactList}\small\item\em Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_bloc_afd5d437c0b31109b90946d183a150642}{simplifier} ()
+\begin{DoxyCompactList}\small\item\em Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+void \hyperlink{class_bloc_ab3698ded3f7a5765c15f0f18a2ce5e13}{add} (\hyperlink{class_expression}{Expression} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_bloc_a3154373e6bca7fa42a1832b56f4681fa}{operator$<$$<$} (ostream \&os, const \hyperlink{class_bloc}{Bloc} \&)
+\begin{DoxyCompactList}\small\item\em operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_bloc}{Bloc}. 
+
+Cette classe représente une séquence d’instructions (expression) sur le même modèle 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Bloc@{Bloc}!Bloc@{Bloc}}
+\index{Bloc@{Bloc}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{Bloc()}{Bloc()}}]{\setlength{\rightskip}{0pt plus 5cm}Bloc\+::\+Bloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bloc_ae3ac5cbad6363c4ab56262a94d0b982e}{}\label{class_bloc_ae3ac5cbad6363c4ab56262a94d0b982e}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_bloc}{Bloc} \index{Bloc@{Bloc}!````~Bloc@{$\sim$\+Bloc}}
+\index{````~Bloc@{$\sim$\+Bloc}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{$\sim$\+Bloc()}{~Bloc()}}]{\setlength{\rightskip}{0pt plus 5cm}Bloc\+::$\sim$\+Bloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_bloc_a1f40a68b1acb741fc91e07bbaa61dc22}{}\label{class_bloc_a1f40a68b1acb741fc91e07bbaa61dc22}
+
+
+Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. 
+
+\index{Bloc@{Bloc}!Bloc@{Bloc}}
+\index{Bloc@{Bloc}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{Bloc(const string \&, Expression $\ast$)}{Bloc(const string &, Expression *)}}]{\setlength{\rightskip}{0pt plus 5cm}Bloc\+::\+Bloc (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{nom, }
+\item[{{\bf Expression} $\ast$}]{exp1}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bloc_aabf8e5cb40aa177dfb12ebc79e9a2550}{}\label{class_bloc_aabf8e5cb40aa177dfb12ebc79e9a2550}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_bloc}{Bloc}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & \+: nom du bloc \\
+\hline
+{\em expression} & \+: l\textquotesingle{}expression \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Bloc@{Bloc}!add@{add}}
+\index{add@{add}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{add(\+Expression $\ast$)}{add(Expression *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bloc\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf Expression} $\ast$}]{expression}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bloc_ab3698ded3f7a5765c15f0f18a2ce5e13}{}\label{class_bloc_ab3698ded3f7a5765c15f0f18a2ce5e13}
+\index{Bloc@{Bloc}!afficher@{afficher}}
+\index{afficher@{afficher}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{afficher() const }{afficher() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Bloc\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_bloc_acfe2075a0f69de800f447c1bc0aee63f}{}\label{class_bloc_acfe2075a0f69de800f447c1bc0aee63f}
+
+
+Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le string d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_expression_a953c7de0302331023987a2fff895cb85}{Expression}.
+
+\index{Bloc@{Bloc}!clone@{clone}}
+\index{clone@{clone}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Bloc\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_bloc_a15c01c71bdad5b42c2d79102a19ca5aa}{}\label{class_bloc_a15c01c71bdad5b42c2d79102a19ca5aa}
+
+
+clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression cloné 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}{Expression}.
+
+\index{Bloc@{Bloc}!deriver@{deriver}}
+\index{deriver@{deriver}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{deriver(const string \&)}{deriver(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Bloc\+::deriver (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_bloc_ad8547a697be0d0829fbf13d4f6623376}{}\label{class_bloc_ad8547a697be0d0829fbf13d4f6623376}
+
+
+Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression derivé 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}{Expression}.
+
+\index{Bloc@{Bloc}!eval@{eval}}
+\index{eval@{eval}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{eval() const }{eval() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Bloc\+::eval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_bloc_a8847a4df7adf319e48ed7a277347ac80}{}\label{class_bloc_a8847a4df7adf319e48ed7a277347ac80}
+
+
+Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le valeur d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a5481c36265e11eff513df87bbc5a1d33}{Expression}.
+
+\index{Bloc@{Bloc}!simplifier@{simplifier}}
+\index{simplifier@{simplifier}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{simplifier()}{simplifier()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Bloc\+::simplifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_bloc_afd5d437c0b31109b90946d183a150642}{}\label{class_bloc_afd5d437c0b31109b90946d183a150642}
+
+
+Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression simplifié 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a319d06d43ead325c835181419061ae0b}{Expression}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Bloc@{Bloc}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Bloc@{Bloc}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Bloc} \&}]{bloc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_bloc_a3154373e6bca7fa42a1832b56f4681fa}{}\label{class_bloc_a3154373e6bca7fa42a1832b56f4681fa}
+
+
+operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{bloc_8h}{bloc.\+h}\item 
+src/\hyperlink{bloc_8cpp}{bloc.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,256 @@
+\hypertarget{class_variable}{}\section{Variable Class Reference}
+\label{class_variable}\index{Variable@{Variable}}
+
+
+La classe \hyperlink{class_variable}{Variable}.  
+
+
+
+
+{\ttfamily \#include $<$variable.\+h$>$}
+
+Inheritance diagram for Variable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_variable}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_variable_a601d7302bd602908e852db38ab066fb8}{Variable} (const string \&, double)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_variable_a5716c9dcafcc8cf59a6f6b5dac3ec7a2}{Variable} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_variable_a96ce3df790172b8ad9e7bbf540d38bf3}{Variable} (const string \&)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+double \hyperlink{class_variable_a4bb6309ec2c117c5c050ca89488daf2e}{eval} () const 
+\begin{DoxyCompactList}\small\item\em Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_variable_ae7e8e77718b47b10f7633756715aa986}{deriver} (const string \&)
+\begin{DoxyCompactList}\small\item\em Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_variable_a60c5ae49c674293b68646342c9de242f}{simplifier} ()
+\begin{DoxyCompactList}\small\item\em Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_variable_acfc14d0ad77af53025f890b4d3a7745a}{$\sim$\+Variable} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. \end{DoxyCompactList}\item 
+string \hyperlink{class_variable_a2ae42f5b49f09c593be81f301462f1b3}{afficher} () const 
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_variable_a0862fa73db06e1c7f6fdd82dd7c3fc24}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression \end{DoxyCompactList}\item 
+double \hyperlink{class_variable_a1edee492eaac2d45905122190d212060}{set} (double)
+\begin{DoxyCompactList}\small\item\em Affecte la une valeur a une variable Methode qui permet d\textquotesingle{}affecter une valeur a un variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_variable_a29b2557b27e881585651e459d22e5feb}{effacer\+Memoire} ()
+\begin{DoxyCompactList}\small\item\em Efface la memoire Methode qui permet d\textquotesingle{}effacer le contenu de la mémoire (toutes les variables) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_variable_a627a5fdd79e8f7701199491a08c1593d}{operator$<$$<$} (ostream \&, const \hyperlink{class_variable}{Variable} \&)
+\begin{DoxyCompactList}\small\item\em operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_variable}{Variable}. 
+
+Cette classe représente les variables. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Variable@{Variable}!Variable@{Variable}}
+\index{Variable@{Variable}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{Variable(const string \&, double)}{Variable(const string &, double)}}]{\setlength{\rightskip}{0pt plus 5cm}Variable\+::\+Variable (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{id, }
+\item[{double}]{valeur}
+\end{DoxyParamCaption}
+)}\hypertarget{class_variable_a601d7302bd602908e852db38ab066fb8}{}\label{class_variable_a601d7302bd602908e852db38ab066fb8}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_variable}{Variable}
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: le nom \\
+\hline
+{\em val} & \+: le valeur \\
+\hline
+\end{DoxyParams}
+\index{Variable@{Variable}!Variable@{Variable}}
+\index{Variable@{Variable}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{Variable()}{Variable()}}]{\setlength{\rightskip}{0pt plus 5cm}Variable\+::\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_variable_a5716c9dcafcc8cf59a6f6b5dac3ec7a2}{}\label{class_variable_a5716c9dcafcc8cf59a6f6b5dac3ec7a2}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_variable}{Variable} \index{Variable@{Variable}!Variable@{Variable}}
+\index{Variable@{Variable}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{Variable(const string \&)}{Variable(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}Variable\+::\+Variable (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{class_variable_a96ce3df790172b8ad9e7bbf540d38bf3}{}\label{class_variable_a96ce3df790172b8ad9e7bbf540d38bf3}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_variable}{Variable}
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & \+: le nom \\
+\hline
+\end{DoxyParams}
+\index{Variable@{Variable}!````~Variable@{$\sim$\+Variable}}
+\index{````~Variable@{$\sim$\+Variable}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{$\sim$\+Variable()}{~Variable()}}]{\setlength{\rightskip}{0pt plus 5cm}Variable\+::$\sim$\+Variable (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_variable_acfc14d0ad77af53025f890b4d3a7745a}{}\label{class_variable_acfc14d0ad77af53025f890b4d3a7745a}
+
+
+Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Variable@{Variable}!afficher@{afficher}}
+\index{afficher@{afficher}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{afficher() const }{afficher() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Variable\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_variable_a2ae42f5b49f09c593be81f301462f1b3}{}\label{class_variable_a2ae42f5b49f09c593be81f301462f1b3}
+
+
+Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le string d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_expression_a953c7de0302331023987a2fff895cb85}{Expression}.
+
+\index{Variable@{Variable}!clone@{clone}}
+\index{clone@{clone}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Variable\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_variable_a0862fa73db06e1c7f6fdd82dd7c3fc24}{}\label{class_variable_a0862fa73db06e1c7f6fdd82dd7c3fc24}
+
+
+clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression cloné 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}{Expression}.
+
+\index{Variable@{Variable}!deriver@{deriver}}
+\index{deriver@{deriver}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{deriver(const string \&)}{deriver(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Variable\+::deriver (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_variable_ae7e8e77718b47b10f7633756715aa986}{}\label{class_variable_ae7e8e77718b47b10f7633756715aa986}
+
+
+Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression derivé 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}{Expression}.
+
+\index{Variable@{Variable}!effacer\+Memoire@{effacer\+Memoire}}
+\index{effacer\+Memoire@{effacer\+Memoire}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{effacer\+Memoire()}{effacerMemoire()}}]{\setlength{\rightskip}{0pt plus 5cm}void Variable\+::effacer\+Memoire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_variable_a29b2557b27e881585651e459d22e5feb}{}\label{class_variable_a29b2557b27e881585651e459d22e5feb}
+
+
+Efface la memoire Methode qui permet d\textquotesingle{}effacer le contenu de la mémoire (toutes les variables) 
+
+\index{Variable@{Variable}!eval@{eval}}
+\index{eval@{eval}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{eval() const }{eval() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Variable\+::eval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_variable_a4bb6309ec2c117c5c050ca89488daf2e}{}\label{class_variable_a4bb6309ec2c117c5c050ca89488daf2e}
+
+
+Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le valeur d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a5481c36265e11eff513df87bbc5a1d33}{Expression}.
+
+\index{Variable@{Variable}!set@{set}}
+\index{set@{set}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{set(double)}{set(double)}}]{\setlength{\rightskip}{0pt plus 5cm}double Variable\+::set (
+\begin{DoxyParamCaption}
+\item[{double}]{valeur}
+\end{DoxyParamCaption}
+)}\hypertarget{class_variable_a1edee492eaac2d45905122190d212060}{}\label{class_variable_a1edee492eaac2d45905122190d212060}
+
+
+Affecte la une valeur a une variable Methode qui permet d\textquotesingle{}affecter une valeur a un variable. 
+
+\index{Variable@{Variable}!simplifier@{simplifier}}
+\index{simplifier@{simplifier}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{simplifier()}{simplifier()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Variable\+::simplifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_variable_a60c5ae49c674293b68646342c9de242f}{}\label{class_variable_a60c5ae49c674293b68646342c9de242f}
+
+
+Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression simplifié 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a319d06d43ead325c835181419061ae0b}{Expression}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Variable@{Variable}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Variable@{Variable}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Variable} \&}]{variable}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_variable_a627a5fdd79e8f7701199491a08c1593d}{}\label{class_variable_a627a5fdd79e8f7701199491a08c1593d}
+
+
+operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{variable_8h}{variable.\+h}\item 
+src/\hyperlink{variable_8cpp}{variable.\+cpp}\end{DoxyCompactItemize}

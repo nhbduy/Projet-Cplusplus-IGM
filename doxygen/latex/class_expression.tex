@@ -1,0 +1,226 @@
+\hypertarget{class_expression}{}\section{Expression Class Reference}
+\label{class_expression}\index{Expression@{Expression}}
+
+
+La classe \hyperlink{class_expression}{Expression}.  
+
+
+
+
+{\ttfamily \#include $<$expression.\+h$>$}
+
+Inheritance diagram for Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{class_expression}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_expression_afcf87716bf0abfe8d414c92529e1564a}{Expression} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_expression_af356120f34980bb9b9b8f491f2b0913a}{Expression} (const string \&)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_expression_a3e99570b177da619eeb2c5787cbb148e}{$\sim$\+Expression} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. \end{DoxyCompactList}\item 
+virtual string \hyperlink{class_expression_a953c7de0302331023987a2fff895cb85}{afficher} () const 
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}{clone} () const  =0
+\begin{DoxyCompactList}\small\item\em clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression \end{DoxyCompactList}\item 
+virtual \hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}{deriver} (const string \&)=0
+\begin{DoxyCompactList}\small\item\em Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_expression_a319d06d43ead325c835181419061ae0b}{simplifier} ()=0
+\begin{DoxyCompactList}\small\item\em Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_expression_a5481c36265e11eff513df87bbc5a1d33}{eval} () const  =0
+\begin{DoxyCompactList}\small\item\em Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_expression_a6e403e2450258e3924aea969740205f4}{tout\+Liberer} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_expression_aac494983d284346f05c4386bdbc65e56}{\+\_\+nom}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_expression_afd5a48d1dc944d5594b5fba79c7ba263}{operator$<$$<$} (ostream \&, const \hyperlink{class_expression}{Expression} \&)
+\begin{DoxyCompactList}\small\item\em operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_expression}{Expression}. 
+
+Cette classe représente l\textquotesingle{}expression 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Expression@{Expression}!Expression@{Expression}}
+\index{Expression@{Expression}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{Expression()}{Expression()}}]{\setlength{\rightskip}{0pt plus 5cm}Expression\+::\+Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_expression_afcf87716bf0abfe8d414c92529e1564a}{}\label{class_expression_afcf87716bf0abfe8d414c92529e1564a}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_expression}{Expression} \index{Expression@{Expression}!Expression@{Expression}}
+\index{Expression@{Expression}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{Expression(const string \&)}{Expression(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}Expression\+::\+Expression (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{nom}
+\end{DoxyParamCaption}
+)}\hypertarget{class_expression_af356120f34980bb9b9b8f491f2b0913a}{}\label{class_expression_af356120f34980bb9b9b8f491f2b0913a}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_expression}{Expression}
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & \+: le nom d\textquotesingle{}expression \\
+\hline
+\end{DoxyParams}
+\index{Expression@{Expression}!````~Expression@{$\sim$\+Expression}}
+\index{````~Expression@{$\sim$\+Expression}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{$\sim$\+Expression()}{~Expression()}}]{\setlength{\rightskip}{0pt plus 5cm}Expression\+::$\sim$\+Expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_expression_a3e99570b177da619eeb2c5787cbb148e}{}\label{class_expression_a3e99570b177da619eeb2c5787cbb148e}
+
+
+Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Expression@{Expression}!afficher@{afficher}}
+\index{afficher@{afficher}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{afficher() const }{afficher() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Expression\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_expression_a953c7de0302331023987a2fff895cb85}{}\label{class_expression_a953c7de0302331023987a2fff895cb85}
+
+
+Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le string d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_inferieur_egal_a820821cedaab1a0bce1d13f49c55a006}{Inferieur\+Egal}, \hyperlink{class_superieur_egal_a9fb8d0b7cdfb75361bae0a2fa8db06a0}{Superieur\+Egal}, \hyperlink{class_inferieur_ad826ba17b77bdb74d07cab07db30c472}{Inferieur}, \hyperlink{class_superieur_a0613c6dc4df0de7cf6a4be2e45bcf0ac}{Superieur}, \hyperlink{class_division_af4b4b119ddfb23fd84244ac4eb6b5388}{Division}, \hyperlink{class_produit_aabe10cf42ec4e382d7b577573bea69a1}{Produit}, \hyperlink{class_exponentielle_ae7391929f4181aa363e1c03e511c1263}{Exponentielle}, \hyperlink{class_difference_af06c097f3901551229b8a7b73bccb94b}{Difference}, \hyperlink{class_somme_a3605a67027a5d0f7dc8c7617d2b1edfc}{Somme}, \hyperlink{class_variable_a2ae42f5b49f09c593be81f301462f1b3}{Variable}, \hyperlink{class_affectation_a37acdac77acfb27d8c59abfdbd5ed3b0}{Affectation}, \hyperlink{class_constante_a798db3847c1a81a68321cada88f3f43d}{Constante}, \hyperlink{class_conditionnel_ace6f0a27597c614b82a0f84a329167cf}{Conditionnel}, \hyperlink{class_bloc_acfe2075a0f69de800f447c1bc0aee63f}{Bloc}, \hyperlink{class_if_then_else_a25ca7b935d19e330c2502051f4791655}{If\+Then\+Else}, and \hyperlink{class_pour_a7d59b36e80ca85da59c4f5d93ffb674e}{Pour}.
+
+\index{Expression@{Expression}!clone@{clone}}
+\index{clone@{clone}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{clone() const  =0}{clone() const  =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Expression}$\ast$ Expression\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}{}\label{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}
+
+
+clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression cloné 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_inferieur_egal_acdeb552ab7486e0cabe0af7a7e0f4b6c}{Inferieur\+Egal}, \hyperlink{class_superieur_egal_a55d16bacf7aff0cf9c8a7b4992b09279}{Superieur\+Egal}, \hyperlink{class_inferieur_afdf1b8ba0a235bc1329923ac0fe61fbb}{Inferieur}, \hyperlink{class_superieur_a13e12cfa91154853de73d67518fb7795}{Superieur}, \hyperlink{class_division_a810f31960659e2a95ddfe4f49e08cb99}{Division}, \hyperlink{class_produit_a6fed59a3d22b91d80c59d6fd664c122c}{Produit}, \hyperlink{class_exponentielle_a670c2713c1b15db2b7eb703cb7f416c3}{Exponentielle}, \hyperlink{class_difference_a3bd254abd06c7ed2b6946c7682bec584}{Difference}, \hyperlink{class_cos_a1c4eb6ff08383ac08e7b511aa9d50fb2}{Cos}, \hyperlink{class_somme_aaf95e8388a3eb28edddd205805d9c10b}{Somme}, \hyperlink{class_sin_a12ca12d6edd6a6d98566b1befef978c4}{Sin}, \hyperlink{class_variable_a0862fa73db06e1c7f6fdd82dd7c3fc24}{Variable}, \hyperlink{class_affectation_aef2d294e0ab788aace81d33097a80d18}{Affectation}, \hyperlink{class_constante_a3227e53212fc8381fb33c559b22b868d}{Constante}, \hyperlink{class_conditionnel_a3dec2cad7a9a43495c4bdc2b6b65f4a4}{Conditionnel}, \hyperlink{class_bloc_a15c01c71bdad5b42c2d79102a19ca5aa}{Bloc}, \hyperlink{class_if_then_else_aba998c96619eeb1d2d29fccf9350a095}{If\+Then\+Else}, and \hyperlink{class_pour_a0116d7b9233b8b9dd48999f781f4592f}{Pour}.
+
+\index{Expression@{Expression}!deriver@{deriver}}
+\index{deriver@{deriver}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{deriver(const string \&)=0}{deriver(const string &)=0}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Expression\+::deriver (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}{}\label{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}
+
+
+Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression derivé 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_inferieur_egal_af3dfc429ad45e2ed60920e423f363e46}{Inferieur\+Egal}, \hyperlink{class_superieur_egal_ae1aa499c6130c12a96910df1f6776fac}{Superieur\+Egal}, \hyperlink{class_inferieur_a40bd4ec1d76deef074b97c6f0959606f}{Inferieur}, \hyperlink{class_superieur_a316ead2ea4d6451a6056947bd4f3cdbd}{Superieur}, \hyperlink{class_division_addfc9004319763a3fc8a2ead6d02151c}{Division}, \hyperlink{class_produit_a8aa9088f34b20414cec38451f43f0520}{Produit}, \hyperlink{class_exponentielle_a5937ff3e9a1f7af5c9bdd58ba5b21238}{Exponentielle}, \hyperlink{class_difference_af9118a276538e992bff5dfcae3d3b25f}{Difference}, \hyperlink{class_cos_a23bcff67edb0140231ea0b00f68f9a3a}{Cos}, \hyperlink{class_sin_a62c81e668f29b126f7fcc6ed4e6fb4dc}{Sin}, \hyperlink{class_somme_a6288da4022b7ee227431e0531ddd4664}{Somme}, \hyperlink{class_conditionnel_ac7ac864a499c05d874ab88dbb4bda442}{Conditionnel}, \hyperlink{class_bloc_ad8547a697be0d0829fbf13d4f6623376}{Bloc}, \hyperlink{class_if_then_else_a7fe544a73f42777341df653b290116d5}{If\+Then\+Else}, \hyperlink{class_pour_a6bd2f404e8531dca015c05edced0a63e}{Pour}, \hyperlink{class_variable_ae7e8e77718b47b10f7633756715aa986}{Variable}, \hyperlink{class_affectation_a918e2a05678e29ee1b7172e8eec95083}{Affectation}, and \hyperlink{class_constante_a78c242a323b89ebc7b1ffdd817e2bd76}{Constante}.
+
+\index{Expression@{Expression}!eval@{eval}}
+\index{eval@{eval}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{eval() const  =0}{eval() const  =0}}]{\setlength{\rightskip}{0pt plus 5cm}double Expression\+::eval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_expression_a5481c36265e11eff513df87bbc5a1d33}{}\label{class_expression_a5481c36265e11eff513df87bbc5a1d33}
+
+
+Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le valeur d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_inferieur_egal_aece49b421f83e80f33eb43adec758cdd}{Inferieur\+Egal}, \hyperlink{class_superieur_egal_a1ea7bc313de485e4055914661d5e596a}{Superieur\+Egal}, \hyperlink{class_inferieur_a8b4e8f22ab48859ad781f1997b083d46}{Inferieur}, \hyperlink{class_superieur_aee2a8239ebc62ae3db015d2744013fb7}{Superieur}, \hyperlink{class_division_a58dbaea10d63a27367155141cb9db323}{Division}, \hyperlink{class_produit_a6c4efb337679a2cf7ea920c95616d7fe}{Produit}, \hyperlink{class_exponentielle_a8ef5b91ae85a4384d709266422d61c53}{Exponentielle}, \hyperlink{class_difference_a0da9cd3169bea5ca70af3f4aed9a55a8}{Difference}, \hyperlink{class_cos_a601f93938da00a524c3cce3a9bcc6c7d}{Cos}, \hyperlink{class_sin_a12366e0380d5f03f5a83b09a6b861b35}{Sin}, \hyperlink{class_somme_ab36403713c60f51ee6eebc5693ce3891}{Somme}, \hyperlink{class_conditionnel_a1421ef0258647e5c85a1fb2dc8a9434f}{Conditionnel}, \hyperlink{class_bloc_a8847a4df7adf319e48ed7a277347ac80}{Bloc}, \hyperlink{class_if_then_else_a67b94d8e5d88d2d13e90a296c58d2341}{If\+Then\+Else}, \hyperlink{class_pour_a19f811e4a5d7847cf635f389b09c9e39}{Pour}, \hyperlink{class_variable_a4bb6309ec2c117c5c050ca89488daf2e}{Variable}, \hyperlink{class_affectation_ad66950c792ad4ccf0e6491f55a7eaad2}{Affectation}, and \hyperlink{class_constante_aaf4b67f9a9d34aca1f689e6fbf63be75}{Constante}.
+
+\index{Expression@{Expression}!simplifier@{simplifier}}
+\index{simplifier@{simplifier}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{simplifier()=0}{simplifier()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Expression}$\ast$ Expression\+::simplifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_expression_a319d06d43ead325c835181419061ae0b}{}\label{class_expression_a319d06d43ead325c835181419061ae0b}
+
+
+Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression simplifié 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_inferieur_egal_a65e16573f97d5073fb43c7c91a43e5d3}{Inferieur\+Egal}, \hyperlink{class_superieur_egal_a8df045c9b0a436106ccc3e51b7d7d21d}{Superieur\+Egal}, \hyperlink{class_inferieur_a08e1dcb1007cdff4e5fc9303da1df1f3}{Inferieur}, \hyperlink{class_superieur_abdf12b4d6d2a36a36ee48556c674aa00}{Superieur}, \hyperlink{class_division_acf3fafff49eb477ca7f4f84b9c5519f3}{Division}, \hyperlink{class_produit_a4b4db95c687fb3d949e67f7b81e9e9ee}{Produit}, \hyperlink{class_exponentielle_a40634a92344070b2ac048de96052e33b}{Exponentielle}, \hyperlink{class_difference_a1ea49952e410f10cc4907e80ac2597d4}{Difference}, \hyperlink{class_cos_ae22a7bd0a5caf0cab864f80e954ecd34}{Cos}, \hyperlink{class_sin_aa988c5b6f05d2452975ed35125b4fa08}{Sin}, \hyperlink{class_somme_a486f0b09a4697593b638486428b849f3}{Somme}, \hyperlink{class_conditionnel_adafd38733d1384a44f981a292f234e1f}{Conditionnel}, \hyperlink{class_bloc_afd5d437c0b31109b90946d183a150642}{Bloc}, \hyperlink{class_if_then_else_ab16dd963e35a71525ffecffffe338ed3}{If\+Then\+Else}, \hyperlink{class_pour_a7a03702950b98e370df5fb8ae3ab5417}{Pour}, \hyperlink{class_variable_a60c5ae49c674293b68646342c9de242f}{Variable}, \hyperlink{class_affectation_ac39339edc60e2f44edf0cc8ec94e4313}{Affectation}, and \hyperlink{class_constante_a6e034b3b42fbcfcee505303648c03d69}{Constante}.
+
+\index{Expression@{Expression}!tout\+Liberer@{tout\+Liberer}}
+\index{tout\+Liberer@{tout\+Liberer}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{tout\+Liberer()}{toutLiberer()}}]{\setlength{\rightskip}{0pt plus 5cm}void Expression\+::tout\+Liberer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_expression_a6e403e2450258e3924aea969740205f4}{}\label{class_expression_a6e403e2450258e3924aea969740205f4}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Expression@{Expression}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Expression} \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_expression_afd5a48d1dc944d5594b5fba79c7ba263}{}\label{class_expression_afd5a48d1dc944d5594b5fba79c7ba263}
+
+
+operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression 
+
+
+
+\subsection{Member Data Documentation}
+\index{Expression@{Expression}!\+\_\+nom@{\+\_\+nom}}
+\index{\+\_\+nom@{\+\_\+nom}!Expression@{Expression}}
+\subsubsection[{\texorpdfstring{\+\_\+nom}{_nom}}]{\setlength{\rightskip}{0pt plus 5cm}string Expression\+::\+\_\+nom\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_expression_aac494983d284346f05c4386bdbc65e56}{}\label{class_expression_aac494983d284346f05c4386bdbc65e56}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{expression_8h}{expression.\+h}\item 
+src/\hyperlink{expression_8cpp}{expression.\+cpp}\end{DoxyCompactItemize}

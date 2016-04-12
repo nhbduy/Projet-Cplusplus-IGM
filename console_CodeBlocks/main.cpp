@@ -1,3 +1,13 @@
+/**
+ * \file main.c
+ * \brief Programme de tests.
+ * \version 0.1
+ * \date 2016
+ *
+ * Programme de test
+ *
+ */
+
 #include <iostream>
 #include <fstream>
 #include "math.h"
@@ -11,6 +21,8 @@
 #include "ifThenElse.h"
 #include "boucle.h"
 #include "bloc.h"
+
+/*
 
 using namespace std;
 

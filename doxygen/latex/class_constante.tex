@@ -1,0 +1,213 @@
+\hypertarget{class_constante}{}\section{Constante Class Reference}
+\label{class_constante}\index{Constante@{Constante}}
+
+
+La classe \hyperlink{class_constante}{Constante}.  
+
+
+
+
+{\ttfamily \#include $<$constante.\+h$>$}
+
+Inheritance diagram for Constante\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_constante}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_constante_ac463207a372c10cb3fe0cd999e2e2c7b}{Constante} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_constante_a042ef484454ea2cbad4afbdc1693d954}{Constante} (const double=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_constante_a676cae1183d2db492fbe20289e96b2c5}{$\sim$\+Constante} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la classe \hyperlink{class_constante}{Constante}. \end{DoxyCompactList}\item 
+virtual double \hyperlink{class_constante_aaf4b67f9a9d34aca1f689e6fbf63be75}{eval} () const 
+\begin{DoxyCompactList}\small\item\em Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_constante_a78c242a323b89ebc7b1ffdd817e2bd76}{deriver} (const string \&)
+\begin{DoxyCompactList}\small\item\em Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_constante_a6e034b3b42fbcfcee505303648c03d69}{simplifier} ()
+\begin{DoxyCompactList}\small\item\em Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+string \hyperlink{class_constante_a798db3847c1a81a68321cada88f3f43d}{afficher} () const 
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_constante_a3227e53212fc8381fb33c559b22b868d}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression \end{DoxyCompactList}\item 
+string \hyperlink{class_constante_a1481b18531d5a3eefc18bd4bb1522e54}{string\+\_\+from\+\_\+double} (double val)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_constante_a6a615fb5d7dc64fa67d28eb6132c767c}{operator$<$$<$} (ostream \&, const \hyperlink{class_constante}{Constante} \&)
+\begin{DoxyCompactList}\small\item\em operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_constante}{Constante}. 
+
+Cette classe permet de représenter un expression constante qui est un valeur numérique de type double. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Constante@{Constante}!Constante@{Constante}}
+\index{Constante@{Constante}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{Constante()}{Constante()}}]{\setlength{\rightskip}{0pt plus 5cm}Constante\+::\+Constante (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_constante_ac463207a372c10cb3fe0cd999e2e2c7b}{}\label{class_constante_ac463207a372c10cb3fe0cd999e2e2c7b}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_constante}{Constante} \index{Constante@{Constante}!Constante@{Constante}}
+\index{Constante@{Constante}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{Constante(const double=0.\+0)}{Constante(const double=0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}Constante\+::\+Constante (
+\begin{DoxyParamCaption}
+\item[{const double}]{val = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_constante_a042ef484454ea2cbad4afbdc1693d954}{}\label{class_constante_a042ef484454ea2cbad4afbdc1693d954}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_constante}{Constante}
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & \+: le valeur \\
+\hline
+\end{DoxyParams}
+\index{Constante@{Constante}!````~Constante@{$\sim$\+Constante}}
+\index{````~Constante@{$\sim$\+Constante}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{$\sim$\+Constante()}{~Constante()}}]{\setlength{\rightskip}{0pt plus 5cm}Constante\+::$\sim$\+Constante (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_constante_a676cae1183d2db492fbe20289e96b2c5}{}\label{class_constante_a676cae1183d2db492fbe20289e96b2c5}
+
+
+Destructeur Destructeur de la classe \hyperlink{class_constante}{Constante}. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Constante@{Constante}!afficher@{afficher}}
+\index{afficher@{afficher}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{afficher() const }{afficher() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Constante\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_constante_a798db3847c1a81a68321cada88f3f43d}{}\label{class_constante_a798db3847c1a81a68321cada88f3f43d}
+
+
+Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le string d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_expression_a953c7de0302331023987a2fff895cb85}{Expression}.
+
+\index{Constante@{Constante}!clone@{clone}}
+\index{clone@{clone}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Constante\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_constante_a3227e53212fc8381fb33c559b22b868d}{}\label{class_constante_a3227e53212fc8381fb33c559b22b868d}
+
+
+clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression cloné 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}{Expression}.
+
+\index{Constante@{Constante}!deriver@{deriver}}
+\index{deriver@{deriver}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{deriver(const string \&)}{deriver(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Constante\+::deriver (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_constante_a78c242a323b89ebc7b1ffdd817e2bd76}{}\label{class_constante_a78c242a323b89ebc7b1ffdd817e2bd76}
+
+
+Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression derivé 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}{Expression}.
+
+\index{Constante@{Constante}!eval@{eval}}
+\index{eval@{eval}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{eval() const }{eval() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Constante\+::eval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_constante_aaf4b67f9a9d34aca1f689e6fbf63be75}{}\label{class_constante_aaf4b67f9a9d34aca1f689e6fbf63be75}
+
+
+Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le valeur d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a5481c36265e11eff513df87bbc5a1d33}{Expression}.
+
+\index{Constante@{Constante}!simplifier@{simplifier}}
+\index{simplifier@{simplifier}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{simplifier()}{simplifier()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Constante\+::simplifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_constante_a6e034b3b42fbcfcee505303648c03d69}{}\label{class_constante_a6e034b3b42fbcfcee505303648c03d69}
+
+
+Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression simplifié 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a319d06d43ead325c835181419061ae0b}{Expression}.
+
+\index{Constante@{Constante}!string\+\_\+from\+\_\+double@{string\+\_\+from\+\_\+double}}
+\index{string\+\_\+from\+\_\+double@{string\+\_\+from\+\_\+double}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{string\+\_\+from\+\_\+double(double val)}{string_from_double(double val)}}]{\setlength{\rightskip}{0pt plus 5cm}string Constante\+::string\+\_\+from\+\_\+double (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_constante_a1481b18531d5a3eefc18bd4bb1522e54}{}\label{class_constante_a1481b18531d5a3eefc18bd4bb1522e54}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Constante@{Constante}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Constante@{Constante}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Constante} \&}]{constante}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_constante_a6a615fb5d7dc64fa67d28eb6132c767c}{}\label{class_constante_a6a615fb5d7dc64fa67d28eb6132c767c}
+
+
+operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{constante_8h}{constante.\+h}\item 
+src/\hyperlink{constante_8cpp}{constante.\+cpp}\end{DoxyCompactItemize}

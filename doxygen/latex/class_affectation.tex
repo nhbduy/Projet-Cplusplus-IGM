@@ -1,0 +1,207 @@
+\hypertarget{class_affectation}{}\section{Affectation Class Reference}
+\label{class_affectation}\index{Affectation@{Affectation}}
+
+
+La classe \hyperlink{class_affectation}{Affectation}.  
+
+
+
+
+{\ttfamily \#include $<$affectation.\+h$>$}
+
+Inheritance diagram for Affectation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_affectation}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_affectation_a26f0693d0d5e4addca0df82fe3fd632e}{Affectation} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_affectation_adf18b27ad9850ad779f16bc15bad57e5}{Affectation} (\hyperlink{class_variable}{Variable} $\ast$, \hyperlink{class_expression}{Expression} $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+double \hyperlink{class_affectation_ad66950c792ad4ccf0e6491f55a7eaad2}{eval} () const 
+\begin{DoxyCompactList}\small\item\em Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_affectation_a918e2a05678e29ee1b7172e8eec95083}{deriver} (const string \&)
+\begin{DoxyCompactList}\small\item\em Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_affectation_ac39339edc60e2f44edf0cc8ec94e4313}{simplifier} ()
+\begin{DoxyCompactList}\small\item\em Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_affectation_a8fda35e6917179020490407736cd490d}{$\sim$\+Affectation} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_affectation_aef2d294e0ab788aace81d33097a80d18}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression \end{DoxyCompactList}\item 
+string \hyperlink{class_affectation_a37acdac77acfb27d8c59abfdbd5ed3b0}{afficher} () const 
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_affectation_a88f8a9ffdfd76d32bb9a0dd742b283ac}{operator$<$$<$} (ostream \&os, const \hyperlink{class_affectation}{Affectation} \&affectation)
+\begin{DoxyCompactList}\small\item\em operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_affectation}{Affectation}. 
+
+La classe permet d’affecter une valeur à une variable. Par exemple \+: x = 1, y = 2 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Affectation@{Affectation}!Affectation@{Affectation}}
+\index{Affectation@{Affectation}!Affectation@{Affectation}}
+\subsubsection[{\texorpdfstring{Affectation()}{Affectation()}}]{\setlength{\rightskip}{0pt plus 5cm}Affectation\+::\+Affectation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affectation_a26f0693d0d5e4addca0df82fe3fd632e}{}\label{class_affectation_a26f0693d0d5e4addca0df82fe3fd632e}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_affectation}{Affectation} \index{Affectation@{Affectation}!Affectation@{Affectation}}
+\index{Affectation@{Affectation}!Affectation@{Affectation}}
+\subsubsection[{\texorpdfstring{Affectation(\+Variable $\ast$, Expression $\ast$)}{Affectation(Variable *, Expression *)}}]{\setlength{\rightskip}{0pt plus 5cm}Affectation\+::\+Affectation (
+\begin{DoxyParamCaption}
+\item[{{\bf Variable} $\ast$}]{variable, }
+\item[{{\bf Expression} $\ast$}]{expression}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affectation_adf18b27ad9850ad779f16bc15bad57e5}{}\label{class_affectation_adf18b27ad9850ad779f16bc15bad57e5}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_affectation}{Affectation}
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable} & \+: le variable \\
+\hline
+{\em valeur} & \+: le valeur \\
+\hline
+\end{DoxyParams}
+\index{Affectation@{Affectation}!````~Affectation@{$\sim$\+Affectation}}
+\index{````~Affectation@{$\sim$\+Affectation}!Affectation@{Affectation}}
+\subsubsection[{\texorpdfstring{$\sim$\+Affectation()}{~Affectation()}}]{\setlength{\rightskip}{0pt plus 5cm}Affectation\+::$\sim$\+Affectation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_affectation_a8fda35e6917179020490407736cd490d}{}\label{class_affectation_a8fda35e6917179020490407736cd490d}
+
+
+Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Affectation@{Affectation}!afficher@{afficher}}
+\index{afficher@{afficher}!Affectation@{Affectation}}
+\subsubsection[{\texorpdfstring{afficher() const }{afficher() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Affectation\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_affectation_a37acdac77acfb27d8c59abfdbd5ed3b0}{}\label{class_affectation_a37acdac77acfb27d8c59abfdbd5ed3b0}
+
+
+Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le string d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_expression_a953c7de0302331023987a2fff895cb85}{Expression}.
+
+\index{Affectation@{Affectation}!clone@{clone}}
+\index{clone@{clone}!Affectation@{Affectation}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Affectation\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_affectation_aef2d294e0ab788aace81d33097a80d18}{}\label{class_affectation_aef2d294e0ab788aace81d33097a80d18}
+
+
+clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression cloné 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}{Expression}.
+
+\index{Affectation@{Affectation}!deriver@{deriver}}
+\index{deriver@{deriver}!Affectation@{Affectation}}
+\subsubsection[{\texorpdfstring{deriver(const string \&)}{deriver(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Affectation\+::deriver (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_affectation_a918e2a05678e29ee1b7172e8eec95083}{}\label{class_affectation_a918e2a05678e29ee1b7172e8eec95083}
+
+
+Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression derivé 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}{Expression}.
+
+\index{Affectation@{Affectation}!eval@{eval}}
+\index{eval@{eval}!Affectation@{Affectation}}
+\subsubsection[{\texorpdfstring{eval() const }{eval() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Affectation\+::eval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_affectation_ad66950c792ad4ccf0e6491f55a7eaad2}{}\label{class_affectation_ad66950c792ad4ccf0e6491f55a7eaad2}
+
+
+Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le valeur d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a5481c36265e11eff513df87bbc5a1d33}{Expression}.
+
+\index{Affectation@{Affectation}!simplifier@{simplifier}}
+\index{simplifier@{simplifier}!Affectation@{Affectation}}
+\subsubsection[{\texorpdfstring{simplifier()}{simplifier()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Affectation\+::simplifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_affectation_ac39339edc60e2f44edf0cc8ec94e4313}{}\label{class_affectation_ac39339edc60e2f44edf0cc8ec94e4313}
+
+
+Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression simplifié 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a319d06d43ead325c835181419061ae0b}{Expression}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Affectation@{Affectation}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Affectation@{Affectation}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Affectation} \&}]{affectation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_affectation_a88f8a9ffdfd76d32bb9a0dd742b283ac}{}\label{class_affectation_a88f8a9ffdfd76d32bb9a0dd742b283ac}
+
+
+operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{affectation_8h}{affectation.\+h}\item 
+src/\hyperlink{affectation_8cpp}{affectation.\+cpp}\end{DoxyCompactItemize}

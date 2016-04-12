@@ -1,0 +1,211 @@
+\hypertarget{class_pour}{}\section{Pour Class Reference}
+\label{class_pour}\index{Pour@{Pour}}
+
+
+La classe \hyperlink{class_pour}{Pour}.  
+
+
+
+
+{\ttfamily \#include $<$boucle.\+h$>$}
+
+Inheritance diagram for Pour\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pour}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_pour_a27487d84fcb2c5ceef76a2eea40b2507}{Pour} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_pour_af6e831984dc22ad36dfefede7cee57ca}{$\sim$\+Pour} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. \end{DoxyCompactList}\item 
+\hyperlink{class_pour_a03492c109d0097f149b02d493ecc174a}{Pour} (\hyperlink{class_expression}{Expression} $\ast$init, \hyperlink{class_expression}{Expression} $\ast$cond, \hyperlink{class_expression}{Expression} $\ast$inc, \hyperlink{class_expression}{Expression} $\ast$calc)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_pour_a0116d7b9233b8b9dd48999f781f4592f}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression \end{DoxyCompactList}\item 
+string \hyperlink{class_pour_a7d59b36e80ca85da59c4f5d93ffb674e}{afficher} () const 
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+double \hyperlink{class_pour_a19f811e4a5d7847cf635f389b09c9e39}{eval} () const 
+\begin{DoxyCompactList}\small\item\em Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_pour_a6bd2f404e8531dca015c05edced0a63e}{deriver} (const string \&)
+\begin{DoxyCompactList}\small\item\em Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_pour_a7a03702950b98e370df5fb8ae3ab5417}{simplifier} ()
+\begin{DoxyCompactList}\small\item\em Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_pour_a340a834942ee6e157805a6152fce08e9}{operator$<$$<$} (ostream \&os, const \hyperlink{class_pour}{Pour} \&)
+\begin{DoxyCompactList}\small\item\em operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_pour}{Pour}. 
+
+Cette classe représente les structures itératives. Elles permettent de réaliser des boucles. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Pour@{Pour}!Pour@{Pour}}
+\index{Pour@{Pour}!Pour@{Pour}}
+\subsubsection[{\texorpdfstring{Pour()}{Pour()}}]{\setlength{\rightskip}{0pt plus 5cm}Pour\+::\+Pour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_pour_a27487d84fcb2c5ceef76a2eea40b2507}{}\label{class_pour_a27487d84fcb2c5ceef76a2eea40b2507}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_pour}{Pour} \index{Pour@{Pour}!````~Pour@{$\sim$\+Pour}}
+\index{````~Pour@{$\sim$\+Pour}!Pour@{Pour}}
+\subsubsection[{\texorpdfstring{$\sim$\+Pour()}{~Pour()}}]{\setlength{\rightskip}{0pt plus 5cm}Pour\+::$\sim$\+Pour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_pour_af6e831984dc22ad36dfefede7cee57ca}{}\label{class_pour_af6e831984dc22ad36dfefede7cee57ca}
+
+
+Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. 
+
+\index{Pour@{Pour}!Pour@{Pour}}
+\index{Pour@{Pour}!Pour@{Pour}}
+\subsubsection[{\texorpdfstring{Pour(\+Expression $\ast$init, Expression $\ast$cond, Expression $\ast$inc, Expression $\ast$calc)}{Pour(Expression *init, Expression *cond, Expression *inc, Expression *calc)}}]{\setlength{\rightskip}{0pt plus 5cm}Pour\+::\+Pour (
+\begin{DoxyParamCaption}
+\item[{{\bf Expression} $\ast$}]{init, }
+\item[{{\bf Expression} $\ast$}]{cond, }
+\item[{{\bf Expression} $\ast$}]{inc, }
+\item[{{\bf Expression} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\hypertarget{class_pour_a03492c109d0097f149b02d493ecc174a}{}\label{class_pour_a03492c109d0097f149b02d493ecc174a}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_pour}{Pour} 
+\begin{DoxyParams}{Parameters}
+{\em init} & \+: l\textquotesingle{}initialisation \\
+\hline
+{\em cond} & \+: le condition \\
+\hline
+{\em incr} & \+: l\textquotesingle{}incrementaion \\
+\hline
+{\em calcul} & \+: le calcul \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Pour@{Pour}!afficher@{afficher}}
+\index{afficher@{afficher}!Pour@{Pour}}
+\subsubsection[{\texorpdfstring{afficher() const }{afficher() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Pour\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_pour_a7d59b36e80ca85da59c4f5d93ffb674e}{}\label{class_pour_a7d59b36e80ca85da59c4f5d93ffb674e}
+
+
+Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le string d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_expression_a953c7de0302331023987a2fff895cb85}{Expression}.
+
+\index{Pour@{Pour}!clone@{clone}}
+\index{clone@{clone}!Pour@{Pour}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Pour\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_pour_a0116d7b9233b8b9dd48999f781f4592f}{}\label{class_pour_a0116d7b9233b8b9dd48999f781f4592f}
+
+
+clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression cloné 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}{Expression}.
+
+\index{Pour@{Pour}!deriver@{deriver}}
+\index{deriver@{deriver}!Pour@{Pour}}
+\subsubsection[{\texorpdfstring{deriver(const string \&)}{deriver(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Pour\+::deriver (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_pour_a6bd2f404e8531dca015c05edced0a63e}{}\label{class_pour_a6bd2f404e8531dca015c05edced0a63e}
+
+
+Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression derivé 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}{Expression}.
+
+\index{Pour@{Pour}!eval@{eval}}
+\index{eval@{eval}!Pour@{Pour}}
+\subsubsection[{\texorpdfstring{eval() const }{eval() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Pour\+::eval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_pour_a19f811e4a5d7847cf635f389b09c9e39}{}\label{class_pour_a19f811e4a5d7847cf635f389b09c9e39}
+
+
+Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le valeur d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a5481c36265e11eff513df87bbc5a1d33}{Expression}.
+
+\index{Pour@{Pour}!simplifier@{simplifier}}
+\index{simplifier@{simplifier}!Pour@{Pour}}
+\subsubsection[{\texorpdfstring{simplifier()}{simplifier()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Pour\+::simplifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_pour_a7a03702950b98e370df5fb8ae3ab5417}{}\label{class_pour_a7a03702950b98e370df5fb8ae3ab5417}
+
+
+Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression simplifié 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a319d06d43ead325c835181419061ae0b}{Expression}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Pour@{Pour}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Pour@{Pour}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Pour} \&}]{pour}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_pour_a340a834942ee6e157805a6152fce08e9}{}\label{class_pour_a340a834942ee6e157805a6152fce08e9}
+
+
+operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{boucle_8h}{boucle.\+h}\item 
+src/\hyperlink{boucle_8cpp}{boucle.\+cpp}\end{DoxyCompactItemize}

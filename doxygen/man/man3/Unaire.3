@@ -1,0 +1,92 @@
+.TH "Unaire" 3 "Tue Apr 12 2016" "Projet-Cplusplus-IGM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Unaire \- La classe \fBUnaire\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <unaire\&.h>\fP
+.PP
+Inherits \fBExpression\fP\&.
+.PP
+Inherited by \fBCos\fP, \fBExponentielle\fP, and \fBSin\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUnaire\fP ()"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "\fBUnaire\fP (\fBExpression\fP *, const string &name='unaire')"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "virtual \fB~Unaire\fP ()"
+.br
+.RI "\fIDestructeur Destructeur de la classe \fBAffectation\fP\&. \fP"
+.ti -1c
+.RI "virtual string \fBafficher\fP ()"
+.br
+.RI "\fIAffiche l'expression Methode qui permet d'afficher l'expression\&. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBExpression\fP * \fB_op\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+La classe \fBUnaire\fP\&. 
+
+Cette classe représente les opérateurs unaires\&. Ces operateur agissent sur un seul opérande qui peut-être une constante, une variable, ou une expression\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Unaire::Unaire ()"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBUnaire\fP 
+.SS "Unaire::Unaire (\fBExpression\fP * op, const string & name = \fC'unaire'\fP)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBUnaire\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexp\fP : l'expression 
+.br
+\fInom\fP : le nom 
+.RE
+.PP
+
+.SS "Unaire::~Unaire ()\fC [virtual]\fP"
+
+.PP
+Destructeur Destructeur de la classe \fBAffectation\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "string Unaire::afficher ()\fC [virtual]\fP"
+
+.PP
+Affiche l'expression Methode qui permet d'afficher l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le string d'expression 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBExpression\fP* Unaire::_op\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Projet-Cplusplus-IGM from the source code\&.

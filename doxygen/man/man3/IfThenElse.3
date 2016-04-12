@@ -1,0 +1,165 @@
+.TH "IfThenElse" 3 "Tue Apr 12 2016" "Projet-Cplusplus-IGM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IfThenElse \- La classe \fBIfThenElse\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ifThenElse\&.h>\fP
+.PP
+Inherits \fBExpression\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIfThenElse\fP ()"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "virtual \fB~IfThenElse\fP ()"
+.br
+.RI "\fIDestructeur Destructeur de la classe \fBAffectation\fP\&. \fP"
+.ti -1c
+.RI "\fBIfThenElse\fP (\fBBinaire\fP *, \fBExpression\fP *, \fBExpression\fP *)"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBclone\fP () const "
+.br
+.RI "\fIclone l'expression Methode qui permet de cloner l'expression \fP"
+.ti -1c
+.RI "string \fBafficher\fP () const "
+.br
+.RI "\fIAffiche l'expression Methode qui permet d'afficher l'expression\&. \fP"
+.ti -1c
+.RI "double \fBeval\fP () const "
+.br
+.RI "\fIEvalue l'expression Methode qui permet d'evaluer l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBderiver\fP (const string &)"
+.br
+.RI "\fIDerive l'expression* Methode qui permet deriver l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBsimplifier\fP ()"
+.br
+.RI "\fISimplifie l'expression Methode qui permet de simplifier l'expression\&. \fP"
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "ostream & \fBoperator<<\fP (ostream &os, const \fBIfThenElse\fP &)"
+.br
+.RI "\fIoperator<< Methode qui permet d'afficher l'expression \fP"
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+La classe \fBIfThenElse\fP\&. 
+
+Cette classe représente les structures de contrôle conditionnelles\&. Ils permettent d’exécuter une série d'instructions dans le cas où une condition est vraie, et d'exécuter une autre série d'instructions dans le cas contraire\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IfThenElse::IfThenElse ()"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBIfThenElse\fP 
+.SS "IfThenElse::~IfThenElse ()\fC [virtual]\fP"
+
+.PP
+Destructeur Destructeur de la classe \fBAffectation\fP\&. 
+.SS "IfThenElse::IfThenElse (\fBBinaire\fP * cond, \fBExpression\fP * exp1, \fBExpression\fP * exp2)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBIfThenElse\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcond\fP : le condition 
+.br
+\fIexp1\fP : l'expression si la condition est vraie 
+.br
+\fIexp2\fP : l'expression si la condition est fausse 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "string IfThenElse::afficher () const\fC [virtual]\fP"
+
+.PP
+Affiche l'expression Methode qui permet d'afficher l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le string d'expression 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpression\fP\&.
+.SS "\fBExpression\fP * IfThenElse::clone () const\fC [virtual]\fP"
+
+.PP
+clone l'expression Methode qui permet de cloner l'expression 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression cloné 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "\fBExpression\fP * IfThenElse::deriver (const string & var)\fC [virtual]\fP"
+
+.PP
+Derive l'expression* Methode qui permet deriver l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression derivé 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "double IfThenElse::eval () const\fC [virtual]\fP"
+
+.PP
+Evalue l'expression Methode qui permet d'evaluer l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le valeur d'expression 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "\fBExpression\fP * IfThenElse::simplifier ()\fC [virtual]\fP"
+
+.PP
+Simplifie l'expression Methode qui permet de simplifier l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression simplifié 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "ostream& operator<< (ostream & os, const \fBIfThenElse\fP & conditionnel)\fC [friend]\fP"
+
+.PP
+operator<< Methode qui permet d'afficher l'expression 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Projet-Cplusplus-IGM from the source code\&.

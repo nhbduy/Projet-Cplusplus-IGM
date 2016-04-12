@@ -1,0 +1,210 @@
+\hypertarget{class_conditionnel}{}\section{Conditionnel Class Reference}
+\label{class_conditionnel}\index{Conditionnel@{Conditionnel}}
+
+
+La classe \hyperlink{class_conditionnel}{Conditionnel}.  
+
+
+
+
+{\ttfamily \#include $<$conditionnel.\+h$>$}
+
+Inheritance diagram for Conditionnel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_conditionnel}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_conditionnel_a850d4e1a18d5bd594d525e7cfa6f2852}{Conditionnel} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_conditionnel_ac6691d368ba09e30c379c3e21978bc87}{Conditionnel} (\hyperlink{class_binaire}{Binaire} $\ast$, \hyperlink{class_expression}{Expression} $\ast$, \hyperlink{class_expression}{Expression} $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_conditionnel_a0438817d80fc5fc36f1bb0fac869aa33}{$\sim$\+Conditionnel} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_conditionnel_a3dec2cad7a9a43495c4bdc2b6b65f4a4}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression \end{DoxyCompactList}\item 
+string \hyperlink{class_conditionnel_ace6f0a27597c614b82a0f84a329167cf}{afficher} () const 
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+double \hyperlink{class_conditionnel_a1421ef0258647e5c85a1fb2dc8a9434f}{eval} () const 
+\begin{DoxyCompactList}\small\item\em Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_conditionnel_ac7ac864a499c05d874ab88dbb4bda442}{deriver} (const string \&)
+\begin{DoxyCompactList}\small\item\em Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_conditionnel_adafd38733d1384a44f981a292f234e1f}{simplifier} ()
+\begin{DoxyCompactList}\small\item\em Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_conditionnel_a4232dfc0051fa6dc07b1bf61879eaef7}{operator$<$$<$} (ostream \&os, const \hyperlink{class_conditionnel}{Conditionnel} \&)
+\begin{DoxyCompactList}\small\item\em operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_conditionnel}{Conditionnel}. 
+
+Cette classe représente les opérateurs ternaire. Elles permettent d\textquotesingle{}obtenir une valeur si une condition est vraie, et une autre si la condition est fausse. Ils ont de forme \+: (cond)?e1\+:e2 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Conditionnel@{Conditionnel}!Conditionnel@{Conditionnel}}
+\index{Conditionnel@{Conditionnel}!Conditionnel@{Conditionnel}}
+\subsubsection[{\texorpdfstring{Conditionnel()}{Conditionnel()}}]{\setlength{\rightskip}{0pt plus 5cm}Conditionnel\+::\+Conditionnel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_conditionnel_a850d4e1a18d5bd594d525e7cfa6f2852}{}\label{class_conditionnel_a850d4e1a18d5bd594d525e7cfa6f2852}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_conditionnel}{Conditionnel} \index{Conditionnel@{Conditionnel}!Conditionnel@{Conditionnel}}
+\index{Conditionnel@{Conditionnel}!Conditionnel@{Conditionnel}}
+\subsubsection[{\texorpdfstring{Conditionnel(\+Binaire $\ast$, Expression $\ast$, Expression $\ast$)}{Conditionnel(Binaire *, Expression *, Expression *)}}]{\setlength{\rightskip}{0pt plus 5cm}Conditionnel\+::\+Conditionnel (
+\begin{DoxyParamCaption}
+\item[{{\bf Binaire} $\ast$}]{cond, }
+\item[{{\bf Expression} $\ast$}]{exp1, }
+\item[{{\bf Expression} $\ast$}]{exp2}
+\end{DoxyParamCaption}
+)}\hypertarget{class_conditionnel_ac6691d368ba09e30c379c3e21978bc87}{}\label{class_conditionnel_ac6691d368ba09e30c379c3e21978bc87}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_conditionnel}{Conditionnel}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cond} & \+: la condition \\
+\hline
+{\em exp1} & \+: l\textquotesingle{}expression si la condition est vraie \\
+\hline
+{\em exp2} & \+: l\textquotesingle{}expression si la condition est fausse \\
+\hline
+\end{DoxyParams}
+\index{Conditionnel@{Conditionnel}!````~Conditionnel@{$\sim$\+Conditionnel}}
+\index{````~Conditionnel@{$\sim$\+Conditionnel}!Conditionnel@{Conditionnel}}
+\subsubsection[{\texorpdfstring{$\sim$\+Conditionnel()}{~Conditionnel()}}]{\setlength{\rightskip}{0pt plus 5cm}Conditionnel\+::$\sim$\+Conditionnel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_conditionnel_a0438817d80fc5fc36f1bb0fac869aa33}{}\label{class_conditionnel_a0438817d80fc5fc36f1bb0fac869aa33}
+
+
+Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Conditionnel@{Conditionnel}!afficher@{afficher}}
+\index{afficher@{afficher}!Conditionnel@{Conditionnel}}
+\subsubsection[{\texorpdfstring{afficher() const }{afficher() const }}]{\setlength{\rightskip}{0pt plus 5cm}string Conditionnel\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_conditionnel_ace6f0a27597c614b82a0f84a329167cf}{}\label{class_conditionnel_ace6f0a27597c614b82a0f84a329167cf}
+
+
+Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le string d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_expression_a953c7de0302331023987a2fff895cb85}{Expression}.
+
+\index{Conditionnel@{Conditionnel}!clone@{clone}}
+\index{clone@{clone}!Conditionnel@{Conditionnel}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Conditionnel\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_conditionnel_a3dec2cad7a9a43495c4bdc2b6b65f4a4}{}\label{class_conditionnel_a3dec2cad7a9a43495c4bdc2b6b65f4a4}
+
+
+clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression cloné 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}{Expression}.
+
+\index{Conditionnel@{Conditionnel}!deriver@{deriver}}
+\index{deriver@{deriver}!Conditionnel@{Conditionnel}}
+\subsubsection[{\texorpdfstring{deriver(const string \&)}{deriver(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Conditionnel\+::deriver (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_conditionnel_ac7ac864a499c05d874ab88dbb4bda442}{}\label{class_conditionnel_ac7ac864a499c05d874ab88dbb4bda442}
+
+
+Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression derivé 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}{Expression}.
+
+\index{Conditionnel@{Conditionnel}!eval@{eval}}
+\index{eval@{eval}!Conditionnel@{Conditionnel}}
+\subsubsection[{\texorpdfstring{eval() const }{eval() const }}]{\setlength{\rightskip}{0pt plus 5cm}double Conditionnel\+::eval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_conditionnel_a1421ef0258647e5c85a1fb2dc8a9434f}{}\label{class_conditionnel_a1421ef0258647e5c85a1fb2dc8a9434f}
+
+
+Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le valeur d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a5481c36265e11eff513df87bbc5a1d33}{Expression}.
+
+\index{Conditionnel@{Conditionnel}!simplifier@{simplifier}}
+\index{simplifier@{simplifier}!Conditionnel@{Conditionnel}}
+\subsubsection[{\texorpdfstring{simplifier()}{simplifier()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ Conditionnel\+::simplifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_conditionnel_adafd38733d1384a44f981a292f234e1f}{}\label{class_conditionnel_adafd38733d1384a44f981a292f234e1f}
+
+
+Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression simplifié 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a319d06d43ead325c835181419061ae0b}{Expression}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Conditionnel@{Conditionnel}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Conditionnel@{Conditionnel}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Conditionnel} \&}]{conditionnel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_conditionnel_a4232dfc0051fa6dc07b1bf61879eaef7}{}\label{class_conditionnel_a4232dfc0051fa6dc07b1bf61879eaef7}
+
+
+operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{conditionnel_8h}{conditionnel.\+h}\item 
+src/\hyperlink{conditionnel_8cpp}{conditionnel.\+cpp}\end{DoxyCompactItemize}

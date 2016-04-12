@@ -1,0 +1,181 @@
+.TH "Exponentielle" 3 "Tue Apr 12 2016" "Projet-Cplusplus-IGM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Exponentielle \- La classe \fBExponentielle\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <unaire\&.h>\fP
+.PP
+Inherits \fBUnaire\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExponentielle\fP ()"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "\fBExponentielle\fP (\fBExpression\fP *, \fBExpression\fP *, const string &name='ex')"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "virtual \fB~Exponentielle\fP ()"
+.br
+.RI "\fIDestructeur Destructeur de la classe \fBAffectation\fP\&. \fP"
+.ti -1c
+.RI "double \fBeval\fP () const "
+.br
+.RI "\fIEvalue l'expression Methode qui permet d'evaluer l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBderiver\fP (const string &)"
+.br
+.RI "\fIDerive l'expression* Methode qui permet deriver l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBsimplifier\fP ()"
+.br
+.RI "\fISimplifie l'expression Methode qui permet de simplifier l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBclone\fP () const "
+.br
+.RI "\fIclone l'expression Methode qui permet de cloner l'expression \fP"
+.ti -1c
+.RI "string \fBafficher\fP () const "
+.br
+.RI "\fIAffiche l'expression Methode qui permet d'afficher l'expression\&. \fP"
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBExpression\fP * \fB_exp\fP"
+.br
+.ti -1c
+.RI "\fBExpression\fP * \fB_pow\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "ostream & \fBoperator<<\fP (ostream &, const \fBExponentielle\fP &)"
+.br
+.RI "\fIoperator<< Methode qui permet d'afficher l'expression \fP"
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+La classe \fBExponentielle\fP\&. 
+
+Cette classe représente l'\fBExponentielle\fP\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Exponentielle::Exponentielle ()"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBExponentielle\fP 
+.SS "Exponentielle::Exponentielle (\fBExpression\fP * exp, \fBExpression\fP * pow, const string & name = \fC'ex'\fP)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBExponentielle\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexp1\fP : l'expression 
+.br
+\fIexp2\fP : le puissance 
+.br
+\fInom\fP : le nom 
+.RE
+.PP
+
+.SS "Exponentielle::~Exponentielle ()\fC [virtual]\fP"
+
+.PP
+Destructeur Destructeur de la classe \fBAffectation\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "string Exponentielle::afficher () const\fC [virtual]\fP"
+
+.PP
+Affiche l'expression Methode qui permet d'afficher l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le string d'expression 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpression\fP\&.
+.SS "\fBExpression\fP * Exponentielle::clone () const\fC [virtual]\fP"
+
+.PP
+clone l'expression Methode qui permet de cloner l'expression 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression cloné 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "\fBExpression\fP * Exponentielle::deriver (const string & var)\fC [virtual]\fP"
+
+.PP
+Derive l'expression* Methode qui permet deriver l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression derivé 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "double Exponentielle::eval () const\fC [virtual]\fP"
+
+.PP
+Evalue l'expression Methode qui permet d'evaluer l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le valeur d'expression 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "\fBExpression\fP * Exponentielle::simplifier ()\fC [virtual]\fP"
+
+.PP
+Simplifie l'expression Methode qui permet de simplifier l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression simplifié 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "ostream& operator<< (ostream & os, const \fBExponentielle\fP & a)\fC [friend]\fP"
+
+.PP
+operator<< Methode qui permet d'afficher l'expression 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBExpression\fP* Exponentielle::_exp\fC [protected]\fP"
+
+.SS "\fBExpression\fP* Exponentielle::_pow\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Projet-Cplusplus-IGM from the source code\&.

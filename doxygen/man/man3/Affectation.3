@@ -1,0 +1,163 @@
+.TH "Affectation" 3 "Tue Apr 12 2016" "Projet-Cplusplus-IGM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Affectation \- La classe \fBAffectation\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <affectation\&.h>\fP
+.PP
+Inherits \fBBinaire\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAffectation\fP ()"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "\fBAffectation\fP (\fBVariable\fP *, \fBExpression\fP *)"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "double \fBeval\fP () const "
+.br
+.RI "\fIEvalue l'expression Methode qui permet d'evaluer l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBderiver\fP (const string &)"
+.br
+.RI "\fIDerive l'expression* Methode qui permet deriver l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBsimplifier\fP ()"
+.br
+.RI "\fISimplifie l'expression Methode qui permet de simplifier l'expression\&. \fP"
+.ti -1c
+.RI "virtual \fB~Affectation\fP ()"
+.br
+.RI "\fIDestructeur Destructeur de la classe \fBAffectation\fP\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBclone\fP () const "
+.br
+.RI "\fIclone l'expression Methode qui permet de cloner l'expression \fP"
+.ti -1c
+.RI "string \fBafficher\fP () const "
+.br
+.RI "\fIAffiche l'expression Methode qui permet d'afficher l'expression\&. \fP"
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "ostream & \fBoperator<<\fP (ostream &os, const \fBAffectation\fP &affectation)"
+.br
+.RI "\fIoperator<< Methode qui permet d'afficher l'expression \fP"
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+La classe \fBAffectation\fP\&. 
+
+La classe permet d’affecter une valeur à une variable\&. Par exemple : x = 1, y = 2 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Affectation::Affectation ()"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBAffectation\fP 
+.SS "Affectation::Affectation (\fBVariable\fP * variable, \fBExpression\fP * expression)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBAffectation\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvariable\fP : le variable 
+.br
+\fIvaleur\fP : le valeur 
+.RE
+.PP
+
+.SS "Affectation::~Affectation ()\fC [virtual]\fP"
+
+.PP
+Destructeur Destructeur de la classe \fBAffectation\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "string Affectation::afficher () const\fC [virtual]\fP"
+
+.PP
+Affiche l'expression Methode qui permet d'afficher l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le string d'expression 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpression\fP\&.
+.SS "\fBExpression\fP * Affectation::clone () const\fC [virtual]\fP"
+
+.PP
+clone l'expression Methode qui permet de cloner l'expression 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression cloné 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "\fBExpression\fP * Affectation::deriver (const string & var)\fC [virtual]\fP"
+
+.PP
+Derive l'expression* Methode qui permet deriver l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression derivé 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "double Affectation::eval () const\fC [virtual]\fP"
+
+.PP
+Evalue l'expression Methode qui permet d'evaluer l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le valeur d'expression 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "\fBExpression\fP * Affectation::simplifier ()\fC [virtual]\fP"
+
+.PP
+Simplifie l'expression Methode qui permet de simplifier l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression simplifié 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "ostream& operator<< (ostream & os, const \fBAffectation\fP & affectation)\fC [friend]\fP"
+
+.PP
+operator<< Methode qui permet d'afficher l'expression 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Projet-Cplusplus-IGM from the source code\&.

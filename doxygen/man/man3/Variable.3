@@ -1,0 +1,198 @@
+.TH "Variable" 3 "Tue Apr 12 2016" "Projet-Cplusplus-IGM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Variable \- La classe \fBVariable\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <variable\&.h>\fP
+.PP
+Inherits \fBExpression\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVariable\fP (const string &, double)"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "\fBVariable\fP ()"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "\fBVariable\fP (const string &)"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "double \fBeval\fP () const "
+.br
+.RI "\fIEvalue l'expression Methode qui permet d'evaluer l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBderiver\fP (const string &)"
+.br
+.RI "\fIDerive l'expression* Methode qui permet deriver l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBsimplifier\fP ()"
+.br
+.RI "\fISimplifie l'expression Methode qui permet de simplifier l'expression\&. \fP"
+.ti -1c
+.RI "virtual \fB~Variable\fP ()"
+.br
+.RI "\fIDestructeur Destructeur de la classe \fBAffectation\fP\&. \fP"
+.ti -1c
+.RI "string \fBafficher\fP () const "
+.br
+.RI "\fIAffiche l'expression Methode qui permet d'afficher l'expression\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP * \fBclone\fP () const "
+.br
+.RI "\fIclone l'expression Methode qui permet de cloner l'expression \fP"
+.ti -1c
+.RI "double \fBset\fP (double)"
+.br
+.RI "\fIAffecte la une valeur a une variable Methode qui permet d'affecter une valeur a un variable\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBeffacerMemoire\fP ()"
+.br
+.RI "\fIEfface la memoire Methode qui permet d'effacer le contenu de la mémoire (toutes les variables) \fP"
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "ostream & \fBoperator<<\fP (ostream &, const \fBVariable\fP &)"
+.br
+.RI "\fIoperator<< Methode qui permet d'afficher l'expression \fP"
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+La classe \fBVariable\fP\&. 
+
+Cette classe représente les variables\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Variable::Variable (const string & id, double valeur)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBVariable\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP : le nom 
+.br
+\fIval\fP : le valeur 
+.RE
+.PP
+
+.SS "Variable::Variable ()"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBVariable\fP 
+.SS "Variable::Variable (const string & id)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBVariable\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP : le nom 
+.RE
+.PP
+
+.SS "Variable::~Variable ()\fC [virtual]\fP"
+
+.PP
+Destructeur Destructeur de la classe \fBAffectation\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "string Variable::afficher () const\fC [virtual]\fP"
+
+.PP
+Affiche l'expression Methode qui permet d'afficher l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le string d'expression 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBExpression\fP\&.
+.SS "\fBExpression\fP * Variable::clone () const\fC [virtual]\fP"
+
+.PP
+clone l'expression Methode qui permet de cloner l'expression 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression cloné 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "\fBExpression\fP * Variable::deriver (const string & var)\fC [virtual]\fP"
+
+.PP
+Derive l'expression* Methode qui permet deriver l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression derivé 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "void Variable::effacerMemoire ()\fC [static]\fP"
+
+.PP
+Efface la memoire Methode qui permet d'effacer le contenu de la mémoire (toutes les variables) 
+.SS "double Variable::eval () const\fC [virtual]\fP"
+
+.PP
+Evalue l'expression Methode qui permet d'evaluer l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le valeur d'expression 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SS "double Variable::set (double valeur)"
+
+.PP
+Affecte la une valeur a une variable Methode qui permet d'affecter une valeur a un variable\&. 
+.SS "\fBExpression\fP * Variable::simplifier ()\fC [virtual]\fP"
+
+.PP
+Simplifie l'expression Methode qui permet de simplifier l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression simplifié 
+.RE
+.PP
+
+.PP
+Implements \fBExpression\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "ostream& operator<< (ostream & os, const \fBVariable\fP & variable)\fC [friend]\fP"
+
+.PP
+operator<< Methode qui permet d'afficher l'expression 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Projet-Cplusplus-IGM from the source code\&.

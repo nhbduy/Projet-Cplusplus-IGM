@@ -1,0 +1,180 @@
+.TH "Expression" 3 "Tue Apr 12 2016" "Projet-Cplusplus-IGM" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Expression \- La classe \fBExpression\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <expression\&.h>\fP
+.PP
+Inherited by \fBBinaire\fP, \fBBloc\fP, \fBConditionnel\fP, \fBConstante\fP, \fBIfThenElse\fP, \fBPour\fP, \fBUnaire\fP, and \fBVariable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExpression\fP ()"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "\fBExpression\fP (const string &)"
+.br
+.RI "\fIConstructeur\&. \fP"
+.ti -1c
+.RI "virtual \fB~Expression\fP ()"
+.br
+.RI "\fIDestructeur Destructeur de la classe \fBAffectation\fP\&. \fP"
+.ti -1c
+.RI "virtual string \fBafficher\fP () const "
+.br
+.RI "\fIAffiche l'expression Methode qui permet d'afficher l'expression\&. \fP"
+.ti -1c
+.RI "virtual \fBExpression\fP * \fBclone\fP () const  =0"
+.br
+.RI "\fIclone l'expression Methode qui permet de cloner l'expression \fP"
+.ti -1c
+.RI "virtual \fBExpression\fP * \fBderiver\fP (const string &)=0"
+.br
+.RI "\fIDerive l'expression* Methode qui permet deriver l'expression\&. \fP"
+.ti -1c
+.RI "virtual \fBExpression\fP * \fBsimplifier\fP ()=0"
+.br
+.RI "\fISimplifie l'expression Methode qui permet de simplifier l'expression\&. \fP"
+.ti -1c
+.RI "virtual double \fBeval\fP () const  =0"
+.br
+.RI "\fIEvalue l'expression Methode qui permet d'evaluer l'expression\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBtoutLiberer\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fB_nom\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "ostream & \fBoperator<<\fP (ostream &, const \fBExpression\fP &)"
+.br
+.RI "\fIoperator<< Methode qui permet d'afficher l'expression \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+La classe \fBExpression\fP\&. 
+
+Cette classe représente l'expression 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Expression::Expression ()"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBExpression\fP 
+.SS "Expression::Expression (const string & nom)"
+
+.PP
+Constructeur\&. Constructeur de la classe \fBExpression\fP
+.PP
+\fBParameters:\fP
+.RS 4
+\fInom\fP : le nom d'expression 
+.RE
+.PP
+
+.SS "Expression::~Expression ()\fC [virtual]\fP"
+
+.PP
+Destructeur Destructeur de la classe \fBAffectation\fP\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "string Expression::afficher () const\fC [virtual]\fP"
+
+.PP
+Affiche l'expression Methode qui permet d'afficher l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le string d'expression 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBInferieurEgal\fP, \fBSuperieurEgal\fP, \fBInferieur\fP, \fBSuperieur\fP, \fBDivision\fP, \fBProduit\fP, \fBExponentielle\fP, \fBDifference\fP, \fBSomme\fP, \fBVariable\fP, \fBAffectation\fP, \fBConstante\fP, \fBConditionnel\fP, \fBBloc\fP, \fBIfThenElse\fP, and \fBPour\fP\&.
+.SS "virtual \fBExpression\fP* Expression::clone () const\fC [pure virtual]\fP"
+
+.PP
+clone l'expression Methode qui permet de cloner l'expression 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression cloné 
+.RE
+.PP
+
+.PP
+Implemented in \fBInferieurEgal\fP, \fBSuperieurEgal\fP, \fBInferieur\fP, \fBSuperieur\fP, \fBDivision\fP, \fBProduit\fP, \fBExponentielle\fP, \fBDifference\fP, \fBCos\fP, \fBSomme\fP, \fBSin\fP, \fBVariable\fP, \fBAffectation\fP, \fBConstante\fP, \fBConditionnel\fP, \fBBloc\fP, \fBIfThenElse\fP, and \fBPour\fP\&.
+.SS "\fBExpression\fP * Expression::deriver (const string &)\fC [pure virtual]\fP"
+
+.PP
+Derive l'expression* Methode qui permet deriver l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression derivé 
+.RE
+.PP
+
+.PP
+Implemented in \fBInferieurEgal\fP, \fBSuperieurEgal\fP, \fBInferieur\fP, \fBSuperieur\fP, \fBDivision\fP, \fBProduit\fP, \fBExponentielle\fP, \fBDifference\fP, \fBCos\fP, \fBSin\fP, \fBSomme\fP, \fBConditionnel\fP, \fBBloc\fP, \fBIfThenElse\fP, \fBPour\fP, \fBVariable\fP, \fBAffectation\fP, and \fBConstante\fP\&.
+.SS "double Expression::eval () const\fC [pure virtual]\fP"
+
+.PP
+Evalue l'expression Methode qui permet d'evaluer l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Le valeur d'expression 
+.RE
+.PP
+
+.PP
+Implemented in \fBInferieurEgal\fP, \fBSuperieurEgal\fP, \fBInferieur\fP, \fBSuperieur\fP, \fBDivision\fP, \fBProduit\fP, \fBExponentielle\fP, \fBDifference\fP, \fBCos\fP, \fBSin\fP, \fBSomme\fP, \fBConditionnel\fP, \fBBloc\fP, \fBIfThenElse\fP, \fBPour\fP, \fBVariable\fP, \fBAffectation\fP, and \fBConstante\fP\&.
+.SS "virtual \fBExpression\fP* Expression::simplifier ()\fC [pure virtual]\fP"
+
+.PP
+Simplifie l'expression Methode qui permet de simplifier l'expression\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+L'expression simplifié 
+.RE
+.PP
+
+.PP
+Implemented in \fBInferieurEgal\fP, \fBSuperieurEgal\fP, \fBInferieur\fP, \fBSuperieur\fP, \fBDivision\fP, \fBProduit\fP, \fBExponentielle\fP, \fBDifference\fP, \fBCos\fP, \fBSin\fP, \fBSomme\fP, \fBConditionnel\fP, \fBBloc\fP, \fBIfThenElse\fP, \fBPour\fP, \fBVariable\fP, \fBAffectation\fP, and \fBConstante\fP\&.
+.SS "void Expression::toutLiberer ()\fC [static]\fP"
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "ostream& operator<< (ostream & os, const \fBExpression\fP & a)\fC [friend]\fP"
+
+.PP
+operator<< Methode qui permet d'afficher l'expression 
+.SH "Member Data Documentation"
+.PP 
+.SS "string Expression::_nom\fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Projet-Cplusplus-IGM from the source code\&.

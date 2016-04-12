@@ -1,0 +1,210 @@
+\hypertarget{class_if_then_else}{}\section{If\+Then\+Else Class Reference}
+\label{class_if_then_else}\index{If\+Then\+Else@{If\+Then\+Else}}
+
+
+La classe \hyperlink{class_if_then_else}{If\+Then\+Else}.  
+
+
+
+
+{\ttfamily \#include $<$if\+Then\+Else.\+h$>$}
+
+Inheritance diagram for If\+Then\+Else\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_if_then_else}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_if_then_else_a110b5dc89a5cc24d48b3ce61f30e9834}{If\+Then\+Else} ()
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_if_then_else_a14d1c1cea52dd3b9939de1e6b54b86c6}{$\sim$\+If\+Then\+Else} ()
+\begin{DoxyCompactList}\small\item\em Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. \end{DoxyCompactList}\item 
+\hyperlink{class_if_then_else_a38e9daf3a0d1d80ca3a42a0a63cda9c3}{If\+Then\+Else} (\hyperlink{class_binaire}{Binaire} $\ast$, \hyperlink{class_expression}{Expression} $\ast$, \hyperlink{class_expression}{Expression} $\ast$)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_if_then_else_aba998c96619eeb1d2d29fccf9350a095}{clone} () const 
+\begin{DoxyCompactList}\small\item\em clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression \end{DoxyCompactList}\item 
+string \hyperlink{class_if_then_else_a25ca7b935d19e330c2502051f4791655}{afficher} () const 
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+double \hyperlink{class_if_then_else_a67b94d8e5d88d2d13e90a296c58d2341}{eval} () const 
+\begin{DoxyCompactList}\small\item\em Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_if_then_else_a7fe544a73f42777341df653b290116d5}{deriver} (const string \&)
+\begin{DoxyCompactList}\small\item\em Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. \end{DoxyCompactList}\item 
+\hyperlink{class_expression}{Expression} $\ast$ \hyperlink{class_if_then_else_ab16dd963e35a71525ffecffffe338ed3}{simplifier} ()
+\begin{DoxyCompactList}\small\item\em Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_if_then_else_a0d8a32ab1c475d199aeec7b674b1481b}{operator$<$$<$} (ostream \&os, const \hyperlink{class_if_then_else}{If\+Then\+Else} \&)
+\begin{DoxyCompactList}\small\item\em operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+La classe \hyperlink{class_if_then_else}{If\+Then\+Else}. 
+
+Cette classe représente les structures de contrôle conditionnelles. Ils permettent d’exécuter une série d\textquotesingle{}instructions dans le cas où une condition est vraie, et d\textquotesingle{}exécuter une autre série d\textquotesingle{}instructions dans le cas contraire. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{If\+Then\+Else@{If\+Then\+Else}!If\+Then\+Else@{If\+Then\+Else}}
+\index{If\+Then\+Else@{If\+Then\+Else}!If\+Then\+Else@{If\+Then\+Else}}
+\subsubsection[{\texorpdfstring{If\+Then\+Else()}{IfThenElse()}}]{\setlength{\rightskip}{0pt plus 5cm}If\+Then\+Else\+::\+If\+Then\+Else (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_if_then_else_a110b5dc89a5cc24d48b3ce61f30e9834}{}\label{class_if_then_else_a110b5dc89a5cc24d48b3ce61f30e9834}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_if_then_else}{If\+Then\+Else} \index{If\+Then\+Else@{If\+Then\+Else}!````~If\+Then\+Else@{$\sim$\+If\+Then\+Else}}
+\index{````~If\+Then\+Else@{$\sim$\+If\+Then\+Else}!If\+Then\+Else@{If\+Then\+Else}}
+\subsubsection[{\texorpdfstring{$\sim$\+If\+Then\+Else()}{~IfThenElse()}}]{\setlength{\rightskip}{0pt plus 5cm}If\+Then\+Else\+::$\sim$\+If\+Then\+Else (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_if_then_else_a14d1c1cea52dd3b9939de1e6b54b86c6}{}\label{class_if_then_else_a14d1c1cea52dd3b9939de1e6b54b86c6}
+
+
+Destructeur Destructeur de la classe \hyperlink{class_affectation}{Affectation}. 
+
+\index{If\+Then\+Else@{If\+Then\+Else}!If\+Then\+Else@{If\+Then\+Else}}
+\index{If\+Then\+Else@{If\+Then\+Else}!If\+Then\+Else@{If\+Then\+Else}}
+\subsubsection[{\texorpdfstring{If\+Then\+Else(\+Binaire $\ast$, Expression $\ast$, Expression $\ast$)}{IfThenElse(Binaire *, Expression *, Expression *)}}]{\setlength{\rightskip}{0pt plus 5cm}If\+Then\+Else\+::\+If\+Then\+Else (
+\begin{DoxyParamCaption}
+\item[{{\bf Binaire} $\ast$}]{cond, }
+\item[{{\bf Expression} $\ast$}]{exp1, }
+\item[{{\bf Expression} $\ast$}]{exp2}
+\end{DoxyParamCaption}
+)}\hypertarget{class_if_then_else_a38e9daf3a0d1d80ca3a42a0a63cda9c3}{}\label{class_if_then_else_a38e9daf3a0d1d80ca3a42a0a63cda9c3}
+
+
+Constructeur. 
+
+Constructeur de la classe \hyperlink{class_if_then_else}{If\+Then\+Else}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cond} & \+: le condition \\
+\hline
+{\em exp1} & \+: l\textquotesingle{}expression si la condition est vraie \\
+\hline
+{\em exp2} & \+: l\textquotesingle{}expression si la condition est fausse \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{If\+Then\+Else@{If\+Then\+Else}!afficher@{afficher}}
+\index{afficher@{afficher}!If\+Then\+Else@{If\+Then\+Else}}
+\subsubsection[{\texorpdfstring{afficher() const }{afficher() const }}]{\setlength{\rightskip}{0pt plus 5cm}string If\+Then\+Else\+::afficher (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_if_then_else_a25ca7b935d19e330c2502051f4791655}{}\label{class_if_then_else_a25ca7b935d19e330c2502051f4791655}
+
+
+Affiche l\textquotesingle{}expression Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le string d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_expression_a953c7de0302331023987a2fff895cb85}{Expression}.
+
+\index{If\+Then\+Else@{If\+Then\+Else}!clone@{clone}}
+\index{clone@{clone}!If\+Then\+Else@{If\+Then\+Else}}
+\subsubsection[{\texorpdfstring{clone() const }{clone() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ If\+Then\+Else\+::clone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_if_then_else_aba998c96619eeb1d2d29fccf9350a095}{}\label{class_if_then_else_aba998c96619eeb1d2d29fccf9350a095}
+
+
+clone l\textquotesingle{}expression Methode qui permet de cloner l\textquotesingle{}expression 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression cloné 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_ac9fcea09ddd3a650a92c3606118abfb6}{Expression}.
+
+\index{If\+Then\+Else@{If\+Then\+Else}!deriver@{deriver}}
+\index{deriver@{deriver}!If\+Then\+Else@{If\+Then\+Else}}
+\subsubsection[{\texorpdfstring{deriver(const string \&)}{deriver(const string &)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ If\+Then\+Else\+::deriver (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{var}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_if_then_else_a7fe544a73f42777341df653b290116d5}{}\label{class_if_then_else_a7fe544a73f42777341df653b290116d5}
+
+
+Derive l\textquotesingle{}expression$\ast$ Methode qui permet deriver l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression derivé 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a0a2a2cf2cdb1e8ca556ad59832784193}{Expression}.
+
+\index{If\+Then\+Else@{If\+Then\+Else}!eval@{eval}}
+\index{eval@{eval}!If\+Then\+Else@{If\+Then\+Else}}
+\subsubsection[{\texorpdfstring{eval() const }{eval() const }}]{\setlength{\rightskip}{0pt plus 5cm}double If\+Then\+Else\+::eval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_if_then_else_a67b94d8e5d88d2d13e90a296c58d2341}{}\label{class_if_then_else_a67b94d8e5d88d2d13e90a296c58d2341}
+
+
+Evalue l\textquotesingle{}expression Methode qui permet d\textquotesingle{}evaluer l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+Le valeur d\textquotesingle{}expression 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a5481c36265e11eff513df87bbc5a1d33}{Expression}.
+
+\index{If\+Then\+Else@{If\+Then\+Else}!simplifier@{simplifier}}
+\index{simplifier@{simplifier}!If\+Then\+Else@{If\+Then\+Else}}
+\subsubsection[{\texorpdfstring{simplifier()}{simplifier()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Expression} $\ast$ If\+Then\+Else\+::simplifier (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_if_then_else_ab16dd963e35a71525ffecffffe338ed3}{}\label{class_if_then_else_ab16dd963e35a71525ffecffffe338ed3}
+
+
+Simplifie l\textquotesingle{}expression Methode qui permet de simplifier l\textquotesingle{}expression. 
+
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}expression simplifié 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_expression_a319d06d43ead325c835181419061ae0b}{Expression}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{If\+Then\+Else@{If\+Then\+Else}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!If\+Then\+Else@{If\+Then\+Else}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf If\+Then\+Else} \&}]{conditionnel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_if_then_else_a0d8a32ab1c475d199aeec7b674b1481b}{}\label{class_if_then_else_a0d8a32ab1c475d199aeec7b674b1481b}
+
+
+operator$<$$<$ Methode qui permet d\textquotesingle{}afficher l\textquotesingle{}expression 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{if_then_else_8h}{if\+Then\+Else.\+h}\item 
+src/\hyperlink{if_then_else_8cpp}{if\+Then\+Else.\+cpp}\end{DoxyCompactItemize}
