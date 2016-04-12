@@ -8,7 +8,7 @@ Expression::Expression()
 }
 
 Expression::Expression(const string& nom) : _nom(nom) {
-
+	_pool.insert(this);
 }
 
 Expression::~Expression()
