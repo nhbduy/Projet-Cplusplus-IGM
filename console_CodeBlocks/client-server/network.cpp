@@ -1,4 +1,5 @@
 #include "network.h"
+#include "format.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,6 +11,8 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <iostream>
+
+#define LENGTH 512
 
 using namespace std;
 
@@ -110,6 +113,10 @@ void Client::setAddress(string server_addr){
     m_address = server_addr;
 }
 
+//int Client::getSocket() {
+//    return Socket.m_socket;
+//}
+
 bool Client::connect() {
     if( !open() ) // Socket already opened or fail!
         return false;
@@ -126,11 +133,94 @@ bool Client::connect() {
 	return true;
 }
 
+void Client::sendMessageToServer(Client c, string msg) {
+    string m = format("%s", msg.c_str());
+    c.send(m);
+}
+
+string Client::receiveMessageFromServer(Client c) {
+    string msg = c.receive();
+    return msg;
+}
+
+void Client::sendFile(char *file) {
+    char buffer[256];
+    int n;
+    fgets(buffer, 255, stdin);
+    bzero(buffer, 256);
+    n = write(m_socket, buffer, strlen(buffer));
+
+    if(n < 0)
+        cout << "Erreur : ecrire au socket.") << endl;
+
+    char *fs_name = file;
+    char sdbuf[LENGTH];
+
+    cout << "Client envoit le fichier '" << fs_name << "' au serveur..." << endl;
+
+    FILE *fs = fopen(fs_name, "r");
+    if(fs == NULL) {
+        cout << "Erreur : Le fichier '" << fs_name << "' n'est pas trouvé." << endl;
+        exit(1);
+    }
+
+    bzero(sdbuf, LENGTH);
+    int fs_block_sz;
+    while((fs_block_sz = fread(sdbuf, sizeof(char), LENGTH, fs)) > 0) {
+        if(send(m_socket, sdbuf, fs_block_sz, 0) < 0) {
+            cout << "Erreur : L'envoi du fichier '" << fs_name << "' avec l'echec." << endl;
+            break;
+        }
+        bzero(sdbuf, LENGTH);
+    }
+    cout << "OK : L'envoi du fichier '" << fs_name << "' avec succes." << endl;
+}
+
 /////////////////////////////////////////////////////////
 // Server
 
 Server::Server( int port ) : m_port(port) {
 
+}
+
+void Server::receiveFile(char *file) {
+    char buffer[256];
+    int n = 0;
+    bzero(buffer, 256);
+    n = read(m_socket, buffer, strlen(buffer));
+
+    if(n < 0)
+        cout << "Erreur : lire du socket.") << endl;
+
+    char *fr_name = file;
+    char revbuf[LENGTH];
+
+    cout << "Le serveur recoit le fichier '" << fr_name << "' du client..." << endl;
+
+    FILE *fr = fopen(fr_name, "a");
+    if(fr == NULL)
+        cout << "Erreur : Le fichier '" << fr_name << "' n'est pas ouvré sur le serveur." << endl;
+    else {
+        bzero(sdbuf, LENGTH);
+        int fr_block_sz = 0;
+        while((fr_block_sz = recv(m_socket, revbuf, LENGTH, 0)) > 0) {
+            int write_sz = fwrite(revbuf, sizeof(char), fr_block_sz, fr);
+
+            if(write_sz < fr_block_sz) {
+                cout << "Erreur : L'ecriture du fichier sur le serveur est tombe." << endl;
+            }
+            bzero(revbuf, LENGTH);
+            if(fr_block_sz == 0 || fr_block_sz != 512) {
+                break;
+            }
+        }
+
+        if(fr_block_sz < 0) {
+            //print something
+        }
+    }
+
+    cout << "OK : La reception du fichier '" << fs_name << "' avec succes." << endl;
 }
 
 bool Server::start() {
@@ -165,4 +255,14 @@ Client *Server::connect() {
     // Create client
     Client *c = new Client( inet_ntoa(client.sin_addr), m_port, socket );
     return c;
+}
+
+void Server::sendMessageToClient(Client *c, string msg) {
+    string m = format("%s", msg.c_str());
+    c-> send(m);
+}
+
+string Server::receiveMessageFromClient(Client *c) {
+    string msg = c->receive();
+    return msg;
 }

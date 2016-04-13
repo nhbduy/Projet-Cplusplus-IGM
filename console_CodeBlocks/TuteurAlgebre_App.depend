@@ -68,3 +68,16 @@
 1460487205 source:/home/user/Projet-Cplusplus-IGM/console_CodeBlocks/src/variable.cpp
 	"variable.h"
 
+1460541443 source:/home/user/Projet-Cplusplus-IGM/console_CodeBlocks/client-server/client.cpp
+	"network.h"
+	"format.h"
+	<iostream>
+	"string.h"
+	<unistd.h>
+
+1460539275 /home/user/Projet-Cplusplus-IGM/console_CodeBlocks/client-server/network.h
+	<string>
+
+1460536059 /home/user/Projet-Cplusplus-IGM/console_CodeBlocks/client-server/format.h
+	<string>
+

@@ -34,6 +34,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="client-server/Makefile" />
+		<Unit filename="client-server/client.cpp" />
+		<Unit filename="client-server/format.cpp" />
+		<Unit filename="client-server/format.h" />
+		<Unit filename="client-server/format.o" />
+		<Unit filename="client-server/network.cpp" />
+		<Unit filename="client-server/network.h" />
+		<Unit filename="client-server/network.o" />
+		<Unit filename="client-server/server.cpp" />
+		<Unit filename="client-server/server_multithreads.cpp" />
+		<Unit filename="client-server/test_server_client.sh" />
 		<Unit filename="include/affectation.h" />
 		<Unit filename="include/binaire.h" />
 		<Unit filename="include/bloc.h" />

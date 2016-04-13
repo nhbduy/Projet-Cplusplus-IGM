@@ -15,10 +15,10 @@ format.o: format.h format.cpp
 	$(CC) $(OPT) -c format.cpp
 
 client: network.o format.o client.cpp
-	$(CC) $(OPT) client.cpp network.o format.o -o client.exe $(CFLAGS) $(LIBS)
+	$(CC) $(OPT) client.cpp network.o format.o -o client $(CFLAGS) $(LIBS)
 
 server: network.o format.o server.cpp
-	$(CC) $(OPT) server.cpp network.o format.o -o server.exe $(CFLAGS) $(LIBS)
+	$(CC) $(OPT) server.cpp network.o format.o -o server $(CFLAGS) $(LIBS)
 
 server_multithreads: network.o format.o server_multithreads.cpp
 	$(CC) $(OPT) server_multithreads.cpp network.o format.o -o server_multithreads $(CFLAGS) $(LIBS)

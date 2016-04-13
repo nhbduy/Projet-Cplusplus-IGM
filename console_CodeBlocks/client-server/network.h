@@ -42,6 +42,13 @@ public:
     // Member access
     string address() const { return m_address; }
     int port() const { return m_port; }
+
+    //////
+    void sendMessageToServer(Client c, string msg);
+    string receiveMessageFromServer(Client c);
+
+    void sendFile(char *file);
+
 private:
 	string m_address;
 	int m_port;
@@ -58,6 +65,13 @@ public:
     bool stop() { return close(); }
     // Accept client connection
     Client *connect();
+
+    /////////////////////
+    void sendMessageToClient(Client *c, string msg);
+    string receiveMessageFromClient(Client *c);
+
+    void receiveFile();
+
 private:
 	int m_port;
 };
