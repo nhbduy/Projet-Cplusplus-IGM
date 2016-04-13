@@ -15,7 +15,7 @@ int main( int argc, char *argv[] ) {
     cout << "Vous etes : l'eleve (client)." << endl;
 
     cout << "Votre nom : ";
-    cin >> name
+    cin >> name;
     cout << endl;
     cout << "Votre nom est : " << name;
 

@@ -8,19 +8,19 @@
  *
  */
 
-#include <iostream>
-#include <fstream>
-#include "math.h"
-#include "expression.h"
-#include "constante.h"
-#include "binaire.h"    // contient les sous-classes de Binaire : Somme, Produit, Superieur ....
-#include "unaire.h"     // contient les sous-classes de Unaire : COs, Sin ....
-#include "variable.h"
-#include "affectation.h"
-#include "conditionnel.h"
-#include "ifThenElse.h"
-#include "boucle.h"
-#include "bloc.h"
+//#include <iostream>
+//#include <fstream>
+//#include "math.h"
+//#include "expression.h"
+//#include "constante.h"
+//#include "binaire.h"    // contient les sous-classes de Binaire : Somme, Produit, Superieur ....
+//#include "unaire.h"     // contient les sous-classes de Unaire : COs, Sin ....
+//#include "variable.h"
+//#include "affectation.h"
+//#include "conditionnel.h"
+//#include "ifThenElse.h"
+//#include "boucle.h"
+//#include "bloc.h"
 
 /*
 
