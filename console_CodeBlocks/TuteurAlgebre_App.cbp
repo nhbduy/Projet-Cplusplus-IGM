@@ -34,38 +34,86 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="client-server/Makefile" />
+		<Unit filename="client-server/Makefile">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="client-server/client.cpp" />
 		<Unit filename="client-server/format.cpp" />
 		<Unit filename="client-server/format.h" />
-		<Unit filename="client-server/format.o" />
 		<Unit filename="client-server/network.cpp" />
 		<Unit filename="client-server/network.h" />
-		<Unit filename="client-server/network.o" />
-		<Unit filename="client-server/server.cpp" />
-		<Unit filename="client-server/server_multithreads.cpp" />
-		<Unit filename="client-server/test_server_client.sh" />
-		<Unit filename="include/affectation.h" />
-		<Unit filename="include/binaire.h" />
-		<Unit filename="include/bloc.h" />
-		<Unit filename="include/boucle.h" />
-		<Unit filename="include/conditionnel.h" />
-		<Unit filename="include/constante.h" />
-		<Unit filename="include/expression.h" />
-		<Unit filename="include/ifThenElse.h" />
-		<Unit filename="include/unaire.h" />
-		<Unit filename="include/variable.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="src/affectation.cpp" />
-		<Unit filename="src/binaire.cpp" />
-		<Unit filename="src/bloc.cpp" />
-		<Unit filename="src/boucle.cpp" />
-		<Unit filename="src/conditionnel.cpp" />
-		<Unit filename="src/constante.cpp" />
-		<Unit filename="src/expression.cpp" />
-		<Unit filename="src/ifThenElse.cpp" />
-		<Unit filename="src/unaire.cpp" />
-		<Unit filename="src/variable.cpp" />
+		<Unit filename="client-server/server.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="client-server/server_multithreads.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="client-server/test_server_client.sh">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/affectation.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/binaire.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/bloc.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/boucle.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/conditionnel.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/constante.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/expression.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/ifThenElse.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/unaire.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/variable.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/affectation.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/binaire.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/bloc.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/boucle.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/conditionnel.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/constante.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/expression.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/ifThenElse.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/unaire.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/variable.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

@@ -70,7 +70,7 @@ public:
     void sendMessageToClient(Client *c, string msg);
     string receiveMessageFromClient(Client *c);
 
-    void receiveFile();
+    void receiveFile(char *file);
 
 private:
 	int m_port;
