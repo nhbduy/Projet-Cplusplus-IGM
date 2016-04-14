@@ -61,6 +61,7 @@
 		<Unit filename="all/src/network.cpp" />
 		<Unit filename="all/src/server.cpp" />
 		<Unit filename="all/src/server_multithreads.cpp" />
+		<Unit filename="all/src/tool.cpp" />
 		<Unit filename="all/src/unaire.cpp" />
 		<Unit filename="all/src/variable.cpp" />
 		<Unit filename="client-server/Makefile">

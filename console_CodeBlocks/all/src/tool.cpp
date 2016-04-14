@@ -102,12 +102,8 @@ int main()
 
                 break;
 //            }
-            case 111:
-            {
-                s = "******************************************************************\n\n";
-                break;
-            }
-            case 222:
+
+            case 000:
             {
                 s = "******************************************************************\n\n";
                 exe << s;
@@ -120,7 +116,7 @@ int main()
                 res.close();
                 break;
         }
-    } while (choice != 666);
+    } while (choice != 999);
 }
 
 void viewMenu() {
@@ -137,9 +133,10 @@ void viewMenu() {
     cout << " 10 : boucle avec bloc d'expressions" << endl;
     cout << " 11 : boucles imbriquées" << endl;
     cout << " 12 : tous les tests" << endl;
-    cout << " 111 : Separer des excercices avec ***" << endl;
-    cout << " 222 : Separer des excercices et des resultats avec ***" << endl;
-    cout << " 666 : Sauvegarder votre fichier" << endl;
+    cout << "-----------------------------------------------------" << endl;
+    cout << " 000 : SEPARER des excercices et des resultats avec ***" << endl;
+    cout << " 999 : SAUVEGARDER votre fichier" << endl;
+     cout << "----------------------------------------------------" << endl;
     cout << endl;
     cout << "Votre choix : ";
 }
