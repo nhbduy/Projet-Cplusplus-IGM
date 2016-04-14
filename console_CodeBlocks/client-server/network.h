@@ -4,7 +4,7 @@
 #include <string>
 
 #define SERVER_ADDRESS "127.0.0.1"
-#define PORT 8888
+#define PORT 5000
 
 using namespace std;
 

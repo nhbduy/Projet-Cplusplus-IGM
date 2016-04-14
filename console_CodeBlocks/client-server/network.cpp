@@ -1,20 +1,31 @@
 #include "network.h"
 #include "format.h"
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
 #include <string.h>
-#include <unistd.h>
 #include <sys/types.h>
-#include <sys/socket.h>
 #include <netinet/in.h>
-#include <netdb.h>
+#include <sys/wait.h>
+#include <sys/socket.h>
+#include <signal.h>
+#include <ctype.h>
 #include <arpa/inet.h>
+#include <netdb.h>
+#include <unistd.h>
+
 #include <iostream>
 
 #define LENGTH 512
 
 using namespace std;
+
+void error(const char *msg)
+{
+    perror(msg);
+    exit(1);
+}
 
 // Get IP from domain name
 // http://www.binarytides.com/hostname-to-ip-address-c-sockets-linux/
@@ -144,21 +155,22 @@ string Client::receiveMessageFromServer(Client c) {
 }
 
 void Client::sendFile(char *file) {
-    char buffer[256];
-    int n;
-    fgets(buffer, 255, stdin);
-    //bzero(buffer, 256);
-    n = ::write(m_socket, buffer, strlen(buffer));
-
-    if(n < 0)
-        cout << "Erreur : ecrire au socket." << endl;
-
     char *fs_name = file;
     char sdbuf[LENGTH];
 
     cout << "Client envoit le fichier '" << fs_name << "' au serveur..." << endl;
 
-    FILE *fs = fopen(fs_name, "rb");
+//    char buffer[256];
+//    int n;
+//    fgets(buffer, 255, stdin);
+//    //bzero(buffer, 256);
+//    n = ::write(m_socket, buffer, strlen(buffer));
+//
+//    if(n < 0)
+//        cout << "Erreur : ecrire au socket." << endl;
+
+    FILE *fs = fopen(fs_name, "r");
+
     if(fs == NULL) {
         cout << "Erreur : Le fichier '" << fs_name << "' n'est pas trouvé." << endl;
         exit(1);
@@ -173,8 +185,11 @@ void Client::sendFile(char *file) {
         }
         bzero(sdbuf, LENGTH);
     }
+    shutdown(m_socket, SHUT_WR);
     cout << "OK : L'envoi du fichier '" << fs_name << "' avec succes." << endl;
+    cout << m_socket << endl;
 }
+
 
 /////////////////////////////////////////////////////////
 // Server
@@ -184,27 +199,27 @@ Server::Server( int port ) : m_port(port) {
 }
 
 void Server::receiveFile(char *file) {
-    char buffer[256];
-    int n;
-    bzero(buffer, 256);
-    n = ::read(m_socket, buffer, strlen(buffer));
-
-    if(n < 0)
-        cout << "Erreur : lire du socket." << endl;
+//    char buffer[256];
+//    int n;
+//    bzero(buffer, 256);
+//    n = ::read(m_socket, buffer, strlen(buffer));
+//
+//    if(n < 0)
+//        cout << "Erreur : lire du socket." << endl;
 
     char *fr_name = file;
     char revbuf[LENGTH];
 
     cout << "Le serveur recoit le fichier '" << fr_name << "' du client..." << endl;
 
-    FILE *fr = fopen(fr_name, "wb");
+    FILE *fr = fopen(fr_name, "a");
     if(fr == NULL)
         cout << "Erreur : Le fichier '" << fr_name << "' n'est pas ouvré sur le serveur." << endl;
     else {
         cout << "Test here 1" << endl;
 
         bzero(revbuf, LENGTH);
-        int fr_block_sz;
+        int fr_block_sz = 0;
 
 //        while((fs_block_sz = fread(sdbuf, sizeof(char), LENGTH, fs)) > 0) {
 //        if(::send(m_socket, sdbuf, fs_block_sz, 0) < 0) {
@@ -237,14 +252,24 @@ void Server::receiveFile(char *file) {
 //            bzero(sdbuf, LENGTH);
         }
 
-        if(fr_block_sz < 0) {
-            //print something
+        if(fr_block_sz < 0)
+        {
+            if (errno == EAGAIN)
+            {
+
+                cout << "recv() timed out." << endl;
+            }
+            else
+            {
+                cout << "recv() failed due to errno = " << errno << endl;
+            }
         }
-
         cout << "Test here 6" << endl;
-    }
 
-    cout << "OK : La reception du fichier '" << fr_name << "' avec succes." << endl;
+        cout << "OK : La reception du fichier '" << fr_name << "' avec succes." << endl;
+        cout << m_socket << endl;
+        fclose(fr);
+    }
 }
 
 bool Server::start() {
