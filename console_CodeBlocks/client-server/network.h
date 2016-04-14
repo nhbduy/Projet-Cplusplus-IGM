@@ -22,6 +22,9 @@ public:
 	// Messages
 	string receive() const;
 	bool send(const string &msg) const;
+
+	bool sendFile(const string &path) const;
+	bool receiveFile(const string &path) const;
 protected:
 	void error(const string &msg);
 	// Socket
@@ -47,8 +50,6 @@ public:
     void sendMessageToServer(Client c, string msg);
     string receiveMessageFromServer(Client c);
 
-    void sendFile(char *file);
-
 private:
 	string m_address;
 	int m_port;
@@ -69,8 +70,6 @@ public:
     /////////////////////
     void sendMessageToClient(Client *c, string msg);
     string receiveMessageFromClient(Client *c);
-
-    void receiveFile(char *file);
 
 private:
 	int m_port;

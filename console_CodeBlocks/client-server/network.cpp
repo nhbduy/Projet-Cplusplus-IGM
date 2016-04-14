@@ -16,6 +16,7 @@
 #include <unistd.h>
 
 #include <iostream>
+#include <fstream>
 
 #define LENGTH 512
 
@@ -106,6 +107,59 @@ bool Socket::send(const string &msg) const {
     return true;
 }
 
+bool Socket::sendFile(const string &path) const {
+    int len;
+    char* buff;
+    ifstream in;
+
+    in.open(path);
+    in.seekg(0, ios::end);
+
+    len = in.tellg();
+
+    in.seekg(0, ios::beg);
+
+    buff = new char[len];
+
+    in.read(buff, len);
+
+    int n = write(m_socket, buff, len);
+
+    if(n < 0)
+        return false;
+
+    in.close();
+
+    delete [] buff;
+
+    return true;
+}
+
+bool Socket::receiveFile(const string &path) const {
+    char* buff;
+    buff = new char[LENGTH];
+    memset(buff, 0, 256);
+
+    ofstream out;
+
+    out.open(path);
+
+    int n = read(m_socket, buff, LENGTH);
+
+    if(n < 0)
+        return false;
+
+    out.write(buff, strlen(buff));
+
+    out.close();
+
+    bzero(buff, LENGTH);
+
+    delete [] buff;
+
+    return true;
+}
+
 void Socket::error(const string &msg) {
     perror( msg.c_str() );
 }
@@ -154,42 +208,100 @@ string Client::receiveMessageFromServer(Client c) {
     return msg;
 }
 
-void Client::sendFile(char *file) {
-    char *fs_name = file;
-    char sdbuf[LENGTH];
-
-    cout << "Client envoit le fichier '" << fs_name << "' au serveur..." << endl;
-
-//    char buffer[256];
-//    int n;
-//    fgets(buffer, 255, stdin);
-//    //bzero(buffer, 256);
-//    n = ::write(m_socket, buffer, strlen(buffer));
+//void Client::sendFileC(string path) {
+//    int len;
+//    char* buff;
+//    ifstream in;
 //
-//    if(n < 0)
-//        cout << "Erreur : ecrire au socket." << endl;
-
-    FILE *fs = fopen(fs_name, "r");
-
-    if(fs == NULL) {
-        cout << "Erreur : Le fichier '" << fs_name << "' n'est pas trouvé." << endl;
-        exit(1);
-    }
-
-    bzero(sdbuf, LENGTH);
-    int fs_block_sz;
-    while((fs_block_sz = fread(sdbuf, sizeof(char), LENGTH, fs)) > 0) {
-        if(::send(m_socket, sdbuf, fs_block_sz, 0) < 0) {
-            cout << "Erreur : L'envoi du fichier '" << fs_name << "' avec l'echec." << endl;
-            break;
-        }
-        bzero(sdbuf, LENGTH);
-    }
-    shutdown(m_socket, SHUT_WR);
-    cout << "OK : L'envoi du fichier '" << fs_name << "' avec succes." << endl;
-    cout << m_socket << endl;
-}
-
+//    in.open(path);
+//    in.seekg(0, ios::end);
+//
+//    len = in.tellg();
+//
+//    in.seekg(0, ios::beg);
+//
+//    buff = new char[len];
+//
+//    in.read(buff, len);
+//
+//    in.close();
+//
+//    cout.write(buff, len);
+//
+//    int n = write(m_socket, buff, len);
+//
+//    if(n < 0) {
+//        cout << "Not send file" << endl;
+//    }
+//    else {
+//        cout << "Content file is:" << buff << endl;
+//    }
+//
+//    delete [] buff;
+//
+//
+//
+////    string line;
+////    cout << "Test 1" << endl;
+////    char* buffer = new char[256];
+////    cout << "Test 2" << endl;
+////    ifstream in(path);
+////    cout << "Test 3" << endl;
+////    if (!in.is_open()) {
+////        cout << "Input is null" << endl;
+////    }
+////    else {
+////        cout << "Input not null" << endl;
+////        while(getline(in, line)) {
+////            //cout << line << '\n';
+////            buffer
+////            cout << ::send(m_socket, buffer, 256, 0) << endl;
+////        }
+////        in.close();
+////    }
+//////    while((!in.read(buffer, 256).eof())) {
+//////        cout << "Test 4" << endl;
+//////        cout << ::send(m_socket, buffer, 256, 0);
+//////    }
+////    cout << "Test 5" << endl;
+////    delete [] buffer;
+//
+//
+//
+////    char *fs_name = file;
+////    char sdbuf[LENGTH];
+////
+////    cout << "Client envoit le fichier '" << fs_name << "' au serveur..." << endl;
+////
+//////    char buffer[256];
+//////    int n;
+//////    fgets(buffer, 255, stdin);
+//////    //bzero(buffer, 256);
+//////    n = ::write(m_socket, buffer, strlen(buffer));
+//////
+//////    if(n < 0)
+//////        cout << "Erreur : ecrire au socket." << endl;
+////
+////    FILE *fs = fopen(fs_name, "r");
+////
+////    if(fs == NULL) {
+////        cout << "Erreur : Le fichier '" << fs_name << "' n'est pas trouvé." << endl;
+////        exit(1);
+////    }
+////
+////    bzero(sdbuf, LENGTH);
+////    int fs_block_sz;
+////    while((fs_block_sz = fread(sdbuf, sizeof(char), LENGTH, fs)) > 0) {
+////        if(::send(m_socket, sdbuf, fs_block_sz, 0) < 0) {
+////            cout << "Erreur : L'envoi du fichier '" << fs_name << "' avec l'echec." << endl;
+////            break;
+////        }
+////        bzero(sdbuf, LENGTH);
+////    }
+////    shutdown(m_socket, SHUT_WR);
+////    cout << "OK : L'envoi du fichier '" << fs_name << "' avec succes." << endl;
+////    cout << m_socket << endl;
+//}
 
 /////////////////////////////////////////////////////////
 // Server
@@ -198,79 +310,126 @@ Server::Server( int port ) : m_port(port) {
 
 }
 
-void Server::receiveFile(char *file) {
-//    char buffer[256];
-//    int n;
-//    bzero(buffer, 256);
-//    n = ::read(m_socket, buffer, strlen(buffer));
+//bool Server::receiveFileS(string path) {
+//    int len = 256;
+//    char* buff;
+//    buff = new char[len];
+//    memset(buff, 0, 256);
 //
-//    if(n < 0)
-//        cout << "Erreur : lire du socket." << endl;
-
-    char *fr_name = file;
-    char revbuf[LENGTH];
-
-    cout << "Le serveur recoit le fichier '" << fr_name << "' du client..." << endl;
-
-    FILE *fr = fopen(fr_name, "a");
-    if(fr == NULL)
-        cout << "Erreur : Le fichier '" << fr_name << "' n'est pas ouvré sur le serveur." << endl;
-    else {
-        cout << "Test here 1" << endl;
-
-        bzero(revbuf, LENGTH);
-        int fr_block_sz = 0;
-
-//        while((fs_block_sz = fread(sdbuf, sizeof(char), LENGTH, fs)) > 0) {
-//        if(::send(m_socket, sdbuf, fs_block_sz, 0) < 0) {
-
-        while((fr_block_sz = ::recv(m_socket, revbuf, LENGTH, 0)) > 0) {
-            cout << "SIZE : " << fr_block_sz  << " " << LENGTH << endl;
-//            int write_sz = fwrite(revbuf, sizeof(char), fr_block_sz, fr);
-            int write_sz = fwrite(revbuf, sizeof(char), fr_block_sz, fr);
-//        while((fr_block_sz = fwrite(revbuf, sizeof(char), fr_block_sz, fr)) > 0) {
-//            int write_sz = ::recv(m_socket, revbuf, fr_block_sz, 0);
+//    ofstream out;
 //
-            cout << "Test here 2" << endl;
-
-            if(write_sz < fr_block_sz) {
-                cout << "Erreur : L'ecriture du fichier sur le serveur est tombe." << endl;
-            }
-            bzero(revbuf, LENGTH);
-            cout << "Test here 3" << endl;
-            if(fr_block_sz == 0 || fr_block_sz != 512) {
-                cout << "Test here 4" << endl;
-                break;
-            }
-
-            cout << "Test here 5" << endl;
-
-//            if(::recv(m_socket, revbuf, fr_block_sz, 0) < 0) {
-//                cout << "Erreur : L'ecriture du fichier sur le serveur est tombe." << endl;
-//                break;
-//            }
-//            bzero(sdbuf, LENGTH);
-        }
-
-        if(fr_block_sz < 0)
-        {
-            if (errno == EAGAIN)
-            {
-
-                cout << "recv() timed out." << endl;
-            }
-            else
-            {
-                cout << "recv() failed due to errno = " << errno << endl;
-            }
-        }
-        cout << "Test here 6" << endl;
-
-        cout << "OK : La reception du fichier '" << fr_name << "' avec succes." << endl;
-        cout << m_socket << endl;
-        fclose(fr);
-    }
-}
+//    out.open(path);
+//
+////    int recv_buff;
+////
+////    while((recv_buff = read(m_socket, buff, len)) > 0) {
+////        out.write(buff, len);
+////    }
+//
+//    int n = read(m_socket, buff, len);
+//    if (n > 0) {
+//        out.write(buff, len);
+//    }
+//    else {
+//        out.write("Why ???", len);
+//    }
+//
+//
+//    out.close();
+//
+//    cout.write(buff, len);
+//
+//    delete [] buff;
+//
+//    return true;
+//
+////    cout << "Test 1" << endl;
+////    char* buffer = new char[256];
+////    cout << "Test 2" << endl;
+////    int byte_recv = 0;
+////    cout << "Test 3" << endl;
+////    ofstream in(path);
+////    cout << "Test 4" << endl;
+////    while(((byte_recv = ::recv(m_socket, buffer, 5, 0)) > 0)) {
+////        cout << "Test 5" << endl;
+////        cout << byte_recv;
+////        in.write(buffer, 256);
+////    }
+////    cout << "Test 6" << endl;
+////    delete [] buffer;
+//
+//////    char buffer[256];
+//////    int n;
+//////    bzero(buffer, 256);
+//////    n = ::read(m_socket, buffer, strlen(buffer));
+//////
+//////    if(n < 0)
+//////        cout << "Erreur : lire du socket." << endl;
+////
+////    char *fr_name = file;
+////    char revbuf[LENGTH];
+////
+////    cout << "Le serveur recoit le fichier '" << fr_name << "' du client..." << endl;
+////
+////    FILE *fr = fopen(fr_name, "a");
+////    if(fr == NULL)
+////        cout << "Erreur : Le fichier '" << fr_name << "' n'est pas ouvré sur le serveur." << endl;
+////    else {
+////        cout << "Test here 1" << endl;
+////
+////        bzero(revbuf, LENGTH);
+////        int fr_block_sz = 0;
+////
+//////        while((fs_block_sz = fread(sdbuf, sizeof(char), LENGTH, fs)) > 0) {
+//////        if(::send(m_socket, sdbuf, fs_block_sz, 0) < 0) {
+////
+////        while((fr_block_sz = ::recv(m_socket, revbuf, LENGTH, 0)) > 0) {
+////            cout << "SIZE : " << fr_block_sz  << " " << LENGTH << endl;
+//////            int write_sz = fwrite(revbuf, sizeof(char), fr_block_sz, fr);
+////            int write_sz = fwrite(revbuf, sizeof(char), fr_block_sz, fr);
+//////        while((fr_block_sz = fwrite(revbuf, sizeof(char), fr_block_sz, fr)) > 0) {
+//////            int write_sz = ::recv(m_socket, revbuf, fr_block_sz, 0);
+//////
+////            cout << "Test here 2" << endl;
+////
+////            if(write_sz < fr_block_sz) {
+////                cout << "Erreur : L'ecriture du fichier sur le serveur est tombe." << endl;
+////            }
+////            bzero(revbuf, LENGTH);
+////            cout << "Test here 3" << endl;
+////            if(fr_block_sz == 0 || fr_block_sz != 512) {
+////                cout << "Test here 4" << endl;
+////                break;
+////            }
+////
+////            cout << "Test here 5" << endl;
+////
+//////            if(::recv(m_socket, revbuf, fr_block_sz, 0) < 0) {
+//////                cout << "Erreur : L'ecriture du fichier sur le serveur est tombe." << endl;
+//////                break;
+//////            }
+//////            bzero(sdbuf, LENGTH);
+////        }
+////
+////        if(fr_block_sz < 0)
+////        {
+////            if (errno == EAGAIN)
+////            {
+////
+////                cout << "recv() timed out." << endl;
+////            }
+////            else
+////            {
+////                cout << "recv() failed due to errno = " << errno << endl;
+////            }
+////        }
+////        cout << "Test here 6" << endl;
+////
+////        cout << "OK : La reception du fichier '" << fr_name << "' avec succes." << endl;
+////        cout << m_socket << endl;
+////        fclose(fr);
+////    }
+//}
 
 bool Server::start() {
     if( !open() ) // Socket already opened or fail!
