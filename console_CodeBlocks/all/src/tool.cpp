@@ -14,39 +14,38 @@
 
 using namespace std;
 
+void viewMenu();
+
 Expression* sConstante();
 Expression* sCosinus();
-Expression* sBinaire();
+Expression* sBinaire1();
+Expression* sBinaire2();
 
 int main()
 {
-    string pathFile;
+    string pathExe;
     cout << "Entrer le path de l'excercice que vous voulez créer : ";
-    cin >> pathFile;
+    cin >> pathExe;
 
-    ofstream file(pathFile);
+    string pathRes;
+    cout << "Entrer le path du resultat que vous voulez stocker : ";
+    cin >> pathRes;
+
+    ofstream exe(pathExe);
+    ofstream res(pathRes);
 
     Expression* e;
+
+    string s;
+    double d;
+
+    string question = " = ?";
+    string result = " = ";
 
     int choice = -1;
 
     do {
-        cout << " 0 : constante, [Ex] 5" << endl;
-        cout << " 1 : cosinus, [Ex] cos(1.0472)" << endl;
-        cout << " 2 : binaire, [Ex] s : (1 + (2 * sin(0.523599)))" << endl;
-        cout << " 3 : variable1" << endl;
-        cout << " 4 : variable2" << endl;
-        cout << " 5 : conditionnel" << endl;
-        cout << " 6 : if then else" << endl;
-        cout << " 7 : bloc" << endl;
-        cout << " 8 : boucle avec une seule expression" << endl;
-        cout << " 9 : boucle avec bloc d'expressions" << endl;
-        cout << " 10 : boucles imbriquées" << endl;
-        cout << " 11 : tous les tests" << endl;
-        cout << "333 : Separer des excercices avec ***" << endl;
-        cout << "666 : Sauvegarder votre fichier" << endl;
-        cout << endl;
-        cout << "Votre choix : ";
+        viewMenu();
         cin >> choice;
 
 
@@ -54,15 +53,25 @@ int main()
             case 0:
             {
                 e = sConstante();
-                string s = e->afficher();
-                file << s << "\n";
+
+                s = e->afficher();
+                exe << s << "\n";
+
+                d = e->eval();
+                res << d << "\n";
+
                 break;
             }
             case 1:
             {
                 e = sCosinus();
-                string s = e->afficher();
-                file << s << "\n";
+
+                s = e->afficher();
+                exe << s << question << "\n";
+
+                d = e->eval();
+                res << s << result << d << "\n";
+
                 break;
             }
             case 2:
@@ -71,23 +80,68 @@ int main()
                 cout << "Entrer le nom d'expression : ";
                 cin >> name;
 
-                e = sBinaire();
-                string s = e->afficher();
-                file << name << " : " << s << "\n";
+                e = sBinaire1();
+
+                s = e->afficher();
+                exe << name << " : " << s << question << "\n";
+
+                d = e->eval();
+                res << name << " : " << s << result << d << "\n";
+
                 break;
             }
-            case 333:
+            case 3:
+//            {
+//                e = sBinaire2();
+//
+//                s = e->afficher();
+//                exe << s << question << "\n";
+//
+//                d = e->eval();
+//                res << s << result << d << "\n";
+
+                break;
+//            }
+            case 111:
             {
-                string s = "******************************************************************";
-                file << s << "\n" << "\n";
+                s = "******************************************************************\n\n";
+                break;
+            }
+            case 222:
+            {
+                s = "******************************************************************\n\n";
+                exe << s;
+                res << s;
                 break;
             }
             default:
-                cout << "Sauvegarder votre fichier......" << endl;
-                file.close();
+                cout << "Sauvegarder vos fichiers......" << endl;
+                exe.close();
+                res.close();
                 break;
         }
     } while (choice != 666);
+}
+
+void viewMenu() {
+    cout << " 0 : constante, [Ex] 5" << endl;
+    cout << " 1 : cosinus, [Ex] cos(1.0472)" << endl;
+    cout << " 2 : binaire1, [Ex] (1 + (2 * sin(0.523599)))" << endl;
+    cout << " 3 : binaire2, [Ex] ((1 + (2 * sin(0.523599))) > 1.8) => true(1), false(0)" << endl;
+    cout << " 4 : variable1" << endl;
+    cout << " 5 : variable2" << endl;
+    cout << " 6 : conditionnel" << endl;
+    cout << " 7 : if then else" << endl;
+    cout << " 8 : bloc" << endl;
+    cout << " 9 : boucle avec une seule expression" << endl;
+    cout << " 10 : boucle avec bloc d'expressions" << endl;
+    cout << " 11 : boucles imbriquées" << endl;
+    cout << " 12 : tous les tests" << endl;
+    cout << " 111 : Separer des excercices avec ***" << endl;
+    cout << " 222 : Separer des excercices et des resultats avec ***" << endl;
+    cout << " 666 : Sauvegarder votre fichier" << endl;
+    cout << endl;
+    cout << "Votre choix : ";
 }
 
 Expression* sConstante() {
@@ -112,7 +166,7 @@ Expression* sCosinus() {
     return c;
 }
 
-Expression* sBinaire() {
+Expression* sBinaire1() {
 
     double a, b, c;
 
