@@ -7,12 +7,18 @@ LIBS =
 OBJS =
 #CFLAGS = -fpermissive -Wno-write-strings
 
-all: main client server server_multithreads
+all: main client server server_multithreads tool
 test : main
 socket: client server server_multithreads
+tool: tool
 
+#Tool expressions
 #Expressions
-main: affectation.o binaire.o bloc.o boucle.o conditionnel.o constante.o expression.o ifThenElse.o unaire.o variable.o
+tool: $(SOURCE)tool.cpp affectation.o binaire.o bloc.o boucle.o conditionnel.o constante.o expression.o ifThenElse.o unaire.o variable.o
+	$(CC) $(OPT) $(SOURCE)tool.cpp affectation.o binaire.o bloc.o boucle.o conditionnel.o constante.o expression.o ifThenElse.o unaire.o variable.o -o tool
+
+#Main expressions
+main: main.cpp affectation.o binaire.o bloc.o boucle.o conditionnel.o constante.o expression.o ifThenElse.o unaire.o variable.o
 	$(CC) $(OPT) main.cpp affectation.o binaire.o bloc.o boucle.o conditionnel.o constante.o expression.o ifThenElse.o unaire.o variable.o -o main
 affectation.o: $(INCLUDE)affectation.h $(SOURCE)affectation.cpp
 	$(CC) $(OPT) -c $(SOURCE)affectation.cpp
@@ -55,8 +61,13 @@ server_multithreads: network.o format.o $(SOURCE)server_multithreads.cpp
 clean:
 	rm -f *.o
 
-distclean: clean
+#Clean txt
+txtclean:
+	rm -f *.txt
+
+distclean: clean txtclean
 	rm -f server
 	rm -f client
 	rm -f server_multithreads
 	rm -f main
+	rm -f tool

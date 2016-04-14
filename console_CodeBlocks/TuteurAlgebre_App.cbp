@@ -34,6 +34,35 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="all/Makefile" />
+		<Unit filename="all/include/affectation.h" />
+		<Unit filename="all/include/binaire.h" />
+		<Unit filename="all/include/bloc.h" />
+		<Unit filename="all/include/boucle.h" />
+		<Unit filename="all/include/conditionnel.h" />
+		<Unit filename="all/include/constante.h" />
+		<Unit filename="all/include/expression.h" />
+		<Unit filename="all/include/format.h" />
+		<Unit filename="all/include/ifThenElse.h" />
+		<Unit filename="all/include/network.h" />
+		<Unit filename="all/include/unaire.h" />
+		<Unit filename="all/include/variable.h" />
+		<Unit filename="all/main.cpp" />
+		<Unit filename="all/src/affectation.cpp" />
+		<Unit filename="all/src/binaire.cpp" />
+		<Unit filename="all/src/bloc.cpp" />
+		<Unit filename="all/src/boucle.cpp" />
+		<Unit filename="all/src/client.cpp" />
+		<Unit filename="all/src/conditionnel.cpp" />
+		<Unit filename="all/src/constante.cpp" />
+		<Unit filename="all/src/expression.cpp" />
+		<Unit filename="all/src/format.cpp" />
+		<Unit filename="all/src/ifThenElse.cpp" />
+		<Unit filename="all/src/network.cpp" />
+		<Unit filename="all/src/server.cpp" />
+		<Unit filename="all/src/server_multithreads.cpp" />
+		<Unit filename="all/src/unaire.cpp" />
+		<Unit filename="all/src/variable.cpp" />
 		<Unit filename="client-server/Makefile">
 			<Option target="Release" />
 		</Unit>

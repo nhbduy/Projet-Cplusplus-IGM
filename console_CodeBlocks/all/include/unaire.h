@@ -173,6 +173,7 @@ public:
 * \return  L'expression cloné
  */
 	Expression* clone() const;
+
 protected:
 	double val;
 private:
