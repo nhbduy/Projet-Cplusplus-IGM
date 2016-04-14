@@ -7,19 +7,19 @@
  * Programme de test
  *
  */
-
+ 
 #include <iostream>
 #include <fstream>
-#include "expression.h"
-#include "constante.h"
-#include "binaire.h"    // contient les sous-classes de Binaire : Somme, Produit, Superieur ....
-#include "unaire.h"     // contient les sous-classes de Unaire : COs, Sin ....
-#include "variable.h"
-#include "affectation.h"
-#include "conditionnel.h"
-#include "ifThenElse.h"
-#include "boucle.h"
-#include "bloc.h"
+#include "include/expression.h"
+#include "include/constante.h"
+#include "include/binaire.h"    // contient les sous-classes de Binaire : Somme, Produit, Superieur ....
+#include "include/unaire.h"     // contient les sous-classes de Unaire : COs, Sin ....
+#include "include/variable.h"
+#include "include/affectation.h"
+#include "include/conditionnel.h"
+#include "include/ifThenElse.h"
+#include "include/boucle.h"
+#include "include/bloc.h"
 
 using namespace std;
 

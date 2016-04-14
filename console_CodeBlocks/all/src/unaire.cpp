@@ -1,5 +1,4 @@
-#include "unaire.h"
-#include "binaire.h"
+#include "../include/unaire.h"
 
 Unaire::Unaire()
 {
@@ -122,8 +121,8 @@ double Exponentielle::eval() const
 
 Expression* Exponentielle::deriver(const string &var)
 {
-//    Expression* exp = _exp;
-//    Expression* pow = _pow;
+	//Expression* exp = _exp;
+	//Expression* pow = _pow;
 	//return new Produit(_pow->deriver(var), new Exponentielle(_exp(exp), _pow(pow-1)));
 	return 0;
 }
