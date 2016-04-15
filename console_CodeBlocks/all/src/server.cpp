@@ -5,53 +5,9 @@
 #include <stdio.h>
 #include <exception>
 
-#include "../include/expression.h"
-#include "../include/constante.h"
-#include "../include/binaire.h"    // contient les sous-classes de Binaire : Somme, Produit, Superieur ....
-#include "../include/unaire.h"     // contient les sous-classes de Unaire : COs, Sin ....
-#include "../include/variable.h"
-#include "../include/affectation.h"
-#include "../include/conditionnel.h"
-#include "../include/ifThenElse.h"
-#include "../include/boucle.h"
-#include "../include/bloc.h"
-
 using namespace std;
 
-void createExercise(Client*);
-void sendExercise(Client*);
-void showMenuApp(Client*);
-void openConnection(Server, Client*);
-
-int main(int argc, char *argv[]) {
-    string name;
-
-    cout << "Votre nom : ";
-    cin >> name;
-    cout << endl;
-
-    cout << "----------BIENVENUE A L'APPLICATION : TUTEUR ALGEBRE----------" << endl;
-    cout << "Bonjour '" << name << "', vous etes le professeur (serveur).\n" << endl;
-
-    Server server;
-
-    Client* client;
-
-    createExercise(client);
-
-    //showMenuApp(client);
-
-    //openConnection(server, client);
-
-    delete client;
-
-    //server.stop();
-    server.close();
-
-    return 0;
-}
-
-void openConnection(Server s, Client* c) {
+bool openConnection(Server s, Client* c) {
     cout << "En attente des eleves (clients) connecté............." << endl;
 
     try {
@@ -71,93 +27,176 @@ void openConnection(Server s, Client* c) {
         }
     }catch(exception& m) {
         cerr << m.what() << endl;
+        return false;
+    }
+
+    return true;
+}
+
+void sendExercise(Client* c, string flag) {
+    string pathFile;
+    cout << "Entrer le path de l'exercice que vous voulez envoyer a l'eleve : ";
+    cin >> pathFile;
+    if(c->sendFile(pathFile)) {
+        flag = "ok";
+        c->send(flag);
+        cout << "L'envoi de l'exercice a l'eleve avec succes......." << endl;
+    }
+    else {
+        cout << "L'envoi de l'exercice a l'eleve avec l'echec......." << endl;
     }
 }
 
-void createExercise(Client* c) {
+void receiveCopy(Client* c) {
     string pathFile;
-    cout << "Entrer le path de l'excercice que vous voulez créer :" << endl;
+    cout << "Entrer le path de la copie que vous voulez stocker : ";
     cin >> pathFile;
-
-    ofstream file(pathFile);
-
-    int choice = -1;
-
-    do {
-        cout << " 0 : constante" << endl;
-        cout << " 1 : cosinus" << endl;
-        cout << " 2 : binaire" << endl;
-        cout << " 3 : variable1" << endl;
-        cout << " 4 : variable2" << endl;
-        cout << " 5 : conditionnel" << endl;
-        cout << " 6 : if then else" << endl;
-        cout << " 7 : bloc" << endl;
-        cout << " 8 : boucle avec une seule expression" << endl;
-        cout << " 9 : boucle avec bloc d'expressions" << endl;
-        cout << " 10 : boucles imbriquées" << endl;
-        cout << " 11 : tous les tests" << endl;
-        cout << "666 : Sauvegarder votre fichier" << endl;
-        cout << endl;
-        cout << "Votre choix : ";
-        cin >> choice;
-
-        switch(choice) {
-            case 0:
-            {
-                string temp;
-                cout << "Entrer le valeur de constante : " << endl;
-                cin >> temp;
-                Expression * c = new Constante(5);
-                cout << "c = "<< *c << endl;
-                //string s = c.afficher();
-                //temp = temp + " = ";
-                //file << s;
-                //createExercise(c);
-                break;
-            }
-            case 1:
-                //sendExercise(c);
-                break;
-            default:
-                cout << "Sauvegarder votre fichier......" << endl;
-                file.close();
-                break;
-        }
-    } while (choice != 666);
+    cout << "En attente de recevoir la copie de l'eleve......." << endl;
+    if(c->receive() == "ok") {
+        c->receiveFile(pathFile);
+        cout << "La reception de la copie de l'eleve avec succes......." << endl;
+    }
+    else {
+        cout << "La reception de la copie de l'eleve avec l'echec......." << endl;
+    }
 }
 
-void sendExercise(Client* c) {
-    string pathFile;
-    cout << "Entrer le path du fichier que vous voulez envoyer : ";
-    cin >> pathFile;
-    c->sendFile(pathFile);
-}
 
-void showMenuApp(Client* c) {
+int showMenuApp(Client* c) {
     int choice = -1;
+    string flag = "ko";
 
-    cout << "***Menu***" << endl;
+    cout << "\t-----------------------MENU SERVEUR-----------------------" << endl;
+    cout << "\t 1 : Envoyer l'exercice a l'eleve" << endl;
+    cout << "\t 2 : Recevoir la copie de l'eleve" << endl;
+    cout << "\t 666 : Quitter" << endl;
+    cout << endl;
+    cout << "Votre choix : ";
 
     do {
-        cout << "1 : Creer des expressions" << endl;
-        cout << "2 : Ouvrir la connexion" << endl;
-        cout << "3 : Envoyer l'exercice aux eleves" << endl;
-        cout << "4 : Fermer la connexion" << endl;
-        cout << "666 : Quitter" << endl;
-        cout << endl;
-        cout << "Votre choix : ";
+
         cin >> choice;
 
         switch(choice) {
             case 1:
-                createExercise(c);
+                sendExercise(c, flag);
                 break;
             case 2:
-                sendExercise(c);
+                cout << "En attente de recevoir la copie..." << endl;
                 break;
             default:
                 cout << "Cas inconnu!" << endl;
                 break;
         }
     } while (choice != 666);
+
+    return 0;
 }
+
+
+int main(int argc, char *argv[]) {
+    string name;
+
+    cout << "Votre nom : ";
+    cin >> name;
+    cout << endl;
+
+    cout << "----------BIENVENUE A L'APPLICATION : TUTEUR ALGEBRE----------" << endl;
+    cout << "Bonjour '" << name << "', vous etes le professeur (serveur).\n" << endl;
+
+    Server server;
+
+    Client* client;
+
+    cout << "En attente des eleves (clients) connecté............." << endl;
+
+    try {
+//        if (openConnection(server, client)) {
+//            //showMenuApp(client);
+//
+//            //client->sendFile("test.txt");
+//            client->receiveFile("hello-server.txt");
+//        }
+//
+//        else {
+//            //something
+//        }
+        server.start();
+        client = server.connect();
+        if ( !client )
+            exit(0);
+        else {
+
+            //Receive client name from client
+            string clientName = client->receive();
+
+            cout << "\n=> L'eleve '" << clientName
+                    << "' (IP: '" << client->address() << "'"
+                    << ", Port: " << client->port() << ") "
+                    << "est connecte." << endl;
+
+            //showMenuApp(client);
+
+            //client->sendFile("hello-server.txt");
+            //client->receiveFile("hello-server.txt");
+
+            int choice = -1;
+            string flag = "ko";
+            string pathFile;
+
+            cout << "\t-----------------------MENU SERVEUR-----------------------" << endl;
+            cout << "\t 1 : Envoyer l'exercice a l'eleve" << endl;
+            cout << "\t 2 : Recevoir la copie de l'eleve" << endl;
+            cout << "\t 666 : Quitter" << endl;
+            cout << endl;
+            cout << "Votre choix : ";
+
+            do {
+
+                cin >> choice;
+
+                switch(choice) {
+                    case 1:
+                    {
+                        cout << "Entrer le path de l'exercice que vous voulez envoyer a l'eleve : ";
+                        cin >> pathFile;
+                        if(client->sendFile(pathFile)) {
+                            cout << "L'envoi de l'exercice a l'eleve avec succes......." << endl;
+                        }
+                        else {
+                            cout << "L'envoi de l'exercice a l'eleve avec l'echec......." << endl;
+                        }
+                        return 0;
+                        break;
+                    }
+                    case 2:
+                        cout << "Entrer le path de la copie que vous voulez stocker : ";
+                        cin >> pathFile;
+                        cout << "En attente de recevoir la copie de l'eleve......." << endl;
+                        if(client->receiveFile(pathFile)) {
+                            cout << "La reception de la copie de l'eleve avec succes......." << endl;
+                        }
+                        else {
+                            cout << "La reception de la copie de l'eleve avec l'echec......." << endl;
+                        }
+                        return 0;
+                        break;
+                    default:
+                        cout << "Cas inconnu!" << endl;
+                        break;
+                }
+            } while (choice != 666);
+
+        }
+    }catch(exception& m) {
+        cerr << m.what() << endl;
+        return false;
+    }
+
+    delete client;
+    //server.stop();
+    server.close();
+
+    return 0;
+}
+

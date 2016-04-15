@@ -18,7 +18,7 @@
 #include <iostream>
 #include <fstream>
 
-#define LENGTH 512
+#define LENGTH 2046
 
 using namespace std;
 
