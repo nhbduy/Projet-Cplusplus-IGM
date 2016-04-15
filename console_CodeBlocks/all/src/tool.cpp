@@ -14,15 +14,169 @@
 
 using namespace std;
 
-void viewMenu();
+//CONSTANTE
+Constante* sConstante() {
+    double temp;
 
-Expression* sConstante();
-Expression* sCosinus();
-Expression* sBinaire1();
-Expression* sBinaire2();
+    cout << "Entrer la valeur (droit->gauche:A,B,C,D...) :  ";
+    cin >> temp;
 
-int main()
-{
+    Constante* e = new Constante(temp);
+
+    return e;
+}
+
+//UNAIRE
+Sin* sSin(Expression* e) {
+    Sin* s = new Sin(e->clone());
+
+    return s;
+}
+
+Cos* sCos(Expression* e) {
+    Cos* c = new Cos(e->clone());
+
+    return c;
+}
+
+Exponentielle* sExponentielle(Expression* e1, Expression *e2) {
+    Exponentielle* e = new Exponentielle(e1->clone(), e2->clone());
+
+    return e;
+}
+//--END UNAIRE
+
+//BINAIRE
+Somme* sSomme(Expression* e1, Expression* e2) {
+    Somme* s = new Somme(e1->clone(), e2->clone());
+
+    return s;
+}
+
+Difference* sDifference(Expression* e1, Expression* e2) {
+    Difference* d = new Difference(e1->clone(), e2->clone());
+
+    return d;
+}
+
+Produit* sProduit(Expression* e1, Expression* e2) {
+    Produit* p = new Produit(e1->clone(), e2->clone());
+
+    return p;
+}
+
+Division* sDivision(Expression* e1, Expression* e2) {
+    Division* d = new Division(e1->clone(), e2->clone());
+
+    return d;
+}
+
+Superieur* sSuperieur(Expression* e1, Expression* e2) {
+    Superieur* s = new Superieur(e1->clone(), e2->clone());
+
+    return s;
+}
+
+Inferieur* sInferieur(Expression* e1, Expression* e2) {
+    Inferieur* i = new Inferieur(e1->clone(), e2->clone());
+
+    return i;
+}
+
+SuperieurEgal* sSuperieurEgal(Expression* e1, Expression* e2) {
+    SuperieurEgal* se = new SuperieurEgal(e1->clone(), e2->clone());
+
+    return se;
+}
+
+InferieurEgal* sInferieurEgal(Expression* e1, Expression* e2) {
+    InferieurEgal* ie = new InferieurEgal(e1->clone(), e2->clone());
+
+    return ie;
+}
+//--END BINAIRE
+
+//VARIABLE
+Variable* sVariable() {
+    string s;
+    double d;
+
+    cout << "Entrer nom de variable :  ";
+    cin >> s;
+    cout << "Entrer valeur de variable :  ";
+    cin >> d;
+    Variable* v = new Variable(s, d);
+
+    return v;
+}
+
+Variable* sVariableAChercher() {
+    string s;
+
+    cout << "Entrer nom de variable à chercher (valeur d'initiale = 0) :  ";
+    cin >> s;
+    Variable* v = new Variable(s);
+
+    return v;
+}
+//--END VARIABLE
+
+//AFFECTATION
+//--END
+Affectation* sAffectation(Variable* e1, Expression* e2) {
+    Affectation* a = new Affectation(e1, e2->clone());
+
+    return a;
+}
+
+//CONDITIONNEL
+Conditionnel* sConditionnel(Binaire* e1, Expression* e2, Expression* e3) {
+    Conditionnel* c = new Conditionnel(e1, e2->clone(), e3->clone());
+
+    return c;
+}
+//--END CONDITIONNEL
+
+//IFTHENELSE
+IfThenElse* sIfThenElse(Binaire* e1, Expression* e2, Expression* e3) {
+    IfThenElse* ite = new IfThenElse(e1, e2->clone(), e3->clone());
+
+    return ite;
+}
+//--END IFTHENELSE
+
+//
+//--END
+
+void printContent(string s, string other, double d) {
+    cout << "******************************************************************\n";
+    cout << "Votre contenu : " << s << other << d << "\n";
+    cout << "******************************************************************\n";
+}
+
+void viewMenuCreation() {
+    cout << "\t-----------------------OPTIONS-----------------------" << endl;
+    cout << "\t 1 : constante \n\t\tA (constante)" << endl;
+    cout << "\t 2 : cosinus   \n\t\tcos(A)" << endl;
+    cout << "\t 3 : binaire1  \n\t\t(C + (B * sin(A)))" << endl;
+    cout << "\t 4 : binaire2  \n\t\t((D + (C * sin(B))) > A) => true(1), false(0)" << endl;
+    cout << "\t 5 : variable \n\t\tx = A\n\t(y <- (C + (B * x))) = ?" << endl;
+    cout << "\t 6 : conditionnel \n\t\tx = A\n\t\t((x > D)) ? (x + C) : (x + B)\n\t\t=> EVAL ternaire = ?" << endl;
+    cout << "\t 7 : if then else \n\t\tx = A\n\t\tif ((x > D)) {\n\t\t\t(x <- (x + C))\n\t\t} else {\n\t\t\t(x <- (x * B))\n\t\t}\n\t\t=> EVAL if then else = ?" << endl;
+    cout << "\t 8 : bloc  " << endl;
+    cout << "\t 9 : boucle avec une seule expression " << endl;
+    cout << "\t 10 : boucle avec bloc d'expressions " << endl;
+    cout << "\t 11 : boucles imbriquées " << endl;
+    cout << "\t 12 : tous les tests" << endl;
+    cout << "\t-----------------------------------------------------" << endl;
+    cout << "\t 0 : SEPARER des excercices et des resultats avec ***" << endl;
+    cout << "\t 999 : SAUVEGARDER votre fichier et quitter" << endl;
+    cout << "\t-----------------------------------------------------" << endl;
+    cout << endl;
+    cout << "Votre choix : ";
+}
+
+int creation() {
     string pathExe;
     cout << "Entrer le path de l'excercice que vous voulez créer : ";
     cin >> pathExe;
@@ -45,12 +199,12 @@ int main()
     int choice = -1;
 
     do {
-        viewMenu();
+        viewMenuCreation();
         cin >> choice;
 
 
         switch(choice) {
-            case 0:
+            case 1:
             {
                 e = sConstante();
 
@@ -60,11 +214,13 @@ int main()
                 d = e->eval();
                 res << d << "\n";
 
+                printContent("", "", d);
+
                 break;
             }
-            case 1:
+            case 2:
             {
-                e = sCosinus();
+                e = sCos(sConstante());
 
                 s = e->afficher();
                 exe << s << question << "\n";
@@ -72,111 +228,167 @@ int main()
                 d = e->eval();
                 res << s << result << d << "\n";
 
-                break;
-            }
-            case 2:
-            {
-                string name;
-                cout << "Entrer le nom d'expression : ";
-                cin >> name;
-
-                e = sBinaire1();
-
-                s = e->afficher();
-                exe << name << " : " << s << question << "\n";
-
-                d = e->eval();
-                res << name << " : " << s << result << d << "\n";
+                printContent(s, result, d);
 
                 break;
             }
             case 3:
-//            {
-//                e = sBinaire2();
-//
-//                s = e->afficher();
-//                exe << s << question << "\n";
-//
-//                d = e->eval();
-//                res << s << result << d << "\n";
+            {
+                e = sSomme(sConstante(), sProduit(sConstante(), sSin(sConstante())));
+
+                s = e->afficher();
+                exe << s << question << "\n";
+
+                d = e->eval();
+                res << s << result << d << "\n";
+
+                printContent(s, result, d);
 
                 break;
-//            }
+            }
+            case 4:
+            {
+                e = sSuperieur(sSomme(sConstante(), sProduit(sConstante(), sSin(sConstante()))), sConstante());
 
-            case 000:
+                s = e->afficher();
+                exe << s << question << "\n";
+
+                d = e->eval();
+                res << s << result << d << "\n";
+
+                printContent(s, result, d);
+
+                break;
+            }
+            case 5:
+            {
+                Expression *e1;
+                e1 = sVariable();
+
+                s = e1->afficher();
+                d = e1->eval();
+
+                exe << s << result << d << "\n";
+                res << s << result << d << "\n";
+
+                printContent(s, result, d);
+                ////////////////////////////////////
+                e = sAffectation(sVariableAChercher(), sSomme(sConstante(), sProduit(sConstante(), e1->clone())));
+
+                s = e->afficher();
+                exe << s << question << "\n";
+
+                d = e->eval();
+                res << s << result << d << "\n";
+
+                printContent(s, result, d);
+
+                break;
+            }
+            case 6:
+            {
+                Expression *e1;
+                e1 = sVariable();
+
+                s = e1->afficher();
+                d = e1->eval();
+
+                exe << s << result << d << "\n";
+                res << s << result << d << "\n";
+                ////////////////////////////////////
+                e = sConditionnel(sSuperieur(e1, sConstante()),
+                                    sSomme(e1, sConstante()),
+                                    sProduit(e1, sConstante()));
+
+                s = e->afficher();
+                exe << s << "\n=> EVAL ternaire" << question << "\n";
+
+                d = e->eval();
+                res << s << "\n=> EVAL ternaire" << result << d << "\n";
+
+                printContent(s, "\n=> EVAL ternaire" + result, d);
+
+                break;
+            }
+            case 7:
+            {
+                Expression *e1;
+                e1 = sVariable();
+
+                s = e1->afficher();
+                d = e1->eval();
+
+                exe << s << result << d << "\n";
+                res << s << result << d << "\n";
+                ////////////////////////////////////
+                e = sIfThenElse(sSuperieur(e1, sConstante()),
+                                    sAffectation(sVariableAChercher(), sSomme(e1, sConstante())),
+                                    sAffectation(sVariableAChercher(), sProduit(e1, sConstante())));
+
+                s = e->afficher();
+                exe << s << "\n=> EVAL if then else" << question << "\n";
+
+                d = e->eval();
+                res << s << "\n=> EVAL if then else" << result << d << "\n";
+
+                printContent(s, "\n=> EVAL if then else" + result, d);
+
+                break;
+            }
+            case 0:
             {
                 s = "******************************************************************\n\n";
                 exe << s;
                 res << s;
                 break;
             }
-            default:
-                cout << "Sauvegarder vos fichiers......" << endl;
+            case 999:
+            {
+                cout << "Sauvegarder des fichiers et quitter......" << endl;
                 exe.close();
                 res.close();
                 break;
+            }
+            default:
+                cout << "Le cas inconnu......" << endl;
+                break;
         }
     } while (choice != 999);
+
+    return 0;
 }
 
-void viewMenu() {
-    cout << " 0 : constante, [Ex] 5" << endl;
-    cout << " 1 : cosinus, [Ex] cos(1.0472)" << endl;
-    cout << " 2 : binaire1, [Ex] (1 + (2 * sin(0.523599)))" << endl;
-    cout << " 3 : binaire2, [Ex] ((1 + (2 * sin(0.523599))) > 1.8) => true(1), false(0)" << endl;
-    cout << " 4 : variable1" << endl;
-    cout << " 5 : variable2" << endl;
-    cout << " 6 : conditionnel" << endl;
-    cout << " 7 : if then else" << endl;
-    cout << " 8 : bloc" << endl;
-    cout << " 9 : boucle avec une seule expression" << endl;
-    cout << " 10 : boucle avec bloc d'expressions" << endl;
-    cout << " 11 : boucles imbriquées" << endl;
-    cout << " 12 : tous les tests" << endl;
-    cout << "-----------------------------------------------------" << endl;
-    cout << " 000 : SEPARER des excercices et des resultats avec ***" << endl;
-    cout << " 999 : SAUVEGARDER votre fichier" << endl;
-     cout << "----------------------------------------------------" << endl;
+
+int main()
+{
+    int choice = -1;
+
+    cout << "\t----------BIENVENUE A L'OUTIL : CREATION-EVALUATION DES EXPRESSIONS----------" << endl;
+    cout << "\t 1 : creation" << endl;
+    cout << "\t 2 : evaluation" << endl;
+    cout << "\t 666 : quitter" << endl;
+    cout << "\t-----------------------------------------------------------------------------" << endl;
     cout << endl;
     cout << "Votre choix : ";
-}
 
-Expression* sConstante() {
-    double temp;
+    //do {
+        cin >> choice;
+        switch(choice) {
+            case 1:
+                creation();
+                break;
+            case 2:
+                break;
+            case 666:
+                return 0;
+                break;
+            default:
+                cout << "Le cas inconnu......" << endl;
+                break;
+        }
+    //} while (choice != 666);
 
-    cout << "Entrer le valeur de constante :  ";
-    cin >> temp;
-
-    Expression* e = new Constante(temp);
-
-    return e;
-}
-
-Expression* sCosinus() {
-    double temp;
-
-    cout << "Entrer le valeur de cos :  ";
-    cin >> temp;
-
-    Cos* c = new Cos(new Constante(temp));
-
-    return c;
-}
-
-Expression* sBinaire1() {
-
-    double a, b, c;
-
-    cout << "Entrer le valeur de a :  ";
-    cin >> a;
-    cout << "Entrer le valeur de b :  ";
-    cin >> b;
-    cout << "Entrer le valeur de c :  ";
-    cin >> c;
-
-    Somme* s = new Somme(new Constante(a), new Produit(new Constante(b), new Sin(new Constante(c))));
-
-    return s;
+    return 0;
 }
 
 
